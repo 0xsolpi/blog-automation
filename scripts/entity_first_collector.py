@@ -21,8 +21,8 @@ NEWS_QUERIES = [
     '모델명', '출시', '품절', '리뷰', '화제', '인기', '내돈내산'
 ]
 
-CELEB_SEEDS = ['김장훈','아이유','장원영','카리나','안유진','한소희','박보영','유재석','기안84','덱스']
-PRODUCT_TERMS = ['화장품','쿠션','립','향수','선크림','앰플','마스크팩','스킨케어','사용템','애용템','파우치','왓츠인마이백','단백질','영양제','정수기','청소기','주방템','생활용품']
+CELEB_SEEDS = ['김장훈','아이유','장원영','카리나','안유진','한소희','박보영','유재석','기안84','덱스','제니','지수','로제','지민','뷔','정국','윈터','닝닝','유나','미연','조유리','이효리','화사','선미','신세경','박은빈','김지원','차은우','임영웅','이찬원']
+PRODUCT_TERMS = ['화장품','쿠션','립','향수','선크림','앰플','마스크팩','스킨케어','사용템','애용템','파우치','왓츠인마이백','겟레디윗미','공항패션','방송착용','협찬','품절','단백질','영양제','정수기','청소기','주방템','생활용품','헤어에센스','바디미스트']
 
 YT_QUERIES = [
     '내돈내산', '리뷰', '추천', '언박싱', '하울', '핫템'
@@ -252,12 +252,36 @@ def compute_quality_metrics(items: list[dict]) -> dict:
     valid_model=sum(1 for x in items if x.get('brand') and x.get('model_name') and is_high_quality_model(x.get('model_name','')))
     evidence_ok=sum(1 for x in items if len(x.get('evidence_briefs',[]) or [])>=1 and len(x.get('evidence_links',[]) or [])>=1)
     infl=sum(1 for x in items if (x.get('source_mix',{}).get('naver_blog',0)+x.get('source_mix',{}).get('naver_news',0)+x.get('source_mix',{}).get('youtube',0))>0)
+    celeb=sum(1 for x in items if '연예/인플루언서 맥락 언급(우선)' in (x.get('issue_reason') or ''))
     return {
         'total': total,
         'valid_model_rate': round(valid_model/total,3),
         'evidence_coverage_rate': round(evidence_ok/total,3),
-        'influencer_priority_rate': round(infl/total,3)
+        'influencer_priority_rate': round(infl/total,3),
+        'celeb_context_rate': round(celeb/total,3)
     }
+
+
+def discover_celeb_seeds(cid: str, sec: str, max_names: int = 20) -> list[str]:
+    # lightweight extraction from entertainment-related queries
+    qs = ['연예인 사용템', '아이돌 파우치', '배우 화장품', '인플루언서 추천템']
+    names = []
+    pat = re.compile(r'([가-힣]{2,4})\s?(?:사용템|쿠션|화장품|착용|파우치|추천템)')
+    for q in qs:
+        news = naver_news(cid, sec, q)
+        blog = naver_blog(cid, sec, q)
+        for row in (news[:5] + blog[:5]):
+            t = strip_tags(row.get('title',''))
+            d = strip_tags(row.get('description',''))
+            txt = f"{t} {d}"
+            for m in pat.findall(txt):
+                if 2 <= len(m) <= 4 and m not in names:
+                    names.append(m)
+                    if len(names) >= max_names:
+                        return names
+    return names
+
+
 def main():
     load_env(ENV)
     cid=os.getenv('NAVER_CLIENT_ID','').strip()
@@ -328,14 +352,16 @@ def main():
 
 
     # 2.5) celebrity-product enrichment (news+blog)
-    for celeb in CELEB_SEEDS:
-        for term in PRODUCT_TERMS:
+    extra_celeb = discover_celeb_seeds(cid, sec, max_names=20)
+    celeb_pool = list(dict.fromkeys(CELEB_SEEDS + extra_celeb))
+    for celeb in celeb_pool[:12]:
+        for term in PRODUCT_TERMS[:12]:
             q = f"{celeb} {term}"
-            news = naver_news(cid, sec, q)
-            blogs = naver_blog(cid, sec, q)
+            news = naver_news(cid, sec, q)[:4]
+            blogs = naver_blog(cid, sec, q)[:4]
 
             # 제목에서 브랜드/모델 추출
-            for row,src in [(x,'naver_news') for x in news[:5]] + [(x,'naver_blog') for x in blogs[:5]]:
+            for row,src in [(x,'naver_news') for x in news] + [(x,'naver_blog') for x in blogs]:
                 t = strip_tags(row.get('title',''))
                 if src=='naver_blog' and weak_blog_title(t):
                     continue
