@@ -30,7 +30,8 @@ YT_QUERIES = [
 
 NOISE = {'뉴스','속보','정치','대선','국회','정부','일보','신문','기자','공개','발표'}
 MODEL_STOP = {'BESPOKE','CUCKOO','SAMSUNG','LG','APPLE','XIAOMI','DYSON','ROBOROCK'}
-MODEL_BLACKLIST = {'29CM','WCONCEPT','MUSINSA','OLIVEYOUNG','NAVER','COUPANG'}
+MODEL_BLACKLIST = {'29CM','WCONCEPT','MUSINSA','OLIVEYOUNG','NAVER','COUPANG','TOP10','25FW','FW25','SS25','HOT','BEST'}
+MODEL_BAD_PATTERNS = [r'^\d{2}FW$', r'^FW\d{2}$', r'^TOP\d+$', r'^[A-Z]{1,3}$']
 BEAUTY_LINE_HINTS = {'쿠션','파운데이션','립','틴트','선크림','에센스','앰플','세럼','크림','마스크팩'}
 
 
@@ -120,6 +121,28 @@ def normalize_model(model: str, brand: str) -> str:
     return m
 
 
+def is_high_quality_model(model: str) -> bool:
+    if not model:
+        return False
+    m=model.upper().strip()
+    if m in MODEL_BLACKLIST or m in MODEL_STOP:
+        return False
+    for pat in MODEL_BAD_PATTERNS:
+        if re.fullmatch(pat, m):
+            return False
+    # strong pass: alpha+digit mix with length>=4
+    has_alpha=any(c.isalpha() for c in m)
+    has_digit=any(c.isdigit() for c in m)
+    if has_alpha and has_digit and len(m)>=4:
+        return True
+    # beauty shade pass: 21N1 / SPF34
+    if re.fullmatch(r'\d{2}[NC]\d', m):
+        return True
+    if re.fullmatch(r'SPF\d{2}', m):
+        return True
+    return False
+
+
 def model_quality(model: str) -> float:
     if not model:
         return 0.0
@@ -139,6 +162,12 @@ def naver_shop(cid, sec, q):
     if r.status_code!=200:
         return []
     return r.json().get('items',[])
+
+
+def weak_blog_title(title: str) -> bool:
+    t=normalize(title).upper()
+    bad=['총정리','브리프','속보','순위','TOP10','핫이슈','요약']
+    return any(b in t for b in bad)
 
 
 def naver_blog(cid, sec, q):
@@ -183,7 +212,7 @@ def valid_entity(brand, model):
         return False
     if model == brand.upper():
         return False
-    if model_quality(model) < 0.55:
+    if not is_high_quality_model(model):
         return False
     return True
 
@@ -267,6 +296,8 @@ def main():
             # 제목에서 브랜드/모델 추출
             for row,src in [(x,'naver_news') for x in news[:5]] + [(x,'naver_blog') for x in blogs[:5]]:
                 t = strip_tags(row.get('title',''))
+                if src=='naver_blog' and weak_blog_title(t):
+                    continue
                 d = strip_tags(row.get('description',''))
                 comb = f"{t} {d}"
                 brand = detect_brand(comb)
