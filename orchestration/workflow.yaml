@@ -1,0 +1,92 @@
+version: 1
+name: blog-automation-orchestration
+owner: nere
+
+schedule:
+  timezone: Asia/Seoul
+  mode: manual_or_scheduled
+  default_start_time: "09:00"
+
+states:
+  - COLLECTING_TRENDS
+  - VALIDATING_CPA
+  - WRITING_DRAFTS
+  - QA_REVIEW
+  - ADMIN_APPROVAL_PENDING
+  - READY_TO_PUBLISH
+  - PUBLISHED
+  - PARTIAL_FAILED
+
+agents:
+  nere:
+    role: orchestrator
+    responsibilities:
+      - distribute_tasks
+      - aggregate_failures
+      - request_admin_approval
+      - route_approved_posts_to_robin
+      - report_publish_results
+  luffy:
+    role: trend_collector
+    output: data/trends/top_items.json
+  ace:
+    role: coupang_partner_verifier
+    output: data/verified/verified_items.json
+  nami:
+    role: writer
+    output: data/drafts/*.md
+  zoro:
+    role: qa_and_risk_reviewer
+    output: data/review/review_reports.json
+  robin:
+    role: wordpress_publisher
+    output: data/published/publish_reports.json
+
+handoff_rules:
+  - from: luffy
+    to: ace
+    condition: top_items_count <= 20
+  - from: ace
+    to: nami
+    condition: each_item_has_coupang_link == true
+  - from: nami
+    to: zoro
+    condition: draft_has_3_or_more_paragraphs == true
+  - from: zoro
+    to: nere
+    condition: qa_status in ["pass", "pass_with_minor_edits"]
+  - from: nere
+    to: admin
+    condition: final_review_complete == true
+  - from: nere
+    to: robin
+    condition: admin_approved == true
+
+quality_gates:
+  - id: FACTUAL_GROUNDING
+    description: 이슈 이유와 근거 링크가 본문에 명시되어야 함
+  - id: COUPANG_LINK_PRESENT
+    description: 쿠팡파트너스 링크가 본문에 최소 1회 포함되어야 함
+  - id: PARAGRAPH_MINIMUM
+    description: 문단 수 최소 3개
+  - id: AI_TONE_REDUCTION
+    description: 기계적 문체/반복 표현 최소화
+  - id: POLICY_RISK_CHECK
+    description: 허위/과장/법적 리스크 요소 제거
+
+failure_policy:
+  retry:
+    max_attempts_per_stage: 2
+  escalate_to_nere_when:
+    - stage_failed_after_retries
+    - source_data_missing
+    - policy_risk_detected
+  report_to_admin_when:
+    - publish_blocked
+    - multiple_items_failed
+    - quality_gate_unresolved
+
+artifacts:
+  run_manifest: runs/{run_id}/manifest.json
+  event_log: runs/{run_id}/events.jsonl
+  failure_log: runs/{run_id}/failures.jsonl

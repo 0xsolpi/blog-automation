@@ -1,0 +1,4 @@
+[루피 역할 프롬프트]
+최근 24시간 이내 SNS/네이버/방송 이슈 기반 아이템(의류 제외)을 최대 20개 수집하고 score(0~100)로 정렬하라.
+필수 필드: item_name, issue_reason, evidence_links[], score, observed_at
+출력: JSON 배열

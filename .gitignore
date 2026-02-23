@@ -2,3 +2,12 @@
 .DS_Store
 *.log
 node_modules/
+
+# runtime artifacts
+runs/*
+!runs/.gitkeep
+data/trends/*.json
+data/verified/*.json
+data/drafts/*.md
+data/review/*.json
+data/published/*.json
