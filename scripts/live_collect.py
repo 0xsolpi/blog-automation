@@ -172,6 +172,30 @@ def normalize_text(s: str) -> str:
     return s
 
 
+
+
+def looks_like_media_org(text: str) -> bool:
+    t = normalize_text(text).lower()
+    media_tokens = ["일보", "신문", "뉴스", "방송", "tv", "채널", "연합뉴스", "뉴시스", "기자"]
+    return any(m.lower() in t for m in media_tokens)
+
+
+def quality_filter_items(items: List[Dict], min_score: float = 55.0) -> List[Dict]:
+    out = []
+    for it in items:
+        name = it.get("item_name", "")
+        if not name:
+            continue
+        if looks_like_media_org(name):
+            continue
+        if any(n in name for n in ["조선일보", "한겨레", "한국일보", "JTBC", "의총", "속보", "정치", "대선"]):
+            continue
+        if float(it.get("score", 0)) < min_score:
+            continue
+        out.append(it)
+    return out
+
+
 def token_candidates(text: str) -> List[str]:
     toks = [t for t in normalize_text(text).split() if 2 <= len(t) <= 16]
     out = []
@@ -554,6 +578,8 @@ def choose_item_name(title: str) -> Optional[str]:
             continue
         if any(n in t for n in PERSON_OR_NOISE_HINTS):
             continue
+        if looks_like_media_org(t):
+            continue
         if any(h in t for h in PRODUCT_HINTS):
             return clean_item_name(t)
 
@@ -578,6 +604,8 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
         if name.isdigit() or re.fullmatch(r"\d+[년월일시분]?", name):
             continue
         if any(n in name for n in PERSON_OR_NOISE_HINTS):
+            continue
+        if looks_like_media_org(name):
             continue
         if len(name) < 2:
             continue
@@ -761,8 +789,22 @@ def main():
             if len(items) >= args.top_n:
                 break
 
+    items = quality_filter_items(items, min_score=56.0)
+
     if len(items) == 0:
-        items = coarse_fallback_items(rss_recent or merged_rows, top_n=args.top_n)
+        items = quality_filter_items(coarse_fallback_items(rss_recent or merged_rows, top_n=args.top_n), min_score=45.0)
+
+    # 품질 우선: 억지 20개 금지. 최소 8개 미만이면 보강 후 최대 15개까지만.
+    if len(items) < 8:
+        extra = quality_filter_items(coarse_fallback_items(rss_recent or merged_rows, top_n=max(args.top_n, 20)), min_score=40.0)
+        seen = {x.get("item_name") for x in items}
+        for e in extra:
+            if e.get("item_name") in seen:
+                continue
+            items.append(e)
+            seen.add(e.get("item_name"))
+            if len(items) >= min(args.top_n, 15):
+                break
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
