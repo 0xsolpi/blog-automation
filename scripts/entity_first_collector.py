@@ -21,6 +21,9 @@ NEWS_QUERIES = [
     '모델명', '출시', '품절', '리뷰', '화제', '인기', '내돈내산'
 ]
 
+CELEB_SEEDS = ['김장훈','아이유','장원영','카리나','안유진','한소희','박보영','유재석','기안84','덱스']
+PRODUCT_TERMS = ['화장품','쿠션','립','향수','선크림','앰플','마스크팩','스킨케어','사용템','애용템','파우치','왓츠인마이백','단백질','영양제','정수기','청소기','주방템','생활용품']
+
 YT_QUERIES = [
     '내돈내산', '리뷰', '추천', '언박싱', '하울', '핫템'
 ]
@@ -115,6 +118,15 @@ def naver_shop(cid, sec, q):
     r=requests.get('https://openapi.naver.com/v1/search/shop.json',headers={
         'X-Naver-Client-Id':cid,'X-Naver-Client-Secret':sec
     },params={'query':q,'display':20,'sort':'sim'},timeout=20)
+    if r.status_code!=200:
+        return []
+    return r.json().get('items',[])
+
+
+def naver_blog(cid, sec, q):
+    r=requests.get('https://openapi.naver.com/v1/search/blog.json',headers={
+        'X-Naver-Client-Id':cid,'X-Naver-Client-Secret':sec
+    },params={'query':q,'display':10,'sort':'date'},timeout=20)
     if r.status_code!=200:
         return []
     return r.json().get('items',[])
@@ -222,6 +234,40 @@ def main():
                     'url': link,
                     'title': t[:140],
                     'summary': (desc[:220] if desc else '뉴스 본문에서 해당 모델 언급 확인')
+                })
+
+
+    # 2.5) celebrity-product enrichment (news+blog)
+    for celeb in CELEB_SEEDS:
+        for term in PRODUCT_TERMS:
+            q = f"{celeb} {term}"
+            news = naver_news(cid, sec, q)
+            blogs = naver_blog(cid, sec, q)
+
+            # 제목에서 브랜드/모델 추출
+            for row,src in [(x,'naver_news') for x in news[:5]] + [(x,'naver_blog') for x in blogs[:5]]:
+                t = strip_tags(row.get('title',''))
+                d = strip_tags(row.get('description',''))
+                comb = f"{t} {d}"
+                brand = detect_brand(comb)
+                model = normalize_model(extract_model(comb), brand)
+                if not valid_entity(brand, model):
+                    continue
+                k = entity_key(brand, model)
+                obj = pool[k]
+                obj['brand']=brand; obj['model_name']=model
+                if not obj['canonical_product_name']:
+                    obj['canonical_product_name']=f"{brand} {model}"
+                obj['mention_count_24h'] += 1
+                obj['source_mix'][src] += 1
+                link = row.get('link') or row.get('originallink') or ''
+                if link: obj['evidence_links'].add(link)
+                obj['issue_reasons'].append(f'연예/인플루언서 맥락 언급: {celeb} {term}')
+                obj['evidence_briefs'].append({
+                    'source': src,
+                    'url': link,
+                    'title': t[:140],
+                    'summary': (d[:220] if d else f'{celeb} 관련 {term} 맥락에서 모델 언급')
                 })
 
     # 3) YouTube mention enrichment (optional; skip on key/quota errors)
