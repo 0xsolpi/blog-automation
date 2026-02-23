@@ -30,6 +30,8 @@ YT_QUERIES = [
 
 NOISE = {'뉴스','속보','정치','대선','국회','정부','일보','신문','기자','공개','발표'}
 MODEL_STOP = {'BESPOKE','CUCKOO','SAMSUNG','LG','APPLE','XIAOMI','DYSON','ROBOROCK'}
+MODEL_BLACKLIST = {'29CM','WCONCEPT','MUSINSA','OLIVEYOUNG','NAVER','COUPANG'}
+BEAUTY_LINE_HINTS = {'쿠션','파운데이션','립','틴트','선크림','에센스','앰플','세럼','크림','마스크팩'}
 
 
 
@@ -84,12 +86,28 @@ def entity_key(brand: str, model: str) -> str:
     return f"{brand}|{model}" if brand and model else ''
 
 
+def normalize_beauty_model(text: str) -> str:
+    t = normalize(text).upper()
+    # common shade/SPF tokens
+    m = re.search(r'(\d{2}[NC]\d)', t)  # 21N1, 23C1
+    if m:
+        return m.group(1)
+    m = re.search(r'SPF\s?\d{2}', t)
+    if m:
+        return m.group(0).replace(' ', '')
+    # cushion line names
+    for key in ['블랙쿠션','BLACKCUSHION','리플렉션','GLOW']:
+        if key in t:
+            return key
+    return ''
+
+
 def normalize_model(model: str, brand: str) -> str:
     m = (model or '').strip().upper()
     b = (brand or '').strip().upper()
     if not m:
         return ''
-    if m in MODEL_STOP:
+    if m in MODEL_STOP or m in MODEL_BLACKLIST:
         return ''
     if m == b:
         return ''
@@ -161,7 +179,7 @@ def valid_entity(brand, model):
         return False
     if model.isdigit():
         return False
-    if model in MODEL_STOP:
+    if model in MODEL_STOP or model in MODEL_BLACKLIST:
         return False
     if model == brand.upper():
         return False
@@ -196,6 +214,8 @@ def main():
             title=strip_tags(it.get('title',''))
             brand=detect_brand(title)
             model=normalize_model(extract_model(title), brand)
+            if not model and any(h in title for h in BEAUTY_LINE_HINTS):
+                model = normalize_beauty_model(title)
             if not valid_entity(brand,model):
                 continue
             k=entity_key(brand,model)
@@ -223,7 +243,7 @@ def main():
             t=strip_tags(n.get('title',''))
             if brand in t and model in normalize(t):
                 obj=pool[k]
-                obj['mention_count_24h'] += 1
+                obj['mention_count_24h'] += 2
                 obj['source_mix']['naver_news'] += 1
                 link=n.get('link') or n.get('originallink') or ''
                 if link: obj['evidence_links'].add(link)
@@ -258,7 +278,7 @@ def main():
                 obj['brand']=brand; obj['model_name']=model
                 if not obj['canonical_product_name']:
                     obj['canonical_product_name']=f"{brand} {model}"
-                obj['mention_count_24h'] += 1
+                obj['mention_count_24h'] += 2
                 obj['source_mix'][src] += 1
                 link = row.get('link') or row.get('originallink') or ''
                 if link: obj['evidence_links'].add(link)
@@ -282,7 +302,7 @@ def main():
                     title=sn.get('title','')
                     if brand in title and model in normalize(title):
                         obj=pool[k]
-                        obj['mention_count_24h'] += 1
+                        obj['mention_count_24h'] += 2
                         obj['source_mix']['youtube'] += 1
                         vid=(v.get('id',{}) or {}).get('videoId','')
                         if vid:
