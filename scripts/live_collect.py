@@ -27,6 +27,13 @@ OUT = ROOT / "data" / "trends" / "top_items.json"
 ENV_PATH = ROOT / ".env"
 CATEGORY_RULES_PATH = ROOT / "configs" / "category_rules.json"
 
+YT_COMMERCE_QUERIES = [
+    "내돈내산 추천템", "올영 추천", "화장품 추천", "쿠션 추천", "립 추천",
+    "생활용품 추천", "주방템 추천", "자취템 추천", "육아템 추천", "반려동물 용품 추천",
+    "가전 추천", "로봇청소기 추천", "무선청소기 추천", "정수기 추천", "커피머신 추천",
+    "프로틴 추천", "영양제 추천", "건강식품 추천", "다이소 추천템", "핫템 리뷰"
+]
+
 RSS_SOURCES = [
     "https://trends.google.com/trending/rss?geo=KR",
     "https://news.google.com/rss?hl=ko&gl=KR&ceid=KR:ko",
@@ -303,23 +310,18 @@ def extract_seed_keywords(rows: List[Dict], max_k=40) -> List[str]:
     return [k for k in keys if not is_clothing(k)]
 
 
+def youtube_title_is_commerce(title: str) -> bool:
+    t = normalize_text(title)
+    must_any = ["추천", "리뷰", "내돈내산", "언박싱", "비교", "후기", "하울", "핫템", "템"]
+    product_any = list(PRODUCT_HINTS) + ["쿠션", "립", "에센스", "앰플", "영양제", "프로틴", "간식", "세제", "정수기", "청소기", "노트북", "이어폰"]
+    return any(m in t for m in must_any) and any(p in t for p in product_any)
+
+
 def fetch_youtube_rows(api_key: str, hours: int, seed_keywords: List[str], per_query=15) -> List[Dict]:
     base = "https://www.googleapis.com/youtube/v3/search"
     published_after = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat().replace("+00:00", "Z")
 
-    default_queries = [
-        "쿠팡 추천템",
-        "생활용품 추천",
-        "자취 필수템",
-        "가전 추천",
-        "주방템 추천",
-        "차량용품 추천",
-        "헬스케어 기기 추천",
-        "수납 정리템",
-        "스마트 기기 추천",
-        "육아 필수템",
-    ]
-    queries = default_queries + seed_keywords[:4] + ["쿠팡", "인기 제품", "추천 아이템"]
+    queries = YT_COMMERCE_QUERIES + seed_keywords[:3]
     rows = []
     for q in queries:
         params = {
@@ -342,6 +344,8 @@ def fetch_youtube_rows(api_key: str, hours: int, seed_keywords: List[str], per_q
             title = (sn.get("title") or "").strip()
             vid = (it.get("id", {}) or {}).get("videoId", "")
             if not title or not vid:
+                continue
+            if not youtube_title_is_commerce(title):
                 continue
             rows.append(
                 {
@@ -379,7 +383,7 @@ def fetch_youtube_rows_recent_date(api_key: str, hours: int, queries: List[str],
             sn = it.get("snippet", {})
             vid = (it.get("id", {}) or {}).get("videoId", "")
             title = (sn.get("title") or "").strip()
-            if title and vid:
+            if title and vid and youtube_title_is_commerce(title):
                 rows.append({"title": title, "link": f"https://www.youtube.com/watch?v={vid}", "pubDate": sn.get("publishedAt", ""), "source": "youtube"})
         time.sleep(0.1)
     return rows
@@ -673,6 +677,8 @@ def coarse_fallback_items(rows: List[Dict], top_n: int) -> List[Dict]:
                 continue
             if t.isdigit():
                 continue
+            if not is_probable_product(t):
+                continue
             c[t]+=1
             if r.get("link") and r["link"] not in links[t]:
                 links[t].append(r["link"])
@@ -794,16 +800,16 @@ def main():
     if len(items) == 0:
         items = quality_filter_items(coarse_fallback_items(rss_recent or merged_rows, top_n=args.top_n), min_score=45.0)
 
-    # 품질 우선: 억지 20개 금지. 최소 8개 미만이면 보강 후 최대 15개까지만.
-    if len(items) < 8:
-        extra = quality_filter_items(coarse_fallback_items(rss_recent or merged_rows, top_n=max(args.top_n, 20)), min_score=40.0)
+    # 품질 우선: 억지 개수 채우기 금지. 부족하면 6~12개 수준으로 반환 가능.
+    if len(items) < 6:
+        extra = quality_filter_items(coarse_fallback_items(rss_recent or merged_rows, top_n=12), min_score=50.0)
         seen = {x.get("item_name") for x in items}
         for e in extra:
             if e.get("item_name") in seen:
                 continue
             items.append(e)
             seen.add(e.get("item_name"))
-            if len(items) >= min(args.top_n, 15):
+            if len(items) >= 12:
                 break
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
