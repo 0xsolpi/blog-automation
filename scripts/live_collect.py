@@ -37,6 +37,7 @@ CLOTHING_BLOCKLIST = {
 }
 
 STOPWORDS = {
+    "자취", "아직도", "좁은", "요즘", "이렇게", "미친", "보이면", "신비로운", "없어서", "밋밋한", "셰프가", "독서", "절윤", "장동혁", "국힘", "국민의힘", "quot",
     "오늘", "최근", "이슈", "화제", "공개", "출시", "논란", "영상", "사진", "방송", "네이버", "유튜브", "인스타그램",
     "대한", "관련", "기자", "뉴스", "속보", "단독", "있다", "없다", "정리", "후기", "추천", "구매", "가격", "비교",
     "내일", "이번", "실시간", "라이브", "공식", "발표", "현장", "인터뷰",
@@ -48,6 +49,8 @@ PERSON_OR_NOISE_HINTS = {
 }
 
 PRODUCT_SUFFIXES = {"청소기","배터리","이어폰","헤드셋","키보드","마우스","모니터","선풍기","가습기","공기청정기","영양제","안마기","믹서기","커피머신","정수기","제습기","블랙박스","스피커","태블릿","노트북","스탠드","조명","매트","베개","칫솔","치약","샴푸","클렌저","세제","건조기","거치대","케이스","쿠커","프라이팬","냄비","에어프라이어","로봇청소기"}
+
+PHRASE_NOISE = {"내돈내산", "추천", "후기", "리뷰", "살까", "비교", "정리", "사용기", "브이로그", "shorts", "쇼츠", "언박싱", "할인", "핫딜"}
 
 PRODUCT_HINTS = {
     "청소기", "보조배터리", "이어폰", "헤드셋", "키보드", "마우스", "모니터", "선풍기", "가습기", "공기청정기",
@@ -109,6 +112,49 @@ def token_candidates(text: str) -> List[str]:
 
 def is_clothing(name: str) -> bool:
     return any(k in name for k in CLOTHING_BLOCKLIST)
+
+
+def clean_item_name(name: str) -> str:
+    x = normalize_text(name)
+    parts = []
+    for t in x.split():
+        if t.lower() in {"shorts", "vlog", "review", "best"}:
+            continue
+        if t in PHRASE_NOISE:
+            continue
+        if t.isdigit() or re.fullmatch(r"\d+[년월일시분]?", t):
+            continue
+        parts.append(t)
+    if not parts:
+        return ""
+    # 2-gram까지 허용
+    if len(parts) >= 2:
+        cand = f"{parts[0]} {parts[1]}"
+    else:
+        cand = parts[0]
+    cand = cand.strip()
+    if len(cand) > 22:
+        cand = cand[:22].strip()
+    return cand
+
+
+def is_probable_product(name: str) -> bool:
+    n = normalize_text(name)
+    if not n:
+        return False
+    if any(noise in n for noise in PERSON_OR_NOISE_HINTS):
+        return False
+    if n in STOPWORDS:
+        return False
+    if re.fullmatch(r"\d+[년월일시분]?", n):
+        return False
+    if any(h in n for h in PRODUCT_HINTS):
+        return True
+    if any(n.endswith(suf) or suf in n for suf in PRODUCT_SUFFIXES):
+        return True
+    # 2-gram 중 하나라도 제품 힌트가 있으면 허용
+    toks=n.split()
+    return any(any(h in t for h in PRODUCT_HINTS) for t in toks)
 
 
 def product_likelihood(name: str) -> float:
@@ -235,6 +281,24 @@ def filter_recent_iso_rows(rows: List[Dict], hours=24) -> List[Dict]:
     return out
 
 
+
+
+def fetch_youtube_with_fallbacks(api_key: str, hours: int, seed_keywords: List[str], target_rows: int = 260) -> List[Dict]:
+    rows = fetch_youtube_rows(api_key, hours, seed_keywords, per_query=15)
+    if len(rows) >= target_rows:
+        return rows
+
+    extra_queries = [
+        "로봇청소기 추천", "무선 이어폰 추천", "가성비 태블릿", "차량용 블랙박스", "주방 가전 추천",
+        "캠핑 용품 추천", "헬스 보충제 추천", "수납용품 추천", "공기청정기 추천", "가습기 추천"
+    ]
+    rows2 = []
+    for q in extra_queries:
+        rows2.extend(fetch_youtube_rows(api_key, hours, [q], per_query=10))
+        if len(rows) + len(rows2) >= target_rows:
+            break
+    return rows + rows2
+
 def datalab_scores(client_id: str, client_secret: str, keywords: List[str]) -> Dict[str, float]:
     """
     DataLab Search Trend는 키워드 그룹 추이 API라 '발굴'보다 '보정'에 사용.
@@ -320,7 +384,7 @@ def choose_item_name(title: str) -> Optional[str]:
         if any(n in t for n in PERSON_OR_NOISE_HINTS):
             continue
         if any(h in t for h in PRODUCT_HINTS):
-            return t
+            return clean_item_name(t)
 
     return None
 
@@ -335,11 +399,18 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
         name = choose_item_name(r.get("title", ""))
         if not name:
             continue
+        name = clean_item_name(name)
+        if not name:
+            continue
         if is_clothing(name):
             continue
         if name.isdigit() or re.fullmatch(r"\d+[년월일시분]?", name):
             continue
         if any(n in name for n in PERSON_OR_NOISE_HINTS):
+            continue
+        if len(name) < 2:
+            continue
+        if not is_probable_product(name):
             continue
 
         w = source_weight.get(r.get("source", "rss"), 1.0)
@@ -417,7 +488,7 @@ def main():
     yt_recent = []
     if yt_key:
         try:
-            yt_rows = fetch_youtube_rows(yt_key, hours=args.hours, seed_keywords=seeds, per_query=15)
+            yt_rows = fetch_youtube_with_fallbacks(yt_key, hours=args.hours, seed_keywords=seeds, target_rows=260)
             yt_recent = filter_recent_iso_rows(yt_rows, hours=args.hours)
         except Exception as e:
             errors.append({"source": "youtube", "error": str(e)})
@@ -440,6 +511,32 @@ def main():
     # 6) Final build
     source_weight = {"rss": 1.0, "youtube": 1.2}
     items = build_items(merged_rows, top_n=args.top_n, source_weight=source_weight, naver_weight=naver_scores)
+
+    if len(items) < args.top_n:
+        # 약한 필터로 2차 보강(개수 확보)
+        refill_rows = []
+        for r in merged_rows:
+            title = r.get("title", "")
+            cands = token_candidates(title)
+            for t in cands[:2]:
+                t2 = clean_item_name(t)
+                if not t2 or is_clothing(t2):
+                    continue
+                if t2.isdigit() or re.fullmatch(r"\d+[년월일시분]?", t2):
+                    continue
+                if not is_probable_product(t2):
+                    continue
+                refill_rows.append({"title": t2, "link": r.get("link", ""), "source": r.get("source", "rss")})
+
+        extra = build_items(refill_rows, top_n=args.top_n * 2, source_weight=source_weight, naver_weight=naver_scores)
+        existing = {x["item_name"] for x in items}
+        for e in extra:
+            if e["item_name"] in existing:
+                continue
+            items.append(e)
+            existing.add(e["item_name"])
+            if len(items) >= args.top_n:
+                break
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
