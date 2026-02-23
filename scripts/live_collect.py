@@ -25,6 +25,7 @@ import xml.etree.ElementTree as ET
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "data" / "trends" / "top_items.json"
 ENV_PATH = ROOT / ".env"
+CATEGORY_RULES_PATH = ROOT / "configs" / "category_rules.json"
 
 RSS_SOURCES = [
     "https://trends.google.com/trending/rss?geo=KR",
@@ -59,6 +60,56 @@ PRODUCT_HINTS = {
     "비타민", "영양제", "안마기", "믹서기", "커피머신", "정수기", "제습기", "블랙박스", "스피커", "태블릿",
     "노트북", "스탠드", "조명", "매트", "베개", "칫솔", "치약", "샴푸", "클렌저", "세제", "건조기",
 }
+
+
+def load_category_rules(path: Path):
+    if not path.exists():
+        return {"categories": {}, "noise_words": []}
+    try:
+        return json.loads(path.read_text(encoding="utf-8"))
+    except Exception:
+        return {"categories": {}, "noise_words": []}
+
+
+def detect_category(name: str, rules: Dict) -> str:
+    categories = (rules or {}).get("categories", {})
+    text = normalize_text(name)
+    best = ("기타", 0)
+    for cat, cfg in categories.items():
+        score = 0
+        for h in cfg.get("hints", []):
+            if h in text:
+                score += 2
+        for b in cfg.get("brands", []):
+            if b in text:
+                score += 1
+        if score > best[1]:
+            best = (cat, score)
+    return best[0]
+
+
+def category_product_ok(name: str, category: str, rules: Dict) -> bool:
+    cats=(rules or {}).get("categories", {})
+    cfg=cats.get(category, {})
+    hints=cfg.get("hints", [])
+    brands=cfg.get("brands", [])
+    text=normalize_text(name)
+    if category == "기타":
+        return any(h in text for h in PRODUCT_HINTS) or any(text.endswith(suf) or suf in text for suf in PRODUCT_SUFFIXES)
+    return any(h in text for h in hints) or any(b in text for b in brands)
+
+
+def extract_category_entity_candidates(title: str, name: str, rules: Dict) -> List[Dict]:
+    category = detect_category(f"{title} {name}", rules)
+    base = build_entity_candidates(title, name)
+    out=[]
+    for c in base:
+        c=dict(c)
+        c["category"] = category
+        if category_product_ok(c.get("product_name",""), category, rules):
+            c["confidence"] = round(min(0.95, c.get("confidence",0.5)+0.1),2)
+        out.append(c)
+    return out
 
 
 def load_env(path: Path):
@@ -458,7 +509,7 @@ def choose_item_name(title: str) -> Optional[str]:
     return None
 
 
-def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], naver_weight: Dict[str, float]) -> List[Dict]:
+def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], naver_weight: Dict[str, float], category_rules: Dict) -> List[Dict]:
     counts = Counter()
     links = defaultdict(list)
     titles = defaultdict(list)
@@ -479,7 +530,8 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
             continue
         if len(name) < 2:
             continue
-        if not is_probable_product(name):
+        cat_guess = detect_category(name, category_rules)
+        if not is_probable_product(name) and not category_product_ok(name, cat_guess, category_rules):
             continue
 
         w = source_weight.get(r.get("source", "rss"), 1.0)
@@ -510,7 +562,7 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
         if src_text:
             reason += f" / 소스분포[{src_text}]"
 
-        entities = build_entity_candidates(top_title or name, name)
+        entities = extract_category_entity_candidates(top_title or name, name, category_rules)
 
         items.append(
             {
@@ -524,6 +576,7 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
                 "source_mix": source_mix,
                 "naver_ratio": round(n_ratio, 2),
                 "product_likelihood": round(pl, 2),
+                "category": (entities[0].get("category") if entities else "기타"),
                 "entity_candidates": entities,
             }
         )
@@ -533,6 +586,7 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
 
 def main():
     load_env(ENV_PATH)
+    category_rules = load_category_rules(CATEGORY_RULES_PATH)
 
     ap = argparse.ArgumentParser()
     ap.add_argument("--top-n", type=int, default=20)
@@ -544,6 +598,9 @@ def main():
     naver_secret = os.getenv("NAVER_CLIENT_SECRET", "").strip()
 
     errors = []
+    dynamic_noise = set((category_rules or {}).get("noise_words", []))
+    if dynamic_noise:
+        STOPWORDS.update(dynamic_noise)
 
     # 1) RSS
     rss_raw = []
@@ -584,7 +641,7 @@ def main():
 
     # 6) Final build
     source_weight = {"rss": 1.0, "youtube": 1.2}
-    items = build_items(merged_rows, top_n=args.top_n, source_weight=source_weight, naver_weight=naver_scores)
+    items = build_items(merged_rows, top_n=args.top_n, source_weight=source_weight, naver_weight=naver_scores, category_rules=category_rules)
 
     if len(items) < args.top_n:
         # 약한 필터로 2차 보강(개수 확보)
@@ -602,7 +659,7 @@ def main():
                     continue
                 refill_rows.append({"title": t2, "link": r.get("link", ""), "source": r.get("source", "rss")})
 
-        extra = build_items(refill_rows, top_n=args.top_n * 2, source_weight=source_weight, naver_weight=naver_scores)
+        extra = build_items(refill_rows, top_n=args.top_n * 2, source_weight=source_weight, naver_weight=naver_scores, category_rules=category_rules)
         existing = {x["item_name"] for x in items}
         for e in extra:
             if e["item_name"] in existing:
