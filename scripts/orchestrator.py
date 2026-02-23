@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-import argparse, json, os, uuid
+import argparse, json, os, uuid, subprocess
 from datetime import datetime
 from pathlib import Path
 
@@ -60,6 +60,20 @@ def fail(run_dir: Path, stage: str, item_slug: str, reason: str):
     }
     append_jsonl(run_dir / "failures.jsonl", payload)
 
+
+
+
+def live_collect(run_dir: Path):
+    cmd = ["python3", str(ROOT / "scripts" / "live_collect.py"), "--top-n", "20"]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode != 0:
+        fail(run_dir, "COLLECTING_TRENDS", "-", f"live_collect_failed: {proc.stderr.strip() or proc.stdout.strip()}")
+        return []
+    path = ROOT / "data" / "trends" / "top_items.json"
+    if not path.exists():
+        fail(run_dir, "COLLECTING_TRENDS", "-", "live_collect_no_output")
+        return []
+    return json.loads(path.read_text(encoding="utf-8"))
 
 def mock_collect():
     items = [
@@ -176,7 +190,10 @@ def run(args):
 
     # Stage 1
     event(run_dir, STAGES[0], "루피 단계 시작")
-    items = mock_collect() if args.mode == "mock" else []
+    if args.mode == "mock":
+        items = mock_collect()
+    else:
+        items = live_collect(run_dir)
     manifest["stages"].append({"stage": STAGES[0], "status": "done", "count": len(items)})
 
     # Stage 2
