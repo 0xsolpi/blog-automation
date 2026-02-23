@@ -28,3 +28,14 @@
 
 
 - live 수집은 `pubDate` 기준 최근 24시간 항목만 반영합니다.
+
+## 4) API 키 사용 (.env)
+
+```env
+YOUTUBE_API_KEY=...
+NAVER_CLIENT_ID=...
+NAVER_CLIENT_SECRET=...
+```
+
+- YouTube: 최근 24시간 업로드 영상 기반 보조 신호
+- Naver DataLab: 후보 키워드 트렌드 ratio 보정 신호
