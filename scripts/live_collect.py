@@ -52,6 +52,8 @@ PRODUCT_SUFFIXES = {"청소기","배터리","이어폰","헤드셋","키보드",
 
 PHRASE_NOISE = {"내돈내산", "추천", "후기", "리뷰", "살까", "비교", "정리", "사용기", "브이로그", "shorts", "쇼츠", "언박싱", "할인", "핫딜"}
 
+BRAND_HINTS = {"삼성","LG","샤오미","다이슨","필립스","브리타","쿠쿠","쿠첸","로보락","애플","소니","보스","한경희","테팔","발뮤다","샤크","위닉스","코웨이","캐치웰","일렉트로룩스"}
+
 PRODUCT_HINTS = {
     "청소기", "보조배터리", "이어폰", "헤드셋", "키보드", "마우스", "모니터", "선풍기", "가습기", "공기청정기",
     "비타민", "영양제", "안마기", "믹서기", "커피머신", "정수기", "제습기", "블랙박스", "스피커", "태블릿",
@@ -346,6 +348,73 @@ def datalab_scores(client_id: str, client_secret: str, keywords: List[str]) -> D
     return out
 
 
+def extract_model_tokens(text: str) -> List[str]:
+    t = normalize_text(text)
+    parts = t.split()
+    models = []
+    for p in parts:
+        # ex) V12, S8, Q5, WH1000XM5, M7, A9, 9800, X2
+        if re.fullmatch(r"[A-Za-z]{1,4}\d{1,5}[A-Za-z0-9-]*", p):
+            models.append(p)
+            continue
+        # ex) Q5+ / S8Pro / XM5-like already normalized may remove +
+        if re.fullmatch(r"[A-Za-z0-9-]{3,}", p) and any(ch.isdigit() for ch in p) and any(ch.isalpha() for ch in p):
+            models.append(p)
+    # dedupe preserve order
+    out=[]
+    for m in models:
+        if m not in out:
+            out.append(m)
+    return out[:3]
+
+
+def detect_brand(text: str) -> str:
+    t = normalize_text(text)
+    for b in BRAND_HINTS:
+        if b in t:
+            return b
+    return ""
+
+
+def build_entity_candidates(title: str, name: str) -> List[Dict]:
+    brand = detect_brand(title)
+    models = extract_model_tokens(title)
+    cands = []
+
+    if brand and models:
+        for m in models[:2]:
+            cands.append({
+                "brand": brand,
+                "model": m,
+                "product_name": f"{brand} {name}".strip(),
+                "confidence": 0.85,
+            })
+    elif brand:
+        cands.append({
+            "brand": brand,
+            "model": "",
+            "product_name": f"{brand} {name}".strip(),
+            "confidence": 0.7,
+        })
+    elif models:
+        for m in models[:2]:
+            cands.append({
+                "brand": "",
+                "model": m,
+                "product_name": name,
+                "confidence": 0.65,
+            })
+
+    if not cands:
+        cands.append({
+            "brand": "",
+            "model": "",
+            "product_name": name,
+            "confidence": 0.5,
+        })
+    return cands
+
+
 def choose_item_name(title: str) -> Optional[str]:
     raw = normalize_text(title)
     toks = token_candidates(title)
@@ -432,17 +501,21 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
         score = max(0, min(100, round(score, 1)))
 
         reason = f"최근 {24}시간 내 멀티소스 언급 증가"
-        if titles.get(name):
-            reason += f" (예: {titles[name][0][:50]})"
+        top_title = titles[name][0] if titles.get(name) else ""
+        if top_title:
+            reason += f" (예: {top_title[:50]})"
 
         source_mix = dict(src_counts[name])
         src_text = ", ".join(f"{k}:{v}" for k, v in source_mix.items())
         if src_text:
             reason += f" / 소스분포[{src_text}]"
 
+        entities = build_entity_candidates(top_title or name, name)
+
         items.append(
             {
                 "item_name": name,
+                "trend_topic": name,
                 "issue_reason": reason,
                 "evidence_links": links[name][:5],
                 "score": score,
@@ -451,6 +524,7 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
                 "source_mix": source_mix,
                 "naver_ratio": round(n_ratio, 2),
                 "product_likelihood": round(pl, 2),
+                "entity_candidates": entities,
             }
         )
 

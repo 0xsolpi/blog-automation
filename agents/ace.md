@@ -15,3 +15,17 @@
 
 ## 완료 조건
 - 최종 아이템 리스트 전체 검증 완료 후 나미에게 전달
+
+
+## 입력 계약(신규)
+- 루피의 `entity_candidates[]`를 우선 사용
+- 후보별 브랜드/모델 기준으로 쿠팡 매칭
+
+## 출력 필드(필수)
+- canonical_product_name
+- model_name (가능하면 필수, 미확인 시 빈값+사유)
+- matched_product_title
+- coupang_partner_url
+- match_confidence (0~1)
+- search_queries_tried[]
+- rejection_reason(optional)

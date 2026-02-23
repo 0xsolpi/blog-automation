@@ -1,0 +1,26 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LuffyOutputItem",
+  "type": "object",
+  "required": ["trend_topic", "issue_reason", "evidence_links", "score", "entity_candidates"],
+  "properties": {
+    "trend_topic": {"type": "string"},
+    "item_name": {"type": "string"},
+    "issue_reason": {"type": "string"},
+    "evidence_links": {"type": "array", "items": {"type": "string"}},
+    "score": {"type": "number"},
+    "entity_candidates": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["brand", "model", "product_name", "confidence"],
+        "properties": {
+          "brand": {"type": "string"},
+          "model": {"type": "string"},
+          "product_name": {"type": "string"},
+          "confidence": {"type": "number"}
+        }
+      }
+    }
+  }
+}
