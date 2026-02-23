@@ -174,7 +174,7 @@ def main():
 
     pool=defaultdict(lambda:{
         'brand':'','model_name':'','canonical_product_name':'','mention_count_24h':0,
-        'source_mix':defaultdict(int),'evidence_links':set(),'issue_reasons':[]
+        'source_mix':defaultdict(int),'evidence_links':set(),'issue_reasons':[], 'evidence_briefs':[]
     })
 
     # 1) Naver shopping -> concrete entities seed
@@ -194,6 +194,12 @@ def main():
             link=it.get('link','')
             if link: obj['evidence_links'].add(link)
             obj['issue_reasons'].append(f'네이버 쇼핑 상위 노출: {cat}')
+            obj['evidence_briefs'].append({
+                'source':'naver_shop',
+                'url': link,
+                'title': title[:140],
+                'summary': f'{cat} 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨.'
+            })
 
     # 2) Naver news mention enrichment by brand+model query
     keys=list(pool.keys())
@@ -209,7 +215,14 @@ def main():
                 obj['source_mix']['naver_news'] += 1
                 link=n.get('link') or n.get('originallink') or ''
                 if link: obj['evidence_links'].add(link)
+                desc = strip_tags(n.get('description',''))
                 obj['issue_reasons'].append('네이버 뉴스 24h 언급')
+                obj['evidence_briefs'].append({
+                    'source':'naver_news',
+                    'url': link,
+                    'title': t[:140],
+                    'summary': (desc[:220] if desc else '뉴스 본문에서 해당 모델 언급 확인')
+                })
 
     # 3) YouTube mention enrichment (optional; skip on key/quota errors)
     if yk:
@@ -227,8 +240,15 @@ def main():
                         obj['source_mix']['youtube'] += 1
                         vid=(v.get('id',{}) or {}).get('videoId','')
                         if vid:
-                            obj['evidence_links'].add(f'https://www.youtube.com/watch?v={vid}')
+                            yurl=f'https://www.youtube.com/watch?v={vid}'
+                            obj['evidence_links'].add(yurl)
                             obj['issue_reasons'].append('유튜브 24h 리뷰/언급')
+                            obj['evidence_briefs'].append({
+                                'source':'youtube',
+                                'url': yurl,
+                                'title': title[:140],
+                                'summary': '최근 24시간 내 업로드/언급된 영상에서 브랜드+모델 동시 확인'
+                            })
 
     # 4) scoring & output
     items=[]
@@ -246,6 +266,7 @@ def main():
             'score':round(score,1),
             'issue_reason':' / '.join(reasons) if reasons else '24시간 내 다중 소스 언급',
             'evidence_links':list(obj['evidence_links'])[:6],
+            'evidence_briefs': obj['evidence_briefs'][:8],
             'source_mix':dict(obj['source_mix'])
         })
 
