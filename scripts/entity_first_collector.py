@@ -219,6 +219,42 @@ def valid_entity(brand, model):
     return True
 
 
+
+
+def pass_quality_gate(item: dict) -> bool:
+    brand=item.get('brand','')
+    model=item.get('model_name','')
+    if not brand or not model:
+        return False
+    if not is_high_quality_model(model):
+        return False
+    links=item.get('evidence_links',[]) or []
+    briefs=item.get('evidence_briefs',[]) or []
+    if len(links) < 1:
+        return False
+    # strict today: at least 1 brief required; prefer 2+
+    if len(briefs) < 1:
+        return False
+    if float(item.get('score',0)) < 58:
+        return False
+    return True
+
+
+def compute_quality_metrics(items: list[dict]) -> dict:
+    total=len(items)
+    if total==0:
+        return {
+            'total':0,'passed':0,'valid_model_rate':0.0,'evidence_coverage_rate':0.0,'influencer_priority_rate':0.0
+        }
+    valid_model=sum(1 for x in items if x.get('brand') and x.get('model_name') and is_high_quality_model(x.get('model_name','')))
+    evidence_ok=sum(1 for x in items if len(x.get('evidence_briefs',[]) or [])>=1 and len(x.get('evidence_links',[]) or [])>=1)
+    infl=sum(1 for x in items if (x.get('source_mix',{}).get('naver_blog',0)+x.get('source_mix',{}).get('naver_news',0)+x.get('source_mix',{}).get('youtube',0))>0)
+    return {
+        'total': total,
+        'valid_model_rate': round(valid_model/total,3),
+        'evidence_coverage_rate': round(evidence_ok/total,3),
+        'influencer_priority_rate': round(infl/total,3)
+    }
 def main():
     load_env(ENV)
     cid=os.getenv('NAVER_CLIENT_ID','').strip()
@@ -382,7 +418,11 @@ def main():
         pr = sm.get('youtube',0)*3 + sm.get('naver_blog',0)*2 + sm.get('naver_news',0)*2
         return (pr, it.get('score',0), it.get('mention_count_24h',0))
 
-    items=sorted(items,key=priority_rank,reverse=True)[:args.top_n]
+    items=sorted(items,key=priority_rank,reverse=True)
+    pre_metrics = compute_quality_metrics(items)
+    gated=[x for x in items if pass_quality_gate(x)]
+    items=gated[:args.top_n]
+    post_metrics = compute_quality_metrics(items)
 
     payload={
         'run_id':datetime.now().strftime('%Y%m%d-%H%M%S'),
@@ -391,6 +431,7 @@ def main():
         'time_window_hours':args.hours,
         'sources':['naver_shop','naver_news','youtube'],
         'mode':'entity-first',
+        'quality_metrics': {'before_gate': pre_metrics, 'after_gate': post_metrics},
         'items':items
     }
 

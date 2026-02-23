@@ -1,0 +1,50 @@
+[
+  {
+    "run": 1,
+    "count": 16,
+    "before": {
+      "total": 16,
+      "valid_model_rate": 1.0,
+      "evidence_coverage_rate": 1.0,
+      "influencer_priority_rate": 0.25
+    },
+    "after": {
+      "total": 16,
+      "valid_model_rate": 1.0,
+      "evidence_coverage_rate": 1.0,
+      "influencer_priority_rate": 0.25
+    }
+  },
+  {
+    "run": 2,
+    "count": 16,
+    "before": {
+      "total": 16,
+      "valid_model_rate": 1.0,
+      "evidence_coverage_rate": 1.0,
+      "influencer_priority_rate": 0.25
+    },
+    "after": {
+      "total": 16,
+      "valid_model_rate": 1.0,
+      "evidence_coverage_rate": 1.0,
+      "influencer_priority_rate": 0.25
+    }
+  },
+  {
+    "run": 3,
+    "count": 16,
+    "before": {
+      "total": 16,
+      "valid_model_rate": 1.0,
+      "evidence_coverage_rate": 1.0,
+      "influencer_priority_rate": 0.25
+    },
+    "after": {
+      "total": 16,
+      "valid_model_rate": 1.0,
+      "evidence_coverage_rate": 1.0,
+      "influencer_priority_rate": 0.25
+    }
+  }
+]
