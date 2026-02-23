@@ -1,0 +1,122 @@
+[
+  {
+    "run": 1,
+    "count": 16,
+    "influencer_priority_rate": 0.25,
+    "top5": [
+      {
+        "entity_key": "삼성|NT750XGR",
+        "source_mix": {
+          "naver_shop": 1,
+          "naver_news": 4
+        }
+      },
+      {
+        "entity_key": "LG|GX56K",
+        "source_mix": {
+          "naver_shop": 2,
+          "naver_news": 1,
+          "naver_blog": 1
+        }
+      },
+      {
+        "entity_key": "삼성|SM-X900",
+        "source_mix": {
+          "naver_blog": 1
+        }
+      },
+      {
+        "entity_key": "삼성|AGE20",
+        "source_mix": {
+          "naver_news": 1
+        }
+      },
+      {
+        "entity_key": "헤라|SPF34",
+        "source_mix": {
+          "naver_shop": 3
+        }
+      }
+    ]
+  },
+  {
+    "run": 2,
+    "count": 16,
+    "influencer_priority_rate": 0.25,
+    "top5": [
+      {
+        "entity_key": "삼성|NT750XGR",
+        "source_mix": {
+          "naver_shop": 1,
+          "naver_news": 4
+        }
+      },
+      {
+        "entity_key": "LG|GX56K",
+        "source_mix": {
+          "naver_shop": 2,
+          "naver_news": 1,
+          "naver_blog": 1
+        }
+      },
+      {
+        "entity_key": "삼성|SM-X900",
+        "source_mix": {
+          "naver_blog": 1
+        }
+      },
+      {
+        "entity_key": "삼성|AGE20",
+        "source_mix": {
+          "naver_news": 1
+        }
+      },
+      {
+        "entity_key": "헤라|SPF34",
+        "source_mix": {
+          "naver_shop": 3
+        }
+      }
+    ]
+  },
+  {
+    "run": 3,
+    "count": 16,
+    "influencer_priority_rate": 0.25,
+    "top5": [
+      {
+        "entity_key": "삼성|NT750XGR",
+        "source_mix": {
+          "naver_shop": 1,
+          "naver_news": 4
+        }
+      },
+      {
+        "entity_key": "LG|GX56K",
+        "source_mix": {
+          "naver_shop": 2,
+          "naver_news": 1,
+          "naver_blog": 1
+        }
+      },
+      {
+        "entity_key": "삼성|SM-X900",
+        "source_mix": {
+          "naver_blog": 1
+        }
+      },
+      {
+        "entity_key": "삼성|AGE20",
+        "source_mix": {
+          "naver_news": 1
+        }
+      },
+      {
+        "entity_key": "헤라|SPF34",
+        "source_mix": {
+          "naver_shop": 3
+        }
+      }
+    ]
+  }
+]

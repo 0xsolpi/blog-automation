@@ -29,7 +29,7 @@ YT_QUERIES = [
 ]
 
 NOISE = {'뉴스','속보','정치','대선','국회','정부','일보','신문','기자','공개','발표'}
-PRIORITY_SOURCE_WEIGHT = {'youtube': 2.5, 'naver_blog': 2.0, 'naver_news': 1.8, 'naver_shop': 1.0}
+PRIORITY_SOURCE_WEIGHT = {'youtube': 3.2, 'naver_blog': 2.8, 'naver_news': 2.2, 'naver_shop': 0.9}
 
 MODEL_STOP = {'BESPOKE','CUCKOO','SAMSUNG','LG','APPLE','XIAOMI','DYSON','ROBOROCK'}
 MODEL_BLACKLIST = {'29CM','WCONCEPT','MUSINSA','OLIVEYOUNG','NAVER','COUPANG','TOP10','25FW','FW25','SS25','HOT','BEST'}
@@ -235,7 +235,10 @@ def pass_quality_gate(item: dict) -> bool:
     # strict today: at least 1 brief required; prefer 2+
     if len(briefs) < 1:
         return False
-    if float(item.get('score',0)) < 58:
+    src=item.get('source_mix',{})
+    non_shop = src.get('naver_news',0)+src.get('naver_blog',0)+src.get('youtube',0)
+    min_score = 54 if non_shop>0 else 60
+    if float(item.get('score',0)) < min_score:
         return False
     return True
 
@@ -310,7 +313,7 @@ def main():
             t=strip_tags(n.get('title',''))
             if brand in t and model in normalize(t):
                 obj=pool[k]
-                obj['mention_count_24h'] += 2
+                obj['mention_count_24h'] += 3
                 obj['source_mix']['naver_news'] += 1
                 link=n.get('link') or n.get('originallink') or ''
                 if link: obj['evidence_links'].add(link)
@@ -347,7 +350,7 @@ def main():
                 obj['brand']=brand; obj['model_name']=model
                 if not obj['canonical_product_name']:
                     obj['canonical_product_name']=f"{brand} {model}"
-                obj['mention_count_24h'] += 2
+                obj['mention_count_24h'] += 3
                 obj['source_mix'][src] += 1
                 link = row.get('link') or row.get('originallink') or ''
                 if link: obj['evidence_links'].add(link)
@@ -371,7 +374,7 @@ def main():
                     title=sn.get('title','')
                     if brand in title and model in normalize(title):
                         obj=pool[k]
-                        obj['mention_count_24h'] += 2
+                        obj['mention_count_24h'] += 3
                         obj['source_mix']['youtube'] += 1
                         vid=(v.get('id',{}) or {}).get('videoId','')
                         if vid:
@@ -396,7 +399,7 @@ def main():
 
         has_influencer_context = any('연예/인플루언서 맥락 언급(우선)' in r for r in obj['issue_reasons'])
         if has_influencer_context:
-            priority_bonus += 8.0
+            priority_bonus += 14.0
 
         score=min(100, 38 + obj['mention_count_24h']*6 + len(obj['source_mix'])*4 + model_quality(obj['model_name'])*8 + priority_bonus)
         reasons=list(dict.fromkeys(obj['issue_reasons']))[:4]
