@@ -88,6 +88,26 @@ def detect_category(name: str, rules: Dict) -> str:
     return best[0]
 
 
+def category_match_score(name: str, category: str, rules: Dict) -> float:
+    cats=(rules or {}).get("categories", {})
+    cfg=cats.get(category, {})
+    hints=cfg.get("hints", [])
+    brands=cfg.get("brands", [])
+    text=normalize_text(name)
+    score=0.0
+    for h in hints:
+        if h in text:
+            score += 0.5
+    for b in brands:
+        if b in text:
+            score += 0.4
+    if any(text.endswith(suf) or suf in text for suf in PRODUCT_SUFFIXES):
+        score += 0.5
+    if any(h in text for h in PRODUCT_HINTS):
+        score += 0.5
+    return min(1.5, score)
+
+
 def category_product_ok(name: str, category: str, rules: Dict) -> bool:
     cats=(rules or {}).get("categories", {})
     cfg=cats.get(category, {})
@@ -106,8 +126,9 @@ def extract_category_entity_candidates(title: str, name: str, rules: Dict) -> Li
     for c in base:
         c=dict(c)
         c["category"] = category
-        if category_product_ok(c.get("product_name",""), category, rules):
-            c["confidence"] = round(min(0.95, c.get("confidence",0.5)+0.1),2)
+        cms = category_match_score(c.get("product_name",""), category, rules)
+        if cms > 0:
+            c["confidence"] = round(min(0.95, c.get("confidence",0.5)+min(0.2, cms*0.15)),2)
         out.append(c)
     return out
 
@@ -274,7 +295,7 @@ def fetch_youtube_rows(api_key: str, hours: int, seed_keywords: List[str], per_q
         "스마트 기기 추천",
         "육아 필수템",
     ]
-    queries = default_queries + seed_keywords[:4]
+    queries = default_queries + seed_keywords[:4] + ["쿠팡", "인기 제품", "추천 아이템"]
     rows = []
     for q in queries:
         params = {
@@ -307,6 +328,36 @@ def fetch_youtube_rows(api_key: str, hours: int, seed_keywords: List[str], per_q
                 }
             )
         time.sleep(0.15)
+    return rows
+
+
+def fetch_youtube_rows_recent_date(api_key: str, hours: int, queries: List[str], per_query=10) -> List[Dict]:
+    base = "https://www.googleapis.com/youtube/v3/search"
+    published_after = (datetime.now(timezone.utc) - timedelta(hours=hours)).isoformat().replace("+00:00", "Z")
+    rows=[]
+    for q in queries[:8]:
+        params = {
+            "part": "snippet",
+            "type": "video",
+            "maxResults": per_query,
+            "q": q,
+            "order": "date",
+            "regionCode": "KR",
+            "relevanceLanguage": "ko",
+            "publishedAfter": published_after,
+            "key": api_key,
+        }
+        r = requests.get(base, params=params, timeout=20)
+        if r.status_code != 200:
+            continue
+        data = r.json()
+        for it in data.get("items", []):
+            sn = it.get("snippet", {})
+            vid = (it.get("id", {}) or {}).get("videoId", "")
+            title = (sn.get("title") or "").strip()
+            if title and vid:
+                rows.append({"title": title, "link": f"https://www.youtube.com/watch?v={vid}", "pubDate": sn.get("publishedAt", ""), "source": "youtube"})
+        time.sleep(0.1)
     return rows
 
 
@@ -531,10 +582,11 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
         if len(name) < 2:
             continue
         cat_guess = detect_category(name, category_rules)
-        if not is_probable_product(name) and not category_product_ok(name, cat_guess, category_rules):
+        cm = category_match_score(name, cat_guess, category_rules)
+        if not is_probable_product(name) and cm < 0.5:
             continue
 
-        w = source_weight.get(r.get("source", "rss"), 1.0)
+        w = source_weight.get(r.get("source", "rss"), 1.0) + (cm * 0.15)
         counts[name] += w
         if r.get("link") and r["link"] not in links[name]:
             links[name].append(r["link"])
@@ -584,6 +636,41 @@ def build_items(rows: List[Dict], top_n: int, source_weight: Dict[str, float], n
     return items[:top_n]
 
 
+def coarse_fallback_items(rows: List[Dict], top_n: int) -> List[Dict]:
+    c = Counter()
+    links = defaultdict(list)
+    for r in rows:
+        for t in token_candidates(r.get("title", "")):
+            if t in STOPWORDS or is_clothing(t):
+                continue
+            if t.isdigit():
+                continue
+            c[t]+=1
+            if r.get("link") and r["link"] not in links[t]:
+                links[t].append(r["link"])
+    out=[]
+    for name,n in c.most_common(top_n*3):
+        if len(name)<2:
+            continue
+        out.append({
+            "item_name": name,
+            "trend_topic": name,
+            "issue_reason": "최근 24시간 RSS 기반 보강 후보",
+            "evidence_links": links[name][:3],
+            "score": max(40, min(65, 40+n*3)),
+            "observed_at": now_iso(),
+            "source": "fallback-rss",
+            "source_mix": {"rss": n},
+            "naver_ratio": 0.0,
+            "product_likelihood": 0.0,
+            "category": detect_category(name, {"categories": {}}),
+            "entity_candidates": [{"brand":"","model":"","product_name":name,"confidence":0.4,"category":"기타"}],
+        })
+        if len(out)>=top_n:
+            break
+    return out
+
+
 def main():
     load_env(ENV_PATH)
     category_rules = load_category_rules(CATEGORY_RULES_PATH)
@@ -621,11 +708,16 @@ def main():
         try:
             yt_rows = fetch_youtube_with_fallbacks(yt_key, hours=args.hours, seed_keywords=seeds, target_rows=260)
             yt_recent = filter_recent_iso_rows(yt_rows, hours=args.hours)
+            if len(yt_recent) == 0:
+                yt_rows2 = fetch_youtube_rows_recent_date(yt_key, hours=args.hours, queries=seeds[:8] or ["쿠팡", "추천템", "핫템"], per_query=12)
+                yt_recent = filter_recent_iso_rows(yt_rows2, hours=args.hours)
         except Exception as e:
             errors.append({"source": "youtube", "error": str(e)})
 
     # 4) Merge rows and build preliminary keywords for naver weighting
     merged_rows = rss_recent + yt_recent
+    if not merged_rows and rss_recent:
+        merged_rows = rss_recent
     if not merged_rows:
         raise SystemExit(f"수집 실패: 최근 {args.hours}시간 데이터 없음. errors={errors}")
 
@@ -668,6 +760,9 @@ def main():
             existing.add(e["item_name"])
             if len(items) >= args.top_n:
                 break
+
+    if len(items) == 0:
+        items = coarse_fallback_items(rss_recent or merged_rows, top_n=args.top_n)
 
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
