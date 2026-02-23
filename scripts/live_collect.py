@@ -13,7 +13,7 @@ import json
 import re
 import time
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import List, Dict
 
@@ -40,6 +40,37 @@ RSS_SOURCES = [
 
 def now_iso() -> str:
     return datetime.now().isoformat(timespec="seconds")
+
+
+def parse_pubdate_to_utc(pub_date: str):
+    if not pub_date:
+        return None
+    fmts = [
+        "%a, %d %b %Y %H:%M:%S %z",
+        "%a, %d %b %Y %H:%M:%S %Z",
+    ]
+    for f in fmts:
+        try:
+            dt = datetime.strptime(pub_date, f)
+            if dt.tzinfo is None:
+                dt = dt.replace(tzinfo=timezone.utc)
+            return dt.astimezone(timezone.utc)
+        except Exception:
+            continue
+    return None
+
+
+def filter_recent_rows(rows, hours=24):
+    cutoff = datetime.now(timezone.utc) - timedelta(hours=hours)
+    out = []
+    for r in rows:
+        dt = parse_pubdate_to_utc(r.get("pubDate", ""))
+        if dt is None:
+            # pubDate 파싱 실패 항목은 보수적으로 제외
+            continue
+        if dt >= cutoff:
+            out.append(r)
+    return out
 
 
 def fetch_rss(url: str, timeout: int = 15) -> List[Dict]:
@@ -133,6 +164,7 @@ def build_items(raw_rows: List[Dict], top_n: int) -> List[Dict]:
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--top-n", type=int, default=20)
+    ap.add_argument("--hours", type=int, default=24, help="최근 n시간 필터")
     args = ap.parse_args()
 
     raw = []
@@ -148,11 +180,15 @@ def main():
     if not raw:
         raise SystemExit(f"수집 실패: usable RSS 없음. errors={errors}")
 
-    items = build_items(raw, args.top_n)
+    raw_recent = filter_recent_rows(raw, hours=args.hours)
+    if not raw_recent:
+        raise SystemExit(f"최근 {args.hours}시간 내 항목이 없습니다. errors={errors}")
+
+    items = build_items(raw_recent, args.top_n)
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(items, ensure_ascii=False, indent=2), encoding="utf-8")
 
-    print(json.dumps({"ok": True, "count": len(items), "out": str(OUT)}, ensure_ascii=False))
+    print(json.dumps({"ok": True, "count": len(items), "out": str(OUT), "hours": args.hours, "raw_count": len(raw), "recent_count": len(raw_recent)}, ensure_ascii=False))
 
 
 if __name__ == "__main__":

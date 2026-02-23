@@ -64,7 +64,7 @@ def fail(run_dir: Path, stage: str, item_slug: str, reason: str):
 
 
 def live_collect(run_dir: Path):
-    cmd = ["python3", str(ROOT / "scripts" / "live_collect.py"), "--top-n", "20"]
+    cmd = ["python3", str(ROOT / "scripts" / "live_collect.py"), "--top-n", "20", "--hours", "24"]
     proc = subprocess.run(cmd, capture_output=True, text=True)
     if proc.returncode != 0:
         fail(run_dir, "COLLECTING_TRENDS", "-", f"live_collect_failed: {proc.stderr.strip() or proc.stdout.strip()}")
