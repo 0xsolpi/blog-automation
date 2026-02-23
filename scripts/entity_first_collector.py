@@ -29,6 +29,8 @@ YT_QUERIES = [
 ]
 
 NOISE = {'뉴스','속보','정치','대선','국회','정부','일보','신문','기자','공개','발표'}
+PRIORITY_SOURCE_WEIGHT = {'youtube': 2.5, 'naver_blog': 2.0, 'naver_news': 1.8, 'naver_shop': 1.0}
+
 MODEL_STOP = {'BESPOKE','CUCKOO','SAMSUNG','LG','APPLE','XIAOMI','DYSON','ROBOROCK'}
 MODEL_BLACKLIST = {'29CM','WCONCEPT','MUSINSA','OLIVEYOUNG','NAVER','COUPANG','TOP10','25FW','FW25','SS25','HOT','BEST'}
 MODEL_BAD_PATTERNS = [r'^\d{2}FW$', r'^FW\d{2}$', r'^TOP\d+$', r'^[A-Z]{1,3}$']
@@ -313,7 +315,7 @@ def main():
                 obj['source_mix'][src] += 1
                 link = row.get('link') or row.get('originallink') or ''
                 if link: obj['evidence_links'].add(link)
-                obj['issue_reasons'].append(f'연예/인플루언서 맥락 언급: {celeb} {term}')
+                obj['issue_reasons'].append(f'연예/인플루언서 맥락 언급(우선): {celeb} {term}')
                 obj['evidence_briefs'].append({
                     'source': src,
                     'url': link,
@@ -352,7 +354,15 @@ def main():
     for k,obj in pool.items():
         if obj['mention_count_24h'] < 2:
             continue
-        score=min(100, 45 + obj['mention_count_24h']*7 + len(obj['source_mix'])*5 + model_quality(obj['model_name'])*8)
+        priority_bonus = 0.0
+        for src, c in obj['source_mix'].items():
+            priority_bonus += PRIORITY_SOURCE_WEIGHT.get(src, 0.8) * c
+
+        has_influencer_context = any('연예/인플루언서 맥락 언급(우선)' in r for r in obj['issue_reasons'])
+        if has_influencer_context:
+            priority_bonus += 8.0
+
+        score=min(100, 38 + obj['mention_count_24h']*6 + len(obj['source_mix'])*4 + model_quality(obj['model_name'])*8 + priority_bonus)
         reasons=list(dict.fromkeys(obj['issue_reasons']))[:4]
         items.append({
             'entity_key':k,
@@ -367,7 +377,12 @@ def main():
             'source_mix':dict(obj['source_mix'])
         })
 
-    items=sorted(items,key=lambda x:(x['score'],x['mention_count_24h']),reverse=True)[:args.top_n]
+    def priority_rank(it):
+        sm = it.get('source_mix', {})
+        pr = sm.get('youtube',0)*3 + sm.get('naver_blog',0)*2 + sm.get('naver_news',0)*2
+        return (pr, it.get('score',0), it.get('mention_count_24h',0))
+
+    items=sorted(items,key=priority_rank,reverse=True)[:args.top_n]
 
     payload={
         'run_id':datetime.now().strftime('%Y%m%d-%H%M%S'),
