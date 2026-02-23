@@ -26,6 +26,8 @@ YT_QUERIES = [
 ]
 
 NOISE = {'뉴스','속보','정치','대선','국회','정부','일보','신문','기자','공개','발표'}
+MODEL_STOP = {'BESPOKE','CUCKOO','SAMSUNG','LG','APPLE','XIAOMI','DYSON','ROBOROCK'}
+
 
 
 def load_env(path: Path):
@@ -79,6 +81,36 @@ def entity_key(brand: str, model: str) -> str:
     return f"{brand}|{model}" if brand and model else ''
 
 
+def normalize_model(model: str, brand: str) -> str:
+    m = (model or '').strip().upper()
+    b = (brand or '').strip().upper()
+    if not m:
+        return ''
+    if m in MODEL_STOP:
+        return ''
+    if m == b:
+        return ''
+    # pure alpha short tokens are often line labels, not models
+    if re.fullmatch(r'[A-Z]{2,6}', m):
+        return ''
+    # too generic words
+    if m in {'PRO','MAX','ULTRA','AIR'}:
+        return ''
+    return m
+
+
+def model_quality(model: str) -> float:
+    if not model:
+        return 0.0
+    has_alpha = any(c.isalpha() for c in model)
+    has_digit = any(c.isdigit() for c in model)
+    if has_alpha and has_digit:
+        return 0.9
+    if has_digit and len(model) >= 4:
+        return 0.6
+    return 0.3
+
+
 def naver_shop(cid, sec, q):
     r=requests.get('https://openapi.naver.com/v1/search/shop.json',headers={
         'X-Naver-Client-Id':cid,'X-Naver-Client-Secret':sec
@@ -117,6 +149,12 @@ def valid_entity(brand, model):
         return False
     if model.isdigit():
         return False
+    if model in MODEL_STOP:
+        return False
+    if model == brand.upper():
+        return False
+    if model_quality(model) < 0.55:
+        return False
     return True
 
 
@@ -145,7 +183,7 @@ def main():
         for it in items[:10]:
             title=strip_tags(it.get('title',''))
             brand=detect_brand(title)
-            model=extract_model(title)
+            model=normalize_model(extract_model(title), brand)
             if not valid_entity(brand,model):
                 continue
             k=entity_key(brand,model)
@@ -197,7 +235,7 @@ def main():
     for k,obj in pool.items():
         if obj['mention_count_24h'] < 2:
             continue
-        score=min(100, 45 + obj['mention_count_24h']*7 + len(obj['source_mix'])*5)
+        score=min(100, 45 + obj['mention_count_24h']*7 + len(obj['source_mix'])*5 + model_quality(obj['model_name'])*8)
         reasons=list(dict.fromkeys(obj['issue_reasons']))[:4]
         items.append({
             'entity_key':k,
