@@ -1,0 +1,56 @@
+{
+  "generated_at": "2026-02-24T01:59:16",
+  "count": 5,
+  "items": [
+    {
+      "canonical_product_name": "로보락 로봇청소기 Q-REVO EDGE C 화이트, 단품",
+      "brand": "로보락",
+      "model_name": "Q-REVO",
+      "price": 949000,
+      "mall_name": "네이버",
+      "product_link": "https://search.shopping.naver.com/catalog/54859243463",
+      "search_query": "로봇청소기",
+      "match_confidence": 0.84
+    },
+    {
+      "canonical_product_name": "LG전자 LG퓨리케어 오브제컬렉션 정수기(맞춤 출수, 냉온정) 카밍 베이지(WD523VC), 자가관리(36개월치필터포함)",
+      "brand": "LG",
+      "model_name": "WD523VC",
+      "price": 1244840,
+      "mall_name": "네이버",
+      "product_link": "https://search.shopping.naver.com/catalog/57852715220",
+      "search_query": "정수기",
+      "match_confidence": 0.84
+    },
+    {
+      "canonical_product_name": "아모레퍼시픽 헤라 블랙 쿠션 파운데이션 본품+리필(SPF34), 21N1, 30g",
+      "brand": "헤라",
+      "model_name": "SPF34",
+      "price": 42100,
+      "mall_name": "네이버",
+      "product_link": "https://search.shopping.naver.com/catalog/57751514587",
+      "search_query": "쿠션",
+      "match_confidence": 0.84
+    },
+    {
+      "canonical_product_name": "헬시오 히치웨이 WPI 단백질보충제 분리유청단백질 쉐이크 프로틴 초코맛 1.5kg 1통",
+      "brand": "",
+      "model_name": "WPI",
+      "price": 64900,
+      "mall_name": "헬시오",
+      "product_link": "https://smartstore.naver.com/main/products/4492124938",
+      "search_query": "프로틴",
+      "match_confidence": 0.71
+    },
+    {
+      "canonical_product_name": "재원전자 버디쿡 에어프라이어 블랙(BD8002S)",
+      "brand": "",
+      "model_name": "BD8002S",
+      "price": 43650,
+      "mall_name": "네이버",
+      "product_link": "https://search.shopping.naver.com/catalog/52207416620",
+      "search_query": "에어프라이어",
+      "match_confidence": 0.71
+    }
+  ]
+}
