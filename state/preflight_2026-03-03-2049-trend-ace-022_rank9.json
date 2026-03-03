@@ -1,0 +1,15 @@
+{
+  "ok": false,
+  "results": [
+    {
+      "file": "/home/solpi/work/agents/agent3-nami/data/handoff/2026-03-03-2049-trend-ace-022/posts/2026-03-03/rank9_bookstand/rank9_comely_bookstand_wp-ready.md",
+      "ok": false,
+      "issues": [
+        {
+          "type": "placeholder_remaining",
+          "count": 9
+        }
+      ]
+    }
+  ]
+}
