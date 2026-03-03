@@ -1,5 +1,9 @@
 # 네레 실제 일처리 방법 (운영 SOP)
 
+## 운영 모드
+- `legacy`: 기존 12단계 handoff 중심 운영
+- `v2-event`: run_id 상태파일 + 이벤트 로그 기반 운영 (권장)
+
 ## 현재 운영 버전(vCurrent) — 12단계 고정
 
 1. **루피 리서치 트리거(이중 방식)**
@@ -65,3 +69,22 @@
 
 ## 승인 게이트 고정 순서
 **조로 → 네레 → Admin → 로빈 → 네레 → Admin**
+
+---
+
+## v2-event 상태머신 (신규)
+`COLLECTED -> SELECTED -> ACE_VALIDATING -> ACE_DONE -> NAMI_WRITING -> NAMI_DONE -> ZORO_REVIEWING -> ZORO_DONE -> NERE_DECISION -> ROBIN_PUBLISHING -> PUBLISHED`
+
+### 에러/복구 상태
+- `*_BLOCKED`: 외부 의존(브라우저 relay/tab/auth) 문제
+- `*_FAILED`: 정책/검증 실패
+- `RETRY_SCHEDULED`: 자동 재시도 예약
+
+### 필수 공통 메타
+- `run_id`, `from`, `to`, `generated_at`, `stage`, `retry_count`
+
+### 운영 원칙
+1) 채팅은 보고/승인용, 실행은 상태파일/이벤트로 진행
+2) ACK SLA 20초, 미수신 시 1회 재전송
+3) announce는 로그만 남기고 실행 트리거로 사용 금지
+4) Robin 발행 전 `ops/publish_quality_gate.md` 4개 게이트 통과 필수
