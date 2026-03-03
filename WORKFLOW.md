@@ -76,7 +76,18 @@
 > - 중간 ACK/announce는 사용자 채널 발신 금지
 > - 실패는 내부 재시도 최대 3회 후 `BLOCKED` 1회 보고
 > - PASS + 정책검사 통과 시 즉시 발행
-> - 로빈은 별도 역할 부여 전까지 비활성(로그/보조만)
+> - 로빈은 기본 비활성(로그/보조). 단, 업로드 SLA 위반 시 백업 워커로 자동 승격
+
+### 업로드 무정지/무누락 강제 규칙 (No-Regression)
+1) 업로드 시작 즉시 `STARTED` 이벤트 기록
+2) 2분 무변화 시 Watchdog 경고 + 자동 재시도
+3) 5분 내 `DONE(url, published_at)` 미달 시 자동 실패
+4) 실패 2회면 즉시 `BLOCKED` + 백업 경로 자동 전환
+5) 완료 보고 필수값: `post_url`, `published_at`, `render_check`
+6) URL 없는 완료 보고는 무효(미완료 처리)
+7) 단일 탭 실행, 완료 후 `tabs_cleanup: done` 필수
+
+> 세부 기준 문서: `ops/no-regression_upload_safety_policy.md`
 
 ---
 
