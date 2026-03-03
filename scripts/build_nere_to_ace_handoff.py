@@ -9,6 +9,40 @@ INP = ROOT / 'data' / 'trends' / 'luffy_output.json'
 OUT = ROOT / 'data' / 'handoff' / 'nere_to_ace.json'
 
 
+def _build_selection_reason(it: dict) -> dict:
+    src_mix = it.get('source_mix', {}) or {}
+    score = float(it.get('score', 0) or 0)
+    mentions = int(it.get('mention_count_24h', 0) or 0)
+    issue_reason = it.get('issue_reason', '')
+
+    source_signals = []
+    for src, label in [
+        ('naver_shop', '네이버쇼핑'),
+        ('naver_news', '뉴스'),
+        ('naver_blog', '블로그'),
+        ('youtube', '유튜브'),
+    ]:
+        c = int(src_mix.get(src, 0) or 0)
+        if c > 0:
+            source_signals.append(f"{label} {c}건")
+
+    bullets = []
+    if issue_reason:
+        bullets.append(issue_reason)
+    if source_signals:
+        bullets.append('근거 출처 분포: ' + ', '.join(source_signals))
+    bullets.append(f"24시간 언급량 {mentions}건")
+    bullets.append(f"내부 트렌드 점수 {score:.1f}")
+
+    return {
+        'one_line': issue_reason or f"24시간 내 다중 출처 신호(언급 {mentions}건, 점수 {score:.1f})",
+        'score': score,
+        'mention_count_24h': mentions,
+        'source_signals': source_signals,
+        'bullets': bullets,
+    }
+
+
 def main():
     if not INP.exists():
         raise SystemExit(f'missing input: {INP}')
@@ -28,7 +62,11 @@ def main():
             'brand': brand,
             'model_name': model,
             'mention_count_24h': it.get('mention_count_24h',0),
+            'score': it.get('score', 0),
+            'selection_reason': _build_selection_reason(it),
+            'issue_reason': it.get('issue_reason', ''),
             'evidence_links': it.get('evidence_links',[])[:5],
+            'evidence_briefs': it.get('evidence_briefs', [])[:3],
             'source_mix': it.get('source_mix',{}),
             'search_queries_seed': [
                 f"{brand} {model}",

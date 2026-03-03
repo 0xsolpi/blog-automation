@@ -1,0 +1,706 @@
+{
+  "run_id": "20260225-172121",
+  "from": "nere",
+  "to": "ace",
+  "generated_at": "2026-02-25T17:21:21",
+  "task": "쿠팡파트너스 매칭 검증",
+  "acceptance_rules": {
+    "min_precheck_confidence": 0.7,
+    "require_brand_and_model": true,
+    "require_coupang_partner_url": true
+  },
+  "items": [
+    {
+      "entity_key": "LG|GX56K",
+      "trend_topic": "LG전자 LG그램 15ZD90T-GX56K 16GB, 256GB",
+      "canonical_product_name": "LG전자 LG그램 15ZD90T-GX56K 16GB, 256GB",
+      "brand": "LG",
+      "model_name": "GX56K",
+      "mention_count_24h": 5,
+      "score": 86.3,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 노트북 / 네이버 뉴스 24h 언급",
+        "score": 86.3,
+        "mention_count_24h": 5,
+        "source_signals": [
+          "네이버쇼핑 1건",
+          "뉴스 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 노트북 / 네이버 뉴스 24h 언급",
+          "근거 출처 분포: 네이버쇼핑 1건, 뉴스 1건",
+          "24시간 언급량 5건",
+          "내부 트렌드 점수 86.3"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 노트북 / 네이버 뉴스 24h 언급",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/54277867358",
+        "https://www.nbntv.co.kr/news/articleView.html?idxno=4017862"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/54277867358",
+          "title": "LG전자 LG그램 15ZD90T-GX56K 16GB, 256GB",
+          "summary": "노트북 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        },
+        {
+          "source": "naver_news",
+          "url": "https://www.nbntv.co.kr/news/articleView.html?idxno=4017862",
+          "title": "LG전자, '16ZD90U-GX56K' 핫it슈 라이브 통해 출시",
+          "summary": "LG전자 관계자는 \"16ZD90U-GX56K는 CPU부터 디스플레이까지 타협 없는 스펙을 담아낸 노트북\"이라며 \"내달 2일 라이브 방송을 통해 고성능 노트북의 새로운 기준을 확인하시길 바란다\"고 전했다."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1,
+        "naver_news": 1
+      },
+      "search_queries_seed": [
+        "LG GX56K",
+        "LG LG전자 LG그램 15ZD90T-GX56K 16GB, 256GB",
+        "GX56K"
+      ],
+      "precheck_confidence": 0.93
+    },
+    {
+      "entity_key": "삼성|NT750XGR-A51A",
+      "trend_topic": "삼성전자 갤럭시북4 NT750XGR-A51A 16GB, 256GB",
+      "canonical_product_name": "삼성전자 갤럭시북4 NT750XGR-A51A 16GB, 256GB",
+      "brand": "삼성",
+      "model_name": "NT750XGR-A51A",
+      "mention_count_24h": 5,
+      "score": 86.3,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 노트북 / 네이버 뉴스 24h 언급",
+        "score": 86.3,
+        "mention_count_24h": 5,
+        "source_signals": [
+          "네이버쇼핑 1건",
+          "뉴스 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 노트북 / 네이버 뉴스 24h 언급",
+          "근거 출처 분포: 네이버쇼핑 1건, 뉴스 1건",
+          "24시간 언급량 5건",
+          "내부 트렌드 점수 86.3"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 노트북 / 네이버 뉴스 24h 언급",
+      "evidence_links": [
+        "http://www.betanews.net:8080/article/1464186.html",
+        "https://search.shopping.naver.com/catalog/52631236642"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/52631236642",
+          "title": "삼성전자 갤럭시북4 NT750XGR-A51A 16GB, 256GB",
+          "summary": "노트북 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        },
+        {
+          "source": "naver_news",
+          "url": "http://www.betanews.net:8080/article/1464186.html",
+          "title": "한사랑씨앤씨, 삼성 갤럭시북4 NT750XGR-A51A 11번가 '신선 집중' 특가 판...",
+          "summary": "삼성 갤럭시북4 NT750XGR-A51A는 인텔 13세대 코어 프로세서(13th Gen Intel Core processors) i5-1335U 와 인텔 아이리스 Xe 그래픽(Intel Iris Xe graphics)을 탑재해 강력한 성능을 제공한다. 슬림 메탈 디자인의 `가성비..."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1,
+        "naver_news": 1
+      },
+      "search_queries_seed": [
+        "삼성 NT750XGR-A51A",
+        "삼성 삼성전자 갤럭시북4 NT750XGR-A51A 16GB, 256GB",
+        "NT750XGR-A51A"
+      ],
+      "precheck_confidence": 0.93
+    },
+    {
+      "entity_key": "삼성|IP1640",
+      "trend_topic": "삼성 IP1640",
+      "canonical_product_name": "삼성 IP1640",
+      "brand": "삼성",
+      "model_name": "IP1640",
+      "mention_count_24h": 3,
+      "score": 84.0,
+      "selection_reason": {
+        "one_line": "연예/인플루언서 맥락 언급(우선): 덱스 파우치",
+        "score": 84.0,
+        "mention_count_24h": 3,
+        "source_signals": [
+          "블로그 1건"
+        ],
+        "bullets": [
+          "연예/인플루언서 맥락 언급(우선): 덱스 파우치",
+          "근거 출처 분포: 블로그 1건",
+          "24시간 언급량 3건",
+          "내부 트렌드 점수 84.0"
+        ]
+      },
+      "issue_reason": "연예/인플루언서 맥락 언급(우선): 덱스 파우치",
+      "evidence_links": [
+        "https://blog.naver.com/pocket5021/224194571836"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_blog",
+          "url": "https://blog.naver.com/pocket5021/224194571836",
+          "title": "포터블 모니터 인터픽셀 IP1640 닌텐도, 삼성 덱스 연결 호환",
+          "summary": "두께 역시 얇은 스마트폰과 비슷할 정도로 슬림하게 빠져 있어 노트북 파우치나 백팩의 남는 공간에... 삼성 갤럭시 스마트폰 사용자라면 별도의 덱스 스테이션 없이 케이블 연결만으로 삼성 DeX(덱스)..."
+        }
+      ],
+      "source_mix": {
+        "naver_blog": 1
+      },
+      "search_queries_seed": [
+        "삼성 IP1640",
+        "삼성 삼성 IP1640",
+        "IP1640"
+      ],
+      "precheck_confidence": 0.92
+    },
+    {
+      "entity_key": "헤라|21N1",
+      "trend_topic": "[백화점] NEW 헤라 블랙쿠션 파운데이션 본품 15g+리필 15g 듀오 21N1, 30g",
+      "canonical_product_name": "[백화점] NEW 헤라 블랙쿠션 파운데이션 본품 15g+리필 15g 듀오 21N1, 30g",
+      "brand": "헤라",
+      "model_name": "21N1",
+      "mention_count_24h": 6,
+      "score": 87.9,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 쿠션",
+        "score": 87.9,
+        "mention_count_24h": 6,
+        "source_signals": [
+          "네이버쇼핑 3건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 쿠션",
+          "근거 출처 분포: 네이버쇼핑 3건",
+          "24시간 언급량 6건",
+          "내부 트렌드 점수 87.9"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 쿠션",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/56756217556",
+        "https://search.shopping.naver.com/catalog/57751514587",
+        "https://smartstore.naver.com/main/products/11087340789"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/57751514587",
+          "title": "아모레퍼시픽 헤라 블랙 쿠션 파운데이션 본품+리필(SPF34), 21N1, 30g",
+          "summary": "쿠션 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        },
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/56756217556",
+          "title": "아모레퍼시픽 헤라 블랙 쿠션 리필(SPF34), 21N1, 15g",
+          "summary": "쿠션 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        },
+        {
+          "source": "naver_shop",
+          "url": "https://smartstore.naver.com/main/products/11087340789",
+          "title": "[백화점] NEW 헤라 블랙쿠션 파운데이션 본품 15g+리필 15g 듀오 21N1, 30g",
+          "summary": "쿠션 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 3
+      },
+      "search_queries_seed": [
+        "헤라 21N1",
+        "헤라 [백화점] NEW 헤라 블랙쿠션 파운데이션 본품 15g+리필 15g 듀오 21N1, 30g",
+        "21N1"
+      ],
+      "precheck_confidence": 0.94
+    },
+    {
+      "entity_key": "로보락|S90VER",
+      "trend_topic": "로보락 S9 MaxV Ultra (S90VER+EWFD32HRR) 화이트, 단품",
+      "canonical_product_name": "로보락 S9 MaxV Ultra (S90VER+EWFD32HRR) 화이트, 단품",
+      "brand": "로보락",
+      "model_name": "S90VER",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 로봇청소기",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 로봇청소기",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 로봇청소기",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/53787754582"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/53787754582",
+          "title": "로보락 S9 MaxV Ultra (S90VER+EWFD32HRR) 화이트, 단품",
+          "summary": "로봇청소기 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "로보락 S90VER",
+        "로보락 로보락 S9 MaxV Ultra (S90VER+EWFD32HRR) 화이트, 단품",
+        "S90VER"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "LG|WD523VC",
+      "trend_topic": "LG전자 LG퓨리케어 오브제컬렉션 정수기(맞춤 출수, 냉온정) 카밍 베이지(WD523VC), 자가관리(36개월치필터포함)",
+      "canonical_product_name": "LG전자 LG퓨리케어 오브제컬렉션 정수기(맞춤 출수, 냉온정) 카밍 베이지(WD523VC), 자가관리(36개월치필터포함)",
+      "brand": "LG",
+      "model_name": "WD523VC",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 정수기",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 정수기",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 정수기",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/57852715220"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/57852715220",
+          "title": "LG전자 LG퓨리케어 오브제컬렉션 정수기(맞춤 출수, 냉온정) 카밍 베이지(WD523VC), 자가관리(36개월치필터포함)",
+          "summary": "정수기 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "LG WD523VC",
+        "LG LG전자 LG퓨리케어 오브제컬렉션 정수기(맞춤 출수, 냉온정) 카밍 베이지(WD523VC), 자가관리(36개월치필터포함)",
+        "WD523VC"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "삼성|RWP54421BF",
+      "trend_topic": "삼성전자 비스포크 정수기 일체형 (냉/온/정수) RWP54421BF M 오프 화이트(RWP54421BF7M)",
+      "canonical_product_name": "삼성전자 비스포크 정수기 일체형 (냉/온/정수) RWP54421BF M 오프 화이트(RWP54421BF7M)",
+      "brand": "삼성",
+      "model_name": "RWP54421BF",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 정수기",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 정수기",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 정수기",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/57842009053"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/57842009053",
+          "title": "삼성전자 비스포크 정수기 일체형 (냉/온/정수) RWP54421BF M 오프 화이트(RWP54421BF7M)",
+          "summary": "정수기 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "삼성 RWP54421BF",
+        "삼성 삼성전자 비스포크 정수기 일체형 (냉/온/정수) RWP54421BF M 오프 화이트(RWP54421BF7M)",
+        "RWP54421BF"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "LG|WU923AS",
+      "trend_topic": "LG전자 LG퓨리케어 WU923AS 실버, 자가관리(36개월치필터포함)",
+      "canonical_product_name": "LG전자 LG퓨리케어 WU923AS 실버, 자가관리(36개월치필터포함)",
+      "brand": "LG",
+      "model_name": "WU923AS",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 정수기",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 정수기",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 정수기",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/57827136266"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/57827136266",
+          "title": "LG전자 LG퓨리케어 WU923AS 실버, 자가관리(36개월치필터포함)",
+          "summary": "정수기 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "LG WU923AS",
+        "LG LG전자 LG퓨리케어 WU923AS 실버, 자가관리(36개월치필터포함)",
+        "WU923AS"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "LG|WU923A",
+      "trend_topic": "LG전자 LG퓨리케어 WU923A B 솔리드 베이지(WU923ACB), 자가관리",
+      "canonical_product_name": "LG전자 LG퓨리케어 WU923A B 솔리드 베이지(WU923ACB), 자가관리",
+      "brand": "LG",
+      "model_name": "WU923A",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 정수기",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 정수기",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 정수기",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/57893484783"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/57893484783",
+          "title": "LG전자 LG퓨리케어 WU923A B 솔리드 베이지(WU923ACB), 자가관리",
+          "summary": "정수기 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "LG WU923A",
+        "LG LG전자 LG퓨리케어 WU923A B 솔리드 베이지(WU923ACB), 자가관리",
+        "WU923A"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "삼성|SM-R420N",
+      "trend_topic": "삼성전자 갤럭시 버즈3 FE SM-R420N",
+      "canonical_product_name": "삼성전자 갤럭시 버즈3 FE SM-R420N",
+      "brand": "삼성",
+      "model_name": "SM-R420N",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 무선이어폰",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 무선이어폰",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 무선이어폰",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/56796984706"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/56796984706",
+          "title": "삼성전자 갤럭시 버즈3 FE SM-R420N",
+          "summary": "무선이어폰 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "삼성 SM-R420N",
+        "삼성 삼성전자 갤럭시 버즈3 FE SM-R420N",
+        "SM-R420N"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "삼성|SM-R630N",
+      "trend_topic": "삼성전자 갤럭시 버즈3 프로 SM-R630N",
+      "canonical_product_name": "삼성전자 갤럭시 버즈3 프로 SM-R630N",
+      "brand": "삼성",
+      "model_name": "SM-R630N",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 무선이어폰",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 무선이어폰",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 무선이어폰",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/53508451505"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/53508451505",
+          "title": "삼성전자 갤럭시 버즈3 프로 SM-R630N",
+          "summary": "무선이어폰 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "삼성 SM-R630N",
+        "삼성 삼성전자 갤럭시 버즈3 프로 SM-R630N",
+        "SM-R630N"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "삼성|SM-R530N",
+      "trend_topic": "삼성전자 갤럭시 버즈3 SM-R530N",
+      "canonical_product_name": "삼성전자 갤럭시 버즈3 SM-R530N",
+      "brand": "삼성",
+      "model_name": "SM-R530N",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 무선이어폰",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 무선이어폰",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 무선이어폰",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/53507707537"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/53507707537",
+          "title": "삼성전자 갤럭시 버즈3 SM-R530N",
+          "summary": "무선이어폰 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "삼성 SM-R530N",
+        "삼성 삼성전자 갤럭시 버즈3 SM-R530N",
+        "SM-R530N"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "LG|16GB",
+      "trend_topic": "LG그램 15 인텔 i5 16GB 256GB 가벼운 노트북 대학생 직장인 포토샵 영상편집",
+      "canonical_product_name": "LG그램 15 인텔 i5 16GB 256GB 가벼운 노트북 대학생 직장인 포토샵 영상편집",
+      "brand": "LG",
+      "model_name": "16GB",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 노트북",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 노트북",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 노트북",
+      "evidence_links": [
+        "https://smartstore.naver.com/main/products/8746609067"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://smartstore.naver.com/main/products/8746609067",
+          "title": "LG그램 15 인텔 i5 16GB 256GB 가벼운 노트북 대학생 직장인 포토샵 영상편집",
+          "summary": "노트북 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "LG 16GB",
+        "LG LG그램 15 인텔 i5 16GB 256GB 가벼운 노트북 대학생 직장인 포토샵 영상편집",
+        "16GB"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "LG|14ZD95U-GX56K",
+      "trend_topic": "LG전자 LG그램 14ZD95U-GX56K RAM 16GB, 256GB",
+      "canonical_product_name": "LG전자 LG그램 14ZD95U-GX56K RAM 16GB, 256GB",
+      "brand": "LG",
+      "model_name": "14ZD95U-GX56K",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 노트북",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 노트북",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 노트북",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/58488180590"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/58488180590",
+          "title": "LG전자 LG그램 14ZD95U-GX56K RAM 16GB, 256GB",
+          "summary": "노트북 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "LG 14ZD95U-GX56K",
+        "LG LG전자 LG그램 14ZD95U-GX56K RAM 16GB, 256GB",
+        "14ZD95U-GX56K"
+      ],
+      "precheck_confidence": 0.81
+    },
+    {
+      "entity_key": "필립스|EP1220",
+      "trend_topic": "필립스 필립스생활가전 EP1220/19 매트 블랙",
+      "canonical_product_name": "필립스 필립스생활가전 EP1220/19 매트 블랙",
+      "brand": "필립스",
+      "model_name": "EP1220",
+      "mention_count_24h": 2,
+      "score": 62.1,
+      "selection_reason": {
+        "one_line": "네이버 쇼핑 상위 노출: 커피머신",
+        "score": 62.1,
+        "mention_count_24h": 2,
+        "source_signals": [
+          "네이버쇼핑 1건"
+        ],
+        "bullets": [
+          "네이버 쇼핑 상위 노출: 커피머신",
+          "근거 출처 분포: 네이버쇼핑 1건",
+          "24시간 언급량 2건",
+          "내부 트렌드 점수 62.1"
+        ]
+      },
+      "issue_reason": "네이버 쇼핑 상위 노출: 커피머신",
+      "evidence_links": [
+        "https://search.shopping.naver.com/catalog/59028284272"
+      ],
+      "evidence_briefs": [
+        {
+          "source": "naver_shop",
+          "url": "https://search.shopping.naver.com/catalog/59028284272",
+          "title": "필립스 필립스생활가전 EP1220/19 매트 블랙",
+          "summary": "커피머신 카테고리 상위 노출 상품. 가격/판매처 기반으로 실제 구매 가능성 확인됨."
+        }
+      ],
+      "source_mix": {
+        "naver_shop": 1
+      },
+      "search_queries_seed": [
+        "필립스 EP1220",
+        "필립스 필립스 필립스생활가전 EP1220/19 매트 블랙",
+        "EP1220"
+      ],
+      "precheck_confidence": 0.81
+    }
+  ]
+}

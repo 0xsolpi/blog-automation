@@ -11,3 +11,4 @@ data/verified/*.json
 data/drafts/*.md
 data/review/*.json
 data/published/*.json
+.env

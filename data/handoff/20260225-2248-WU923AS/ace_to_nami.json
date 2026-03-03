@@ -1,0 +1,44 @@
+{
+  "run_id": "20260225-2248-WU923AS",
+  "from": "ace",
+  "to": "nami",
+  "generated_at": "2026-02-25T22:48:47",
+  "items": [
+    {
+      "entity_key": "LG|WU923AS",
+      "trend_topic": "LG LG 퓨리케어 WU923AS",
+      "canonical_product_name": "LG LG 퓨리케어 WU923AS",
+      "brand": "LG",
+      "model_name": "WU923AS",
+      "mention_count_24h": 1,
+      "score": 80,
+      "selection_reason": {
+        "one_line": "Admin 수동 선택 테스트",
+        "score": 80,
+        "mention_count_24h": 1,
+        "source_signals": [
+          "admin_selected"
+        ],
+        "bullets": [
+          "Admin 수동 선택"
+        ]
+      },
+      "issue_reason": "Admin 수동 선택 테스트",
+      "evidence_links": [],
+      "evidence_briefs": [],
+      "source_mix": {
+        "admin_selected": 1
+      },
+      "precheck_confidence": 0.95,
+      "coupang_available": false,
+      "match_confidence": 0.0,
+      "search_queries_tried": [
+        "LG WU923AS",
+        "LG LG 퓨리케어 WU923AS",
+        "WU923AS"
+      ],
+      "rejection_reason": "coupang_api_error: 검색 API의 시간당 사용 횟수 (API 가이드 - 문서 참고) 를 초과했습니다. 2026-02-26T17:12:50.816521129 이후에 다시 시도해 주시기 바랍니다. 총 3회 초과시 파트너스 이용이 제한됩니다. (현재 *1*회 초과) (403)",
+      "checked_at": "2026-02-25T22:48:47"
+    }
+  ]
+}

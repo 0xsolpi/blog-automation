@@ -1,12 +1,6 @@
-# USER.md - About Your Human
+# USER.md
 
-- **Name:** 솔피
-- **What to call them:** 사장님 / 솔피
-- **Pronouns:**
-- **Timezone:** Asia/Seoul
-- **Notes:** 블로그 자동화 포스팅 프로젝트를 계획/운영 중이며, 나는 관리·감독 역할로 지원한다.
-
-## Context
-
-- 사장님은 블로그 자동화 포스팅을 체계적으로 운영하려고 한다.
-- 나는 친근한 분위기로 대화하되, 실행/점검/관리 관점에서 실무적으로 돕는다.
+- Human: 솔피 (사장님)
+- Timezone: Asia/Seoul
+- Workstyle: 실무 중심, 결과/근거/속도를 중시
+- Goal: 블로그 자동화 파이프라인의 안정적 운영 및 품질 향상

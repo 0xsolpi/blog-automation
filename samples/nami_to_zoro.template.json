@@ -1,0 +1,53 @@
+{
+  "run_id": "2026-03-02-2237-trend-ace-019",
+  "from": "nami",
+  "to": "zoro",
+  "generated_at": "2026-03-02T23:46:00+09:00",
+  "drafts": [
+    {
+      "rank": 10,
+      "title": "비 소식 있는 날, 가방에 쏙 넣기 좋은 리아무아 3단 자동 우양산 솔직 정리",
+      "product_name": "리아무아 3단 자동 우양산",
+      "markdown_path": "data/handoff/2026-03-02-2237-trend-ace-019/rank10_post.md",
+      "content_markdown": "# 비 소식 있는 날, 가방에 쏙 넣기 좋은 리아무아 3단 자동 우양산 솔직 정리\n\n도입 문단...\n\n![상세 이미지1]({{WP_IMAGE_R10_01}})\n\n제품 설명...\n\n![상세 이미지2]({{WP_IMAGE_R10_02}})\n\n쿠팡파트너스 링크: https://link.coupang.com/a/ADMIN_LINK_SAMPLE\n",
+      "category": "생활",
+      "tags": ["우양산", "장마", "생활용품"],
+      "coupang_link": "https://link.coupang.com/a/ADMIN_LINK_SAMPLE",
+      "risk_level": "LOW",
+      "image_manifest": {
+        "featured_image": "2026-03-02-2237-r10-hero.jpg",
+        "body_images": [
+          "2026-03-02-2237-r10-body-01.jpg",
+          "2026-03-02-2237-r10-body-02.jpg"
+        ],
+        "placeholder_to_file": {
+          "{{WP_IMAGE_R10_01}}": "2026-03-02-2237-r10-body-01.jpg",
+          "{{WP_IMAGE_R10_02}}": "2026-03-02-2237-r10-body-02.jpg"
+        }
+      }
+    },
+    {
+      "rank": 11,
+      "title": "배달 음식 남았을 때 딱 좋은 락앤락 3.2L 밀폐용기 솔직 정리",
+      "product_name": "락앤락 3.2L 밀폐용기",
+      "markdown_path": "data/handoff/2026-03-02-2237-trend-ace-019/rank11_post.md",
+      "content_markdown": "# 배달 음식 남았을 때 딱 좋은 락앤락 3.2L 밀폐용기 솔직 정리\n\n도입 문단...\n\n![상세 이미지1]({{WP_IMAGE_R11_01}})\n\n제품 설명...\n\n![상세 이미지2]({{WP_IMAGE_R11_02}})\n\n쿠팡파트너스 링크: https://link.coupang.com/a/ADMIN_LINK_SAMPLE2\n",
+      "category": "생활",
+      "tags": ["밀폐용기", "주방", "보관"],
+      "coupang_link": "https://link.coupang.com/a/ADMIN_LINK_SAMPLE2",
+      "risk_level": "LOW",
+      "image_manifest": {
+        "featured_image": "2026-03-02-2237-r11-hero.jpg",
+        "body_images": [
+          "2026-03-02-2237-r11-body-01.jpg",
+          "2026-03-02-2237-r11-body-02.jpg"
+        ],
+        "placeholder_to_file": {
+          "{{WP_IMAGE_R11_01}}": "2026-03-02-2237-r11-body-01.jpg",
+          "{{WP_IMAGE_R11_02}}": "2026-03-02-2237-r11-body-02.jpg"
+        }
+      }
+    }
+  ],
+  "failures": []
+}
