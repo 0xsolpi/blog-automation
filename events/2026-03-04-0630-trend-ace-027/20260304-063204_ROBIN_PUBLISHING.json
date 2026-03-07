@@ -1,0 +1,13 @@
+{
+  "run_id": "2026-03-04-0630-trend-ace-027",
+  "stage": "ROBIN_PUBLISHING",
+  "status": "done",
+  "from": "nere",
+  "to": "robin",
+  "retry_count": 0,
+  "generated_at": "2026-03-04T06:32:04.761898+09:00",
+  "meta": {
+    "count": 2,
+    "uploader": "nere_manual_browser"
+  }
+}

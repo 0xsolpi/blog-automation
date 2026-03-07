@@ -1,0 +1,26 @@
+{
+  "run_id": "2026-03-04-0630-trend-ace-027",
+  "from": "admin",
+  "to": "ace",
+  "generated_at": "2026-03-04T06:29:22",
+  "selected_items": [
+    {
+      "rank": 1,
+      "product_name": "LG전자 LG그램 15ZD90T-GX56K 16GB, 256GB",
+      "product_brand": "LG",
+      "product_model": "GX56K",
+      "category": "가전/디지털",
+      "selection_note": "사장님 선택 1,2번",
+      "evidence_link": "https://search.shopping.naver.com/catalog/54277867358"
+    },
+    {
+      "rank": 2,
+      "product_name": "삼성전자 갤럭시북4 NT750XGR-A51A 16GB, 256GB",
+      "product_brand": "삼성",
+      "product_model": "NT750XGR-A51A",
+      "category": "가전/디지털",
+      "selection_note": "사장님 선택 1,2번",
+      "evidence_link": "http://www.betanews.net:8080/article/1464186.html"
+    }
+  ]
+}

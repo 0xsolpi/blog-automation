@@ -1,0 +1,23 @@
+{
+  "job_id": "2026-03-07-0308-duzzonku-luffy-001",
+  "stage": "robin_publish",
+  "status": "published_with_fixes",
+  "post_id": 292,
+  "post_url": "https://0xsolpi.com/20260307-p292/",
+  "posted_at": "2026-03-07T03:22:58+09:00",
+  "success_criteria": {
+    "post_url_200": true,
+    "body_image_sample_6plus_200": false,
+    "render_no_broken_image": true
+  },
+  "image_sample_results": [
+    {
+      "url": "https://secure.gravatar.com/avatar/b12ec84cd52b655891d22e78e55eba5b38ed9d12f9ef7c385479e0f4e7226d85?s=50&amp;d=mm&amp;r=g",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/22ed/2b941ea24210b15b1a6dc0d2235f5b2191c2c2bd4a5beea273e645f92d02.png",
+      "status_200": true
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "run_id": "2026-03-05-1210-bomnaduli-luffy-001",
+  "from": "robin",
+  "to": "nere",
+  "generated_at": "2026-03-05T22:41:28+09:00",
+  "status": "publish",
+  "post_id": 255,
+  "post_url": "https://0xsolpi.com/20260305-p255/",
+  "published_at": "2026-03-05T22:41:24+09:00",
+  "published": [
+    {
+      "title": "봄나들이 돗자리, 요즘 많이 찾는 방수 대형 매트 뭐가 괜찮을까?",
+      "post_id": 255,
+      "post_url": "https://0xsolpi.com/20260305-p255/",
+      "published_at": "2026-03-05T22:41:24+09:00",
+      "status": "publish"
+    },
+    {
+      "title": "피크닉 바구니 세트 추천, 요즘 많이 찾는 라탄 보냉 바구니 실사용 후기 포인트",
+      "post_id": 261,
+      "post_url": "https://0xsolpi.com/20260305-p261/",
+      "published_at": "2026-03-05T22:41:28+09:00",
+      "status": "publish"
+    }
+  ],
+  "failures": []
+}

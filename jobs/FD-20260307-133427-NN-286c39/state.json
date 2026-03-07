@@ -1,0 +1,18 @@
+{
+  "job_id": "FD-20260307-133427-NN-286c39",
+  "current_stage": "ace_validation",
+  "status": "failed_blocking",
+  "retry_count": 0,
+  "next_agent": "nere",
+  "blocking_reason": "hard_gate_failed:best_reviews_image_policy",
+  "last_error": null,
+  "selected_item": {
+    "numbers": [
+      1
+    ]
+  },
+  "artifacts": {
+    "validation": "/home/solpi/work/blog-automation/jobs/FD-20260307-133427-NN-286c39/artifacts/validation.json"
+  },
+  "updated_at": "2026-03-07T13:35:20+09:00"
+}

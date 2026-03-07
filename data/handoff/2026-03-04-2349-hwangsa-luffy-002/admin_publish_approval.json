@@ -1,0 +1,14 @@
+{
+  "run_id": "2026-03-04-2349-hwangsa-luffy-002",
+  "from": "admin",
+  "to": "nere",
+  "generated_at": "2026-03-05T03:18:27+09:00",
+  "approval": {
+    "type": "publish",
+    "status": "approved",
+    "approver": "solpi",
+    "source": "telegram",
+    "message_id": "67b36ca0-c2ce-4ed6-8b19-38ba7cb14f6a",
+    "note": "사장님 재업로드 승인"
+  }
+}

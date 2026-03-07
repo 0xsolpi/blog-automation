@@ -1,0 +1,29 @@
+{
+  "run_id": "2026-03-05-0705-hwangsa-luffy-003",
+  "from": "nami",
+  "to": "zoro",
+  "generated_at": "2026-03-05T09:22:30+09:00",
+  "drafts": [
+    {
+      "rank": 5,
+      "title": "황사철 KF94 마스크 추천, 코멧 와이드핏 대형팩 가성비 괜찮을까?",
+      "markdown_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/article.md",
+      "wp_ready_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/wp-ready.md",
+      "product_name": "코멧 KF94 데일리 새부리형 보건방역 마스크 대형 와이드핏, 5개입, 20개",
+      "coupang_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6074013700&itemId=11226775482&vendorItemId=78504142111&traceid=V0-153-aceautogen&subid=ace",
+      "risk_level": "LOW",
+      "category": "생활건강",
+      "tags": ["KF94", "황사마스크", "보건용마스크", "가성비"],
+      "image_manifest": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/image_manifest.json"
+    }
+  ],
+  "notes": {
+    "source_file": "/home/solpi/work/agents/agent2-ace/data/handoff/processed/2026-03-05-0705-hwangsa-luffy-003/2026-03-05_0918_ace_validated.json",
+    "policy_check": {
+      "length_chars": 2852,
+      "links_total": 2,
+      "relative_links_in_wp_ready": 0,
+      "wp_image_placeholders": 0
+    }
+  }
+}

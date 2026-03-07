@@ -1,0 +1,18 @@
+{
+  "job_id": "2026-03-06-2135-pipeline-v2-pilot-001",
+  "current_stage": "done",
+  "status": "completed",
+  "retry_count": 0,
+  "next_agent": "none",
+  "blocking_reason": null,
+  "last_error": null,
+  "selected_item": null,
+  "artifacts": {
+    "research": "/home/solpi/work/blog-automation/jobs/2026-03-06-2135-pipeline-v2-pilot-001/artifacts/research.json",
+    "validation": "/home/solpi/work/blog-automation/jobs/2026-03-06-2135-pipeline-v2-pilot-001/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/2026-03-06-2135-pipeline-v2-pilot-001/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/2026-03-06-2135-pipeline-v2-pilot-001/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/2026-03-06-2135-pipeline-v2-pilot-001/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-06T21:59:32+09:00"
+}

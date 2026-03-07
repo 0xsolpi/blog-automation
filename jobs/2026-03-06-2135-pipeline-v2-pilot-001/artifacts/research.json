@@ -1,0 +1,117 @@
+{
+  "job_id": "2026-03-06-2135-pipeline-v2-pilot-001",
+  "agent": "luffy",
+  "format_lock": "ADMIN_FIXED_12",
+  "topic": "환절기",
+  "generated_at": "2026-03-06T21:36:00+09:00",
+  "items": [
+    {
+      "number": 1,
+      "source": "naver",
+      "recommended_product": "유산균(장건강/면역 밸런스형)",
+      "issue_basis": "환절기 면역관리 니즈와 상시 복용형 카테고리 수요",
+      "trend_basis": "높은 절대 검색량 유지",
+      "search_metrics": "source=pytrends_web(KR,3m), yday=61, avg7=62.29, max90=100, velocity=FLAT",
+      "evidence_url": "https://search.naver.com/search.naver?query=%ED%99%98%EC%A0%88%EA%B8%B0+%EC%9C%A0%EC%82%B0%EA%B7%A0"
+    },
+    {
+      "number": 2,
+      "source": "naver",
+      "recommended_product": "비타민C(데일리 항산화/면역 케어)",
+      "issue_basis": "환절기 컨디션 관리 수요",
+      "trend_basis": "고검색량 구간 안정 유지",
+      "search_metrics": "source=pytrends_web(KR,3m), yday=55, avg7=56.86, max90=100, velocity=FLAT",
+      "evidence_url": "https://search.naver.com/search.naver?query=%ED%99%98%EC%A0%88%EA%B8%B0+%EB%B9%84%ED%83%80%EB%AF%BCC"
+    },
+    {
+      "number": 3,
+      "source": "naver",
+      "recommended_product": "공기청정기(원룸/침실형)",
+      "issue_basis": "환절기 실내 공기질·호흡기 관리 수요",
+      "trend_basis": "중상위 검색량 유지",
+      "search_metrics": "source=pytrends_web(KR,3m), yday=45, avg7=50.43, max90=100, velocity=FLAT",
+      "evidence_url": "https://search.naver.com/search.naver?query=%ED%99%98%EC%A0%88%EA%B8%B0+%EA%B3%B5%EA%B8%B0%EC%B2%AD%EC%A0%95%EA%B8%B0"
+    },
+    {
+      "number": 4,
+      "source": "froogle",
+      "recommended_product": "가습기(저소음/세척편의형)",
+      "issue_basis": "환절기 건조·목불편 대응",
+      "trend_basis": "쇼핑 지표 급등",
+      "search_metrics": "source=pytrends_froogle(KR,tz=1439,3m), yday=100, avg7=29.57, max90=100, velocity=SUDDEN_SPIKE",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EA%B0%80%EC%8A%B5%EA%B8%B0&gprop=froogle"
+    },
+    {
+      "number": 5,
+      "source": "froogle",
+      "recommended_product": "영양제 멀티팩(종합비타민 계열)",
+      "issue_basis": "복합기능성 제품 비교구매 니즈",
+      "trend_basis": "쇼핑 검색 평균치 높음",
+      "search_metrics": "source=pytrends_froogle(KR,tz=1439,3m), yday=0, avg7=57.00, max90=100, velocity=FLAT",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%98%81%EC%96%91%EC%A0%9C&gprop=froogle"
+    },
+    {
+      "number": 6,
+      "source": "froogle",
+      "recommended_product": "유산균(프로바이오틱스)",
+      "issue_basis": "재구매 구조가 강한 면역/장건강 카테고리",
+      "trend_basis": "쇼핑 검색 평균치 높은 안정 구간",
+      "search_metrics": "source=pytrends_froogle(KR,tz=1439,3m), yday=0, avg7=42.29, max90=100, velocity=FLAT",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%9C%A0%EC%82%B0%EA%B7%A0&gprop=froogle"
+    },
+    {
+      "number": 7,
+      "source": "youtube",
+      "recommended_product": "마스크(KF 계열/호흡편의형)",
+      "issue_basis": "미세먼지·호흡기 이슈 관련 리뷰 소비 지속",
+      "trend_basis": "높은 절대 검색량 유지",
+      "search_metrics": "source=pytrends_youtube(KR,tz=1439,3m), yday=74, avg7=82.29, max90=100, velocity=FLAT",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EB%A7%88%EC%8A%A4%ED%81%AC&gprop=youtube"
+    },
+    {
+      "number": 8,
+      "source": "youtube",
+      "recommended_product": "비타민C(브랜드/제형 비교형)",
+      "issue_basis": "함량·복용법 비교형 콘텐츠 강세",
+      "trend_basis": "고검색량 유지",
+      "search_metrics": "source=pytrends_youtube(KR,tz=1439,3m), yday=73, avg7=79.29, max90=100, velocity=FLAT",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EB%B9%84%ED%83%80%EB%AF%BCC&gprop=youtube"
+    },
+    {
+      "number": 9,
+      "source": "youtube",
+      "recommended_product": "유산균(균주/함량 비교형)",
+      "issue_basis": "성분 비교형 소비가 구매로 연결",
+      "trend_basis": "높은 검색량 유지",
+      "search_metrics": "source=pytrends_youtube(KR,tz=1439,3m), yday=70, avg7=78.57, max90=100, velocity=FLAT",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%9C%A0%EC%82%B0%EA%B7%A0&gprop=youtube"
+    },
+    {
+      "number": 10,
+      "source": "news",
+      "recommended_product": "단기 냉기·건조 대응 케어 세트(가습기+마스크+보습)",
+      "issue_basis": "주말 꽃샘추위/아침 영하권 보도",
+      "trend_basis": "날씨 급변 이슈 기반 생활 대응템 수요 증가",
+      "search_metrics": "source=google_news_rss_24h, weather_shock_signal=high, velocity=SUDDEN_SPIKE",
+      "evidence_url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBOY1otY0pVMHdZWEFERUZTMHlvQ0ExS0l1dm9kYkNvczUwbkhCRDVOb2V5MFVPNzQ2cTVDSjZLSmFVclI5OG9nMWNReDgtQmRHQnpzbzJxMGxKSFpZQ1HSAYMBQVVfeXFMT0thLWNBMWlCLTBlUEExdzNBT0NaMjJVUXlUSmtqaDh2dF94WEFyR015emVSVHlsYldTWElLSjBiMktuT010UHlXeUJDZ2wtdkNaOUdvRk9JLVFXd3R6SGhIZXRuVHpXcG84RkdBZjBWRmMycndHQmw0RnFzOERlYnRTb1E?oc=5"
+    },
+    {
+      "number": 11,
+      "source": "news",
+      "recommended_product": "환절기 면역/장건강 관리 제품군(유산균 중심)",
+      "issue_basis": "환절기 면역력 관리 관련 기사",
+      "trend_basis": "면역관리 키워드와 건강기능식품 구매 의도 결합",
+      "search_metrics": "source=google_news_rss_24h, immunity_signal=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1qcHhRVWRhNVdqaXNpUkhOZFpta0lWbzhaQm1LY3c4T1NzQ0s3OFVWM21PdjFCZmYzTlhlVUhSOGRHcEM2ZUNRMGt5X0RqUnkzUDNPekxLdkU5UkJtdjBoRWdRZk9Xbm41VlY0Rg?oc=5"
+    },
+    {
+      "number": 12,
+      "source": "news",
+      "recommended_product": "환절기 호흡기 보호템(기능성 마스크·보습케어)",
+      "issue_basis": "환절기·미세먼지 마스크 관련 보도",
+      "trend_basis": "호흡기 보호 이슈 결합 시 즉시성 구매 가능성 증가",
+      "search_metrics": "source=google_news_rss_24h, respiratory_protection_signal=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://news.google.com/rss/articles/CBMicEFVX3lxTE52UGtTTU5rZFR5d256bWo2QzBnSGRXdURBVmh5QkszVmlIdFRzemFFVUZaLUF2c3djb2RidklpYkkybTNNNXVFUGxvQUt4VWR3Y1U4WjBMbjR4QnEyOHBxZHJ6ZS0tU2dFbF8zZVdkSkk?oc=5"
+    }
+  ]
+}

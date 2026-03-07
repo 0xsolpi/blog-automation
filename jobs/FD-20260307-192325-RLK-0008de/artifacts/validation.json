@@ -1,0 +1,106 @@
+{
+  "job_id": "FD-20260307-192325-RLK-0008de",
+  "agent": "ace",
+  "validated_at": "2026-03-07T19:24:20+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=6930220426/vendorItemId=87767421726 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZIi0G, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6930220426&vendorItemId=87767421726&traceid=V0-183-683fafe021063883"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=가오몬 드로잉 태블릿 타블렛 1060PRO V3 펜슬포함, brand=null 허용, model=1060PRO V3"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=8"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "가오몬 드로잉 태블릿 타블렛 1060PRO V3 펜슬포함",
+      "price": 29800,
+      "rating": 4.4,
+      "review_count": 727,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "가오몬 드로잉 태블릿 타블렛 1060PRO V3 펜슬포함",
+      "productName": "가오몬 드로잉 태블릿 타블렛 1060PRO V3 펜슬포함",
+      "brand": null,
+      "model": "1060PRO V3",
+      "category": "드로잉 태블릿",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/6930220426?vendorItemId=87767421726&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-54abb33e4ea24a25b1234074dc60f142-3.33.169%3Ajikgu_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6930220426&vendorItemId=87767421726&traceid=V0-183-683fafe021063883",
+      "rating": 4.4,
+      "review_count": 727,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/fe39/5c5ac72558b83ea2963b9c8fad1e48d259d896ab1573036e3b1637f41b7d.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "661585484",
+          "rating": 5,
+          "full_text": "주문정보 및 실사용 기준으로 가오몬 드로잉 태블릿 1060PRO V3는 필기/드로잉 입문자에게 가격 대비 만족도가 높았습니다. 뉴터치 감응 기술과 16:10 비율, 무충전 펜 구성으로 활용성이 좋았고 단축키 활용도도 높았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202412/3/2665036469476055121/ff279fc2-5761-4985-8d62-b4a7bec8db04.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202412/3/2665036469476055121/e230ded8-9a8a-4f8c-a05a-6c94a7ae88a0.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202412/3/2665036469476055121/d5740e5d-a905-4bd7-8ae0-ac712bbc51d6.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "32980950",
+          "rating": 4,
+          "full_text": "가격 대비 필압과 구성품이 좋아 입문용으로 만족스럽다는 후기입니다. 펜 무게가 가볍고 기본 사용성은 양호했으며, 배송 속도와 가성비 측면에서 장점이 있었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/201710/24/7505339215663830089/8445a89f-5a2e-4f53-9b09-ff6dea682417.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/201710/24/7505339215663830089/a752fea9-46ea-44af-acfc-ebd49b6e3355.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/201710/24/7505339215663830089/535ab154-b961-4e26-96b5-c55044247b37.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "825901593",
+          "rating": 5,
+          "full_text": "입문용 드로잉 작업에서 인식 안정성과 단축키 활용이 좋았다는 평가입니다. 설치 후 딜레이가 크지 않고 연습용/서브용으로 무난하다는 내용이 포함되어 있습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/2/6675583930086949069/0ea016a9-a833-488b-95d7-d97d590e12b8.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/2/6675583930086949069/52e96afb-0310-4461-ae3a-78cef0c55832.jpg"
+          ],
+          "image_collection_result": "PASS_2"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/6930220426?vendorItemId=87767421726&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-54abb33e4ea24a25b1234074dc60f142-3.33.169%3Ajikgu_promotion"
+}

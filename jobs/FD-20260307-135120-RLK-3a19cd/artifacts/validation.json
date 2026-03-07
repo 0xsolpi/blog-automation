@@ -1,0 +1,59 @@
+{
+  "job_id": "FD-20260307-135120-RLK-3a19cd",
+  "agent": "ace",
+  "validated_at": "2026-03-07T13:52:00+09:00",
+  "status": "failed_blocking",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "입력링크 productId=9126475142/itemId=26849509789 상세 진입 및 동일 제품명 확인"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 생성",
+      "result": "pass",
+      "evidence": "landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9126475142&itemId=26849509789&traceid=V0-183-4ddb154c3093d00a"
+    },
+    {
+      "id": "partners_product_fields",
+      "title": "productName/brand 파트너스 API 값",
+      "result": "fail",
+      "evidence": "productName=None, brand=None, api_error=HTTP Error 401: Unauthorized"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "리뷰 3개, 이미지 3+2+1=6 수집"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "QCY 멜로버즈 N60 무선 블루투스 이어폰 HT19",
+      "price": 40550,
+      "rating": 4.6,
+      "review_count": 126,
+      "result": "rejected",
+      "reason": "direct link target"
+    }
+  ],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "QCY 멜로버즈 N60 무선 블루투스 이어폰 HT19",
+      "reason": "partners API productName/brand 필드 확보 실패(Invalid signature)로 필수필드 미충족",
+      "fail_code": "COUPANG_NOT_FOUND"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/9126475142?itemId=26849509789"
+}

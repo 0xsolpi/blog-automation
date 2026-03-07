@@ -1,0 +1,104 @@
+{
+  "job_id": "FD-20260307-140211-RLK-d741e1",
+  "agent": "ace",
+  "validated_at": "2026-03-07T14:03:10+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "productId=9126475142 itemId=26849509789 링크일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZxwVH, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9126475142&itemId=26849509789&traceid=V0-183-4ddb154c3093d00a"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=페이지 제목 기반, brand=null 허용, model=N60"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 최소3최대5 + 리뷰당>=1 + 총6장 이상",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=6"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "QCY 멜로버즈 N60 무선 블루투스 이어폰 HT19",
+      "price": 40550,
+      "rating": 4.6,
+      "review_count": 126,
+      "result": "selected",
+      "reason": "direct 링크 제품 하드게이트 충족"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "QCY 멜로버즈 N60 무선 블루투스 이어폰 HT19",
+      "productName": "QCY 멜로버즈 N60 무선 블루투스 이어폰 HT19",
+      "brand": null,
+      "model": "N60",
+      "category": "이어폰",
+      "eligibility": "pass",
+      "reason": "productName/model 확정 및 하드게이트 통과",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9126475142?itemId=26849509789",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9126475142&itemId=26849509789&traceid=V0-183-4ddb154c3093d00a",
+      "rating": 4.6,
+      "review_count": 126,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/5960/236c22f662aa0fd5870cd803b898e29ff639e4d2f49fa36bb2b82d66218f.jpeg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "848093591",
+          "rating": 5,
+          "full_text": " [내돈내산] \n\n평소 덜렁거리는 성격 탓에 고가의 프리미엄 이어폰을 몇 번이나 잃어버렸는지 모릅니다. 눈물을 머금고 저가형 제품들로 갈아타서 이것저것 써봤는데, 확실히 싼 게 비지떡이라고 성능이 너무 떨어져서 1년을 채 못 버티고 바꾸기 일쑤였죠.\n\n그러다 \"QCY는 확실히 다르다\"는 커뮤니티 글을 보고 이번엔 제대로 조사해보고 사기로 마음먹었습니다. 비교군으로 N70이나 H08 같은 모델들도 리스트에 있었지만, 제가 이번 구매에서 가장 중요하게 생각한 기준은 딱 세 가지였습니다.\n\n * 거슬리는 기계음이나 노이즈가 없을 것\n * 업무상 통화가 많으니 통화 품질이 좋을 것\n * 무조건 5만 원 언더일 것\n\n이 까다로운 조건을 다 충족하는 유일한 제품이 바로 이 N60(HT19) 모델이었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/15/8642612588686593654/c6c66ad2-8db0-4903-84e4-c47950ff6e13.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/15/8642612588686593654/49c755dc-620f-4421-88d0-9e7c83bc7155.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/15/8642612588686593654/44797d9c-d483-4383-8cee-b352c9a613f6.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "795932456",
+          "rating": 5,
+          "full_text": "일단 요즘 핫한 n70은 알x로 구입해서 배송중이고,\n\n이 제품 n60의 대한 정보도 많이 없고,\n\n좋다고들해서 궁금궁금한김에 구입함.\n\n\n본인은 멜버프 ht08 블랙 1년정도? 이상? 사용중임.\n\n출시되자마자 구입했음.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202511/13/2778634156279996621/de7f7551-f3b1-4242-b180-9d24f2dc83db.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202511/13/2778634156279996621/23c53166-2528-4d7c-80cf-525d3000e4de.jpg"
+          ],
+          "image_collection_result": "PASS_2"
+        },
+        {
+          "review_id": "818144157",
+          "rating": 4,
+          "full_text": "후속으로 나온 제품 치곤 아쉬운 점이 많습니다.\n전문가가 아니라 음질 등은 잘 모르겠고,\n기존에 쓰던 HT08, T16 제품 보다는\n음질이 더 나은 정도라는 건 말 할 수 있을 것 같습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/18/1101666679987314721/77cf99d8-7e18-4c9a-955a-7065e362ae69.jpg"
+          ],
+          "image_collection_result": "FAIL_1_OR_LESS"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/9126475142?itemId=26849509789"
+}

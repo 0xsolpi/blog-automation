@@ -1,0 +1,14 @@
+{
+  "run_id": "2026-03-05-1210-bomnaduli-luffy-001",
+  "from": "admin",
+  "to": "nere",
+  "generated_at": "2026-03-05T21:31:28+09:00",
+  "approval": {
+    "type": "publish",
+    "status": "approved",
+    "approver": "solpi",
+    "source": "telegram",
+    "message_id": "372",
+    "note": "사장님 업로드 승인(REST API 방식 재시도)"
+  }
+}

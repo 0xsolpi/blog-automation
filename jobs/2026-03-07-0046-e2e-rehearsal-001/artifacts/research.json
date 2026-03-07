@@ -1,0 +1,37 @@
+{
+  "job_id": "2026-03-07-0046-e2e-rehearsal-001",
+  "schema": "luffy_research_schema_v2",
+  "agent": "luffy",
+  "generated_at": "2026-03-07T00:47:00+09:00",
+  "topic": "오늘 업로드 가능 상업 아이템",
+  "items": [
+    {
+      "number": 1,
+      "source": "trend_research",
+      "product_category": "건강식품 > 유산균/프로바이오틱스",
+      "recommended_product": "종근당건강 락토핏 골드 유산균",
+      "issue_basis": "환절기에는 장 컨디션 저하·면역 관리 니즈가 동시에 올라오며, 유산균은 복용 목적이 명확하고 재구매 주기가 짧아 상업 전환이 빠릅니다. 특히 락토핏 골드처럼 브랜드 인지도가 높은 단일 상품명은 검색-비교-구매 경로가 짧고, 리뷰 축적량이 많아 구매 저항이 낮습니다. 오늘 업로드 기준으로도 시즌성 키워드(환절기/면역/장건강)와 결합해 즉시 클릭·전환을 기대할 수 있는 안전한 카테고리입니다.",
+      "trend_basis": "환절기 면역/장건강 관련 검색 수요가 지속되며 유산균 카테고리는 상시 수요 + 계절 보강 수요가 겹치는 구간",
+      "search_metrics": {
+        "source": "pytrends_web(KR,3m) reference",
+        "keyword": "유산균",
+        "yday": 61,
+        "avg7": 62.29,
+        "max90": 100,
+        "velocity": "FLAT",
+        "conversion_potential": "high",
+        "commerce_intent_signal": "review/compare/ranking"
+      },
+      "evidence": [
+        {
+          "type": "naver_search",
+          "url": "https://search.naver.com/search.naver?query=%ED%99%98%EC%A0%88%EA%B8%B0+%EC%9C%A0%EC%82%B0%EA%B7%A0"
+        },
+        {
+          "type": "coupang_search",
+          "url": "https://www.coupang.com/np/search?component=&q=%EC%A2%85%EA%B7%BC%EB%8B%B9%EA%B1%B4%EA%B0%95+%EB%9D%BD%ED%86%A0%ED%95%8F+%EA%B3%A8%EB%93%9C+%EC%9C%A0%EC%82%B0%EA%B7%A0"
+        }
+      ]
+    }
+  ]
+}

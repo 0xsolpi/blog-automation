@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260307-142002-RLK-1b7e72",
+  "agent": "ace",
+  "validated_at": "2026-03-07T14:21:00+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치",
+      "result": "pass",
+      "evidence": "input_link와 수집상품 productId=7242698793/itemId=14636426686/vendorItemId=81877949600 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZyv7E, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7242698793&itemId=14636426686&vendorItemId=81877949600&traceid=V0-183-8ab014f75220611c"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=로지텍 MX 마스터 3S 무선마우스, brand=null(허용), model=3S"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "로지텍 MX 마스터 3S 무선마우스",
+      "price": 95900,
+      "rating": 4.8,
+      "review_count": 2095,
+      "result": "selected",
+      "reason": "링크 일치 및 하드게이트 충족"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "Logitech MX Master 3S",
+      "productName": "로지텍 MX 마스터 3S 무선마우스",
+      "brand": null,
+      "model": "3S",
+      "category": "마우스",
+      "eligibility": "pass",
+      "reason": "직접 링크 검증 통과",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/7242698793?itemId=14636426686&vendorItemId=81877949600&q=mx+master+3s&searchId=13539ed22561271&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmfvj2k8",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7242698793&itemId=14636426686&vendorItemId=81877949600&traceid=V0-183-8ab014f75220611c",
+      "rating": 4.8,
+      "review_count": 2095,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/2a64/235c763e7e1395a4c9f6d0863df2e2afdca73686b061bd67982bc337dd40.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "852721687",
+          "rating": 5,
+          "full_text": "안녕하세요. 구매에 도움 되시길 바라며 적어본 내돈내산 후기 입니다! 집에서 글 작업이 많다 보니 마우스는 손목이 편한 제품을 찾게 되더라고요. 그래서 선택한 게 Logitech MX Master 3S 블랙 모델이에요. 기존에 쓰던 마우스보다 확실히 묵직하고 그립감이 안정적이라 처음 잡았을 때부터 다르다 느낌이 있었어요. 클릭 소음이 정말 조용하고 스크롤 휠이 부드러워 문서 작업에 유용했습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/26/6552999922652449381/1b8e170c-7e00-40c3-a3a0-178386acb742.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/26/6552999922652449381/3649afe5-79fb-4c7a-8583-85579c1ab104.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/26/6552999922652449381/46dc7db3-dcd2-46f8-a9ad-e1735e87d4a1.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "853421591",
+          "rating": 5,
+          "full_text": "마우스를 여러 제품 사용해 보다가 이번에 MX 마스터 3S로 교체하게 되었습니다. 가격대가 있는 편이라 고민을 했지만, 실제로 사용해 보니 만족도가 높은 제품이었습니다. 정숙한 클릭감과 가로 스크롤 휠이 특히 유용했고 블루투스 연결도 안정적이었습니다. 다만 무게감은 약간 있는 편입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/28/2410033679684112216/ace1b0ff-1102-4bf9-b1ce-3a09d4a9da50.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/28/2410033679684112216/3941734e-414d-4dfe-8310-e962a8b6bd4a.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/28/2410033679684112216/9d2aaf3d-6303-43de-a6b0-f0fb635c9e64.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "811755077",
+          "rating": 5,
+          "full_text": "로지텍 mx master 3s에 관한 상세리뷰는 유투브에도 넘쳐납니다. 개인적으로 고려했던 사항은 가격과 무게였는데 실제 사용해보니 손목 부담이 줄고 작업 효율이 좋아졌습니다. 무게는 오히려 안정감으로 느껴졌고 장시간 사용에서도 피로가 적었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/7/6290075631843327833/58777c9c-86aa-4ed2-8a3f-74628b88e835.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/7/6290075631843327833/a1b035c9-9cea-4cae-b516-26630ffb398a.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/7/6290075631843327833/360e8b20-b69d-4ee4-a6d0-aa6f268f6c65.jpeg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/7242698793?itemId=14636426686&vendorItemId=81877949600&q=mx+master+3s&searchId=13539ed22561271&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmfvj2k8"
+}

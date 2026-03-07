@@ -1,0 +1,23 @@
+{
+  "job_id": "2026-03-07-1100-kkotsaemchuwi-luffy-004",
+  "current_stage": "nami_draft",
+  "status": "pending",
+  "retry_count": 0,
+  "next_agent": "nami",
+  "blocking_reason": null,
+  "last_error": null,
+  "selected_item": {
+    "numbers": [
+      5,
+      6
+    ]
+  },
+  "artifacts": {
+    "research": "/home/solpi/work/blog-automation/jobs/2026-03-07-1100-kkotsaemchuwi-luffy-004/artifacts/research.json",
+    "validation": "/home/solpi/work/blog-automation/jobs/2026-03-07-1100-kkotsaemchuwi-luffy-004/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/2026-03-07-1100-kkotsaemchuwi-luffy-004/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/2026-03-07-1100-kkotsaemchuwi-luffy-004/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/2026-03-07-1100-kkotsaemchuwi-luffy-004/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-07T13:27:00+09:00"
+}

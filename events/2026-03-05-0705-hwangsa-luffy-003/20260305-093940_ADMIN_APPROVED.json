@@ -1,0 +1,14 @@
+{
+  "run_id": "2026-03-05-0705-hwangsa-luffy-003",
+  "stage": "ADMIN_APPROVED",
+  "status": "done",
+  "from": "admin",
+  "to": "robin",
+  "retry_count": 0,
+  "generated_at": "2026-03-05T09:39:40.531553+09:00",
+  "meta": {
+    "approval_file": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/admin_publish_approval.json",
+    "source": "telegram",
+    "message_id": "307"
+  }
+}

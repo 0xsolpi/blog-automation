@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260307-145711-RLK-94947b",
+  "agent": "ace",
+  "validated_at": "2026-03-07T14:58:10+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8799008506/itemId=25618845333/vendorItemId=92609190784 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZyMI3, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8799008506&itemId=25618845333&vendorItemId=92609190784&traceid=V0-183-401a84444a253aed"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=구스페리 닌텐도 스위치2 강화유리 액정보호필름 2p 세트(페이지제목), brand=null 허용, model=닌텐도 스위치2"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "구스페리 닌텐도 스위치2 강화유리 액정보호필름 2p 세트",
+      "price": 5500,
+      "rating": 4.9,
+      "review_count": 684,
+      "result": "selected",
+      "reason": "링크 일치 및 하드게이트 충족"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "닌텐도 스위치2 강화유리 필름",
+      "productName": "구스페리 닌텐도 스위치2 강화유리 액정보호필름 2p 세트",
+      "brand": null,
+      "model": "닌텐도 스위치2",
+      "category": "액정보호필름",
+      "eligibility": "pass",
+      "reason": "링크 일치 검증 통과",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8799008506?itemId=25618845333&searchId=feed-a9e9fe3cc3294760a9c2ed474b3bdbe1-3.3.37%3Aview_together_ads-P9410967878&vendorItemId=92609190784&sourceType=SDP_ADS&clickEventId=582aaef0-19ea-11f1-9a78-172e275e9ded",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8799008506&itemId=25618845333&vendorItemId=92609190784&traceid=V0-183-401a84444a253aed",
+      "rating": 4.9,
+      "review_count": 684,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2025/05/27/12/7/26bdc84b-a694-4668-b4e6-405746318285.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "849460973",
+          "rating": 5,
+          "full_text": "구스페리 닌텐도 스위치 2 전용 강화유리 액정보호필름 2P 세트는 소중한 새 기기를 스크래치와 충격으로부터 보호하기에 적합했습니다. 2매 구성이라 부착 실패 시 여유가 있고, 투과율과 터치감도 우수해서 화면 선명도 저하가 거의 없었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/19/4539123642031874288/aed455a9-c47c-45bf-b4e8-06acddb56339.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/19/4539123642031874288/64269be9-adeb-4616-9bd2-e1b00bff4683.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/19/4539123642031874288/80ee26c1-6059-49cb-a3ee-90d28ec1fc19.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "846487819",
+          "rating": 5,
+          "full_text": "닌텐도 스위치2 구매와 함께 부착했는데 투명도와 터치감이 좋았고, 2매 세트라 부담 없이 사용할 수 있었습니다. 부착 난이도는 조금 있으나 전반적으로 만족스러운 강화유리 제품입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/745007042607496641/e15f4200-98a7-4960-8b9a-c2415ea9ec60.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/745007042607496641/fc948caa-b2b1-43a6-9f0f-b8bb12bd7bc1.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/745007042607496641/0b9f4d7b-6dea-4fb0-b434-68dc95c28910.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "827311932",
+          "rating": 5,
+          "full_text": "새 기기 액정 보호용으로 선택했는데 부착이 쉽고 선명도가 유지되어 만족했습니다. 9H 경도와 지문 방지 코팅이 체감되며 2매 구성이라 실사용 만족도가 높았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/5/853241335506349648/77634ec2-7386-4ecc-b10c-2eefccd1fa39.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/5/853241335506349648/64a79d88-77cd-4d57-a2bd-28ba16cefc42.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/5/853241335506349648/ceec5415-5bf7-4d76-a6fe-bcc81ac3f0c1.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8799008506?itemId=25618845333&searchId=feed-a9e9fe3cc3294760a9c2ed474b3bdbe1-3.3.37%3Aview_together_ads-P9410967878&vendorItemId=92609190784&sourceType=SDP_ADS&clickEventId=582aaef0-19ea-11f1-9a78-172e275e9ded"
+}

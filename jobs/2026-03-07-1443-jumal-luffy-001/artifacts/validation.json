@@ -1,0 +1,107 @@
+{
+  "job_id": "2026-03-07-1443-jumal-luffy-001",
+  "agent": "ace",
+  "validated_at": "2026-03-07T14:50:30+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "selected_match",
+      "title": "selected=5 검증",
+      "result": "pass",
+      "evidence": "run_id 고정 selected_item_numbers=[5] 기준 처리"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZyyaa, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=201355&itemId=373416&vendorItemId=3000278460&traceid=V0-183-4da5980dd028bbb5"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=코리아보드게임즈 아미고 할리갈리 순발력 게임, brand=null 허용, model=할리갈리(제목기반)"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "코리아보드게임즈 아미고 할리갈리 순발력 게임",
+      "price": 14250,
+      "rating": 4.8,
+      "review_count": 14641,
+      "result": "selected",
+      "reason": "selected=5 직접검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 5,
+      "product": "보드게임(가족형 파티게임)",
+      "productName": "코리아보드게임즈 아미고 할리갈리 순발력 게임, 혼합색상, 1개",
+      "brand": null,
+      "model": "할리갈리",
+      "category": "보드게임",
+      "eligibility": "pass",
+      "reason": "하드게이트 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/201355?itemId=373416&vendorItemId=3000278460",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=201355&itemId=373416&vendorItemId=3000278460&traceid=V0-183-4da5980dd028bbb5",
+      "rating": 4.8,
+      "review_count": 14641,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/f72f/b5d406f6b6a0893a1960ec7ecbe72eaeae0fdbc1c0aa8dac1cddc82e2103.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "854262898",
+          "rating": 5,
+          "full_text": "아이들 집에 있는 시간이 길어지다 보니까 자연스럽게 오늘은 또 뭐 하고 놀지 고민하게 되더라고요. 가족이 같이 할 수 있는 놀이를 찾다가 코리아보드게임즈 아미고 할리갈리 순발력 게임을 선택했습니다. 규칙은 단순한데 시작하면 긴장감이 높고 어른도 재미있게 참여할 수 있어 만족도가 높았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/2227485696866200244/02d53561-9a77-4142-b4da-8af018925638.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/2227485696866200244/86c1aaa6-034c-4648-a836-ee69735f3adf.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/2227485696866200244/d497ac09-8cf5-43cf-940f-ef38ea1b2c49.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "851933363",
+          "rating": 5,
+          "full_text": "겨울 방학이라 아이들과 함께 즐길 수 있는 보드게임을 찾다가 구매했는데 만족스러웠습니다. 규칙이 쉬워 아이들도 금방 익히고, 종을 누르는 타이밍 경쟁 덕분에 집중력과 순발력 놀이로 활용하기 좋았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/24/4909319193307012001/a13325b8-cf5b-447c-9d21-77e0d94078d1.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/24/4909319193307012001/0a979c16-391d-437e-878b-78c704edc0bb.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/24/4909319193307012001/08f8a88d-968c-454c-831c-78025c702fbc.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "847483157",
+          "rating": 5,
+          "full_text": "아이와 집에서 재미있게 놀 수 있는 보드게임을 찾다가 선택했습니다. 규칙이 어렵지 않고, 카드와 종 구성으로 준비가 간편해 가족 게임으로 쓰기 좋았습니다. 반복 플레이에도 지루하지 않아 만족합니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/13/6217888063517287241/7d202671-f57f-4feb-826e-79e368d4b8e9.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/13/6217888063517287241/5a0ed67b-ca1b-4e50-bdc5-ee31b857f5a2.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/13/6217888063517287241/6d05ba83-3be1-47b4-b88c-718c3ecc856f.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 5,
+    "backup": 5
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "/home/solpi/work/agents/agent2-ace/data/handoff/raw/2026-03-07-1443-jumal-luffy-001/2026-03-07_144819_luffy_to_ace.json"
+}

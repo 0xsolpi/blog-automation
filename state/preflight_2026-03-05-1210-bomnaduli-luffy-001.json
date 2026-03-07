@@ -1,0 +1,35 @@
+{
+  "ok": false,
+  "results": [
+    {
+      "file": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank1_picnicmat/wp-ready.md",
+      "ok": false,
+      "issues": [
+        {
+          "type": "raw_markdown_exposed",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "file": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank5_basket/wp-ready.md",
+      "ok": false,
+      "issues": [
+        {
+          "type": "raw_markdown_exposed",
+          "count": 14
+        }
+      ]
+    },
+    {
+      "file": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank1_picnicmat/image_manifest.json",
+      "ok": true,
+      "issues": []
+    },
+    {
+      "file": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank5_basket/image_manifest.json",
+      "ok": true,
+      "issues": []
+    }
+  ]
+}

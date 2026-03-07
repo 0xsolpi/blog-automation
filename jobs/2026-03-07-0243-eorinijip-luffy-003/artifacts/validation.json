@@ -1,0 +1,146 @@
+{
+  "job_id": "2026-03-07-0243-eorinijip-luffy-003",
+  "agent": "ace",
+  "validated_at": "2026-03-07T02:52:15+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "fail",
+  "checklist": [
+    {
+      "id": "C1",
+      "title": "최저가 우선 순차 검증 + price_scan_log",
+      "result": "pass",
+      "evidence": "price_scan_log 10건 기록"
+    },
+    {
+      "id": "C2",
+      "title": "기준 검증(review>=30, rating>=4.0)",
+      "result": "fail",
+      "evidence": "선택 상품 기준 미충족 또는 API 응답 필드 부족"
+    },
+    {
+      "id": "C3",
+      "title": "is_rocket_delivery 기록",
+      "result": "warn",
+      "evidence": "선정 상품 부재로 기록 불가"
+    },
+    {
+      "id": "C4",
+      "title": "리뷰 3개 + 이미지 정책",
+      "result": "fail",
+      "evidence": "기준 충족 상품 미선정으로 리뷰 수집 단계 미진입"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "올메이크 EVA 네이밍 학교 실내화",
+      "price": 4500.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 2,
+      "product": "네임코코 방수네임스티커 실속구성 패키지",
+      "price": 5790.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 3,
+      "product": "말랑베이비 스마일 칭찬스티커 유치원 어린이집 스티커 대용량",
+      "price": 5800.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 4,
+      "product": "집으로프레시 방수 견출지 컬러 스티커",
+      "price": 6180.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 5,
+      "product": "숭람 방수 다용도 라벨 네임 스티커 250P 세트",
+      "price": 7500.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 1,
+      "product": "아이자리 키즈케어 어린이집 낮잠이불 일체형",
+      "price": 27110.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 2,
+      "product": "아띠래빗 양면 사계절 어린이집 낮잠이불 일체형",
+      "price": 37900.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 3,
+      "product": "아이자리 크리미워싱 자수누빔 애착 어린이집 낮잠이불세트 일체형",
+      "price": 40710.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 4,
+      "product": "아리베베 항균 어린이집 사계+E23절 낮잠이불  세트 분리형",
+      "price": 52030.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    },
+    {
+      "rank_by_price": 5,
+      "product": "보떼하우스 사계절용 5-60수 광목 일체형 낮잠이불, 피싱베어 블루",
+      "price": 87800.0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "기준 미충족(리뷰/평점 데이터 부족 또는 임계치 미달)"
+    }
+  ],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "어린이집 네임스티커(방수/의류부착형)",
+      "reason": "최저가 우선 스캔에서 review>=30 & rating>=4.0 상품 미확보",
+      "fail_code": "REVIEW_DATA_INSUFFICIENT"
+    },
+    {
+      "number": 2,
+      "product": "어린이집 낮잠이불 세트(패드+이불+가방)",
+      "reason": "최저가 우선 스캔에서 review>=30 & rating>=4.0 상품 미확보",
+      "fail_code": "REVIEW_DATA_INSUFFICIENT"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 0,
+    "backup": 0
+  },
+  "review_image_fail_count": 3,
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-07-0243-eorinijip-luffy-003/artifacts/research.json"
+}

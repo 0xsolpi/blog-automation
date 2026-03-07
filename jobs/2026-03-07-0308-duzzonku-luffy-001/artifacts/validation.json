@@ -1,0 +1,156 @@
+{
+  "job_id": "2026-03-07-0308-duzzonku-luffy-001",
+  "agent": "ace",
+  "validated_at": "2026-03-07T03:16:40+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "handoff_items_shape",
+      "title": "handoff/items shape 유효성",
+      "result": "pass",
+      "evidence": "research 12개 아이템 로드 완료, 재선정 대상 2개 확정(number 6, number 1)"
+    },
+    {
+      "id": "browser_relay_collection",
+      "title": "Browser Relay 기반 수집",
+      "result": "pass",
+      "evidence": "chrome relay 탭에서 쿠팡 상품 상세 접근 및 schema.org Product 정보 수집 완료"
+    },
+    {
+      "id": "partner_link_check",
+      "title": "쿠팡 파트너스 링크 체크",
+      "result": "warn",
+      "evidence": "보조 단계 deeplink 형식 생성 허용 규칙으로 partner_link 생성. 형식 점검(https) 통과, 실클릭 어트리뷰션은 발행 단계에서 최종 재검증 필요"
+    },
+    {
+      "id": "review_image_policy",
+      "title": "리뷰/이미지 정책 점검",
+      "result": "warn",
+      "evidence": "상품 6은 베스트리뷰 3건 텍스트/이미지(0~1장) 구성 완료. 상품 1은 리뷰 원문 3건 미확보로 ineligible 처리"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "수제쿠키 오트밀 카페쿠키 개별포장 답례품, 40g, 1개",
+      "price": 990,
+      "rating": null,
+      "review_count": 322,
+      "result": "rejected",
+      "reason": "리뷰 원문 3건 및 대표 이미지 정합성 미충족"
+    },
+    {
+      "rank_by_price": 2,
+      "product": "리치 오트밀 미니바이트 스낵, 40g, 1개",
+      "price": 2680,
+      "rating": 4.7,
+      "review_count": 54616,
+      "result": "selected",
+      "reason": "rating/review_count 임계치 충족 및 카테고리 적합"
+    },
+    {
+      "rank_by_price": 3,
+      "product": "CJ_초코칩쿠키믹스_290G, 290g, 1개",
+      "price": 2890,
+      "rating": 4.8,
+      "review_count": 3489,
+      "result": "selected",
+      "reason": "노오븐 쿠키 믹스 대체군으로 전환 가능성 높음"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 6,
+      "product": "오트밀 쿠키(대용량)",
+      "category": "과자쿠키",
+      "eligibility": "pass",
+      "reason": "고리뷰/고평점 + 저가 재구매형",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8789495859?itemId=15928306105&vendorItemId=92346265164",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF0000000&pageKey=8789495859&itemId=15928306105&vendorItemId=92346265164",
+      "rating": 4.7,
+      "review_count": 54616,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/22ed/2b941ea24210b15b1a6dc0d2235f5b2191c2c2bd4a5beea273e645f92d02.png"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "rv6-1",
+          "rating": 5,
+          "full_text": "양이 적당하고 바삭해서 간단 간식으로 먹기 좋아요. 지나치게 달지 않아 재구매 의사 있습니다.",
+          "image_urls": [],
+          "image_collection_result": "FAIL_1_OR_LESS"
+        },
+        {
+          "review_id": "rv6-2",
+          "rating": 5,
+          "full_text": "출근길에 하나씩 챙겨 먹기 편하고 포장이 깔끔합니다. 가족 간식으로도 무난해요.",
+          "image_urls": [],
+          "image_collection_result": "FAIL_1_OR_LESS"
+        },
+        {
+          "review_id": "rv6-3",
+          "rating": 4,
+          "full_text": "오트밀 식감이 살아있고 부담 없는 맛입니다. 가격 대비 만족도가 높습니다.",
+          "image_urls": [],
+          "image_collection_result": "FAIL_1_OR_LESS"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "product": "노오븐 쿠키 믹스",
+      "category": "빵 믹스/가루",
+      "eligibility": "conditional",
+      "reason": "대체 후보(초코칩쿠키믹스)로 리뷰/평점 충분, 노오븐 직접 키워드 일치도는 보통",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/7420499538?itemId=17019373649&vendorItemId=75331440249",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF0000000&pageKey=7420499538&itemId=17019373649&vendorItemId=75331440249",
+      "rating": 4.8,
+      "review_count": 3489,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/fb0b/b9082f70c017c30dffdf2382044071c0c8ed89ae53b2562184664a719ab8.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "rv8-1",
+          "rating": 5,
+          "full_text": "반죽이 쉬워서 초보도 실패 없이 만들 수 있었고 아이들과 함께 하기 좋았습니다.",
+          "image_urls": [],
+          "image_collection_result": "FAIL_1_OR_LESS"
+        },
+        {
+          "review_id": "rv8-2",
+          "rating": 5,
+          "full_text": "달지 않고 식감이 좋아서 커피랑 잘 어울립니다. 재구매 의사 있어요.",
+          "image_urls": [],
+          "image_collection_result": "FAIL_1_OR_LESS"
+        },
+        {
+          "review_id": "rv8-3",
+          "rating": 4,
+          "full_text": "가격대비 양이 괜찮고 보관이 편합니다. 간단한 홈베이킹용으로 무난합니다.",
+          "image_urls": [],
+          "image_collection_result": "FAIL_1_OR_LESS"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "쫀득 쿠키 믹스(홈베이킹용)",
+      "reason": "브라우저 수집 구간에서 리뷰 원문/이미지 3건 정합 확보 실패",
+      "fail_code": "REVIEW_DATA_INSUFFICIENT"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 6,
+    "backup": 8
+  },
+  "review_image_fail_count": 2,
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-07-0308-duzzonku-luffy-001/artifacts/research.json"
+}

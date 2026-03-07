@@ -1,0 +1,74 @@
+{
+  "job_id": "2026-03-07-0402-diet-luffy-002",
+  "agent": "ace",
+  "validated_at": "2026-03-07T09:13:20+09:00",
+  "status": "failed_blocking",
+  "affiliate_rule_check": "fail",
+  "checklist": [
+    {
+      "id": "reselection_from_full12",
+      "title": "research 12개 전체 재선정",
+      "result": "pass",
+      "evidence": "기존 selected(1,6) 고정 해제 후 재선정 후보를 number=3(닭가슴살), number=5(제로 탄산음료)로 재구성"
+    },
+    {
+      "id": "browser_relay_collection",
+      "title": "Browser Relay 기반 상품/리뷰 수집",
+      "result": "warn",
+      "evidence": "브라우저 릴레이 기반 수집 시도는 수행했으나 리뷰 원문 3개+이미지 정책 충족 데이터 확보 실패"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "fail",
+      "evidence": "coupang_product_url 기반 deeplink API 호출 로그 미확보(API 미호출/실패). link.coupang.com 유효 링크 생성 검증 실패"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3개 전문 + 이미지 정책",
+      "result": "fail",
+      "evidence": "선정 후보 모두에서 best_reviews 전문 3건 및 이미지 정책(PASS_2 이상) 충족 실패"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "닭가슴살 큐브/스테이크(간편식) 후보군",
+      "price": 0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "deeplink API 파트너 링크 생성 실패 + 리뷰 원문/이미지 하드게이트 미충족"
+    },
+    {
+      "rank_by_price": 2,
+      "product": "제로 탄산음료(저칼로리 대체음료) 후보군",
+      "price": 0,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "deeplink API 파트너 링크 생성 실패 + 리뷰 원문/이미지 하드게이트 미충족"
+    }
+  ],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 3,
+      "product": "닭가슴살 큐브/스테이크(간편식)",
+      "reason": "partner_link_generated 실패 및 best_reviews/이미지 정책 미충족",
+      "fail_code": "PARTNER_LINK_FAILED"
+    },
+    {
+      "number": 5,
+      "product": "제로 탄산음료(저칼로리 대체음료)",
+      "reason": "best_reviews 3개 전문/이미지 정책 미충족",
+      "fail_code": "REVIEW_DATA_INSUFFICIENT"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 3,
+    "backup": 5
+  },
+  "review_image_fail_count": 2,
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-07-0402-diet-luffy-002/artifacts/research.json"
+}

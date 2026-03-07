@@ -1,0 +1,19 @@
+{
+  "job_id": "2026-03-07-0218-camping-luffy-001",
+  "stage": "robin_publish",
+  "status": "published_with_fixes",
+  "post_id": 290,
+  "post_url": "https://0xsolpi.com/20260307-p290/",
+  "posted_at": "2026-03-07T02:33:21+09:00",
+  "success_criteria": {
+    "post_url_200": true,
+    "body_image_sample_6plus_200": false,
+    "render_no_broken_image": true
+  },
+  "image_sample_results": [
+    {
+      "url": "https://secure.gravatar.com/avatar/b12ec84cd52b655891d22e78e55eba5b38ed9d12f9ef7c385479e0f4e7226d85?s=50&amp;d=mm&amp;r=g",
+      "status_200": true
+    }
+  ]
+}

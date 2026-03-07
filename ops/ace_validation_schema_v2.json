@@ -1,0 +1,172 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ace Validation Artifact v2",
+  "type": "object",
+  "required": [
+    "job_id",
+    "agent",
+    "validated_at",
+    "status",
+    "affiliate_rule_check",
+    "checklist",
+    "price_scan_log",
+    "eligible_products",
+    "ineligible_products",
+    "selected_for_nami",
+    "review_image_fail_count",
+    "source_artifact"
+  ],
+  "properties": {
+    "job_id": { "type": "string" },
+    "agent": { "type": "string", "const": "ace" },
+    "validated_at": { "type": "string" },
+    "status": { "type": "string", "enum": ["completed", "failed_retryable", "failed_blocking"] },
+    "affiliate_rule_check": { "type": "string", "enum": ["pass", "fail"] },
+    "checklist": {
+      "type": "array",
+      "minItems": 4,
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "result", "evidence"],
+        "properties": {
+          "id": { "type": "string" },
+          "title": { "type": "string" },
+          "result": { "type": "string", "enum": ["pass", "fail", "warn"] },
+          "evidence": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "price_scan_log": {
+      "type": "array",
+      "description": "최저가 우선 검증 로그 (오름차순 스캔)",
+      "items": {
+        "type": "object",
+        "required": ["rank_by_price", "product", "price", "rating", "review_count", "result", "reason"],
+        "properties": {
+          "rank_by_price": { "type": "integer", "minimum": 1 },
+          "product": { "type": "string" },
+          "price": { "type": "number" },
+          "rating": { "type": ["number", "null"] },
+          "review_count": { "type": ["integer", "null"] },
+          "result": { "type": "string", "enum": ["selected", "rejected"] },
+          "reason": { "type": "string" }
+        },
+        "additionalProperties": false
+      }
+    },
+    "eligible_products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "number",
+          "product",
+          "productName",
+          "model",
+          "category",
+          "eligibility",
+          "reason",
+          "coupang_verified",
+          "coupang_product_url",
+          "coupang_partner_link",
+          "rating",
+          "review_count",
+          "is_rocket_delivery",
+          "representative_image_urls",
+          "best_reviews"
+        ],
+        "properties": {
+          "number": { "type": "integer" },
+          "product": { "type": "string" },
+          "productName": {
+            "type": "string",
+            "description": "우선순위: (1) 쿠팡 파트너스 API productName (2) API 불가 시 판매페이지 제목 기반 유추값"
+          },
+          "brand": {
+            "type": ["string", "null"],
+            "description": "쿠팡 파트너스 API brand. API 수집 불가 시 null 허용(미수집)"
+          },
+          "model": {
+            "type": "string",
+            "description": "쿠팡 상품 제목 기준 모델명. 제목에 명시 모델명이 없으면 제목 문맥으로 유추한 모델명 허용"
+          },
+          "category": { "type": "string" },
+          "eligibility": { "type": "string", "enum": ["pass", "conditional"] },
+          "reason": { "type": "string" },
+          "coupang_verified": { "type": "boolean", "const": true },
+          "coupang_product_url": { "type": "string", "pattern": "^https://" },
+          "coupang_partner_link": { "type": "string", "pattern": "^https://" },
+          "rating": { "type": "number", "minimum": 4.0 },
+          "review_count": { "type": "integer", "minimum": 30 },
+          "is_rocket_delivery": { "type": ["boolean", "null"] },
+          "representative_image_urls": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "string", "pattern": "^https://" }
+          },
+          "best_reviews": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": ["review_id", "rating", "full_text", "image_urls", "image_collection_result"],
+              "properties": {
+                "review_id": { "type": "string" },
+                "rating": { "type": "number" },
+                "full_text": { "type": "string" },
+                "image_urls": {
+                  "type": "array",
+                  "maxItems": 3,
+                  "items": { "type": "string", "pattern": "^https://" }
+                },
+                "image_collection_result": {
+                  "type": "string",
+                  "enum": ["PASS_3", "PASS_2", "FAIL_1_OR_LESS"]
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "ineligible_products": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["number", "product", "reason", "fail_code"],
+        "properties": {
+          "number": { "type": "integer" },
+          "product": { "type": "string" },
+          "reason": { "type": "string" },
+          "fail_code": {
+            "type": "string",
+            "enum": [
+              "COUPANG_NOT_FOUND",
+              "REVIEW_COUNT_LT_30",
+              "RATING_LT_4",
+              "PARTNER_LINK_FAILED",
+              "REVIEW_DATA_INSUFFICIENT"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "selected_for_nami": {
+      "type": "object",
+      "required": ["primary", "backup"],
+      "properties": {
+        "primary": { "type": "integer" },
+        "backup": { "type": "integer" }
+      },
+      "additionalProperties": false
+    },
+    "review_image_fail_count": { "type": "integer", "minimum": 0 },
+    "source_artifact": { "type": "string" }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,25 @@
+{
+  "run_id": "2026-03-05-0705-hwangsa-luffy-003",
+  "from": "robin",
+  "to": "nere",
+  "generated_at": "2026-03-05T10:40:20+09:00",
+  "post_id": 227,
+  "post_url": "https://0xsolpi.com/20260305-p227/",
+  "status": "publish",
+  "published_at": "2026-03-05T10:40:20+09:00",
+  "used_image_urls": [
+    "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_01.jpg",
+    "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_02.jpg",
+    "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_03.jpg",
+    "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_04.jpg"
+  ],
+  "render_checks": {
+    "post_http_200": true,
+    "raw_markdown_exposure_count": 0,
+    "contains_exact_4_image_urls": true,
+    "image_http_200_count": 4,
+    "affiliate_notice_present": true,
+    "featured_image_id": 230
+  },
+  "failures": []
+}

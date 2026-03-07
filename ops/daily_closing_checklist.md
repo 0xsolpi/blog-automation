@@ -5,6 +5,7 @@
 - 점검자: 네레
 
 ## 1) 파이프라인 상태 (목표 40초)
+- [ ] 세션-파일 동기화 보정 실행 (`scripts/reconcile_zoro_session_done.py`)
 - [ ] run_id 생성/유지 확인
 - [ ] 핸드오프 순서 누락 없음 (luffy→ace→nami→zoro→nere→robin→nere)
 - [ ] 각 핸드오프 메타 필수값 확인 (`run_id`, `from`, `to`, `generated_at`)

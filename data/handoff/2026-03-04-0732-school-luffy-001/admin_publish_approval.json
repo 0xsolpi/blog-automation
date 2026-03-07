@@ -1,0 +1,14 @@
+{
+  "run_id": "2026-03-04-0732-school-luffy-001",
+  "from": "admin",
+  "to": "nere",
+  "generated_at": "2026-03-04T12:00:44+09:00",
+  "approval": {
+    "type": "publish",
+    "status": "approved",
+    "approver": "solpi",
+    "source": "telegram",
+    "message_id": "237",
+    "note": "사장님 업로드 승인"
+  }
+}

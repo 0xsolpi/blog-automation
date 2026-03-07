@@ -43,6 +43,12 @@ checks:
     recommended_for_section: <PASS|FIX>
     pre_purchase_check_section: <PASS|FIX>
     aggressive_cta_absent: <PASS|FIX>
+  image_integrity:
+    relative_path_absent: <PASS|FIX|HOLD>
+    placeholder_absent_or_mapped: <PASS|FIX|HOLD>
+    fabricated_url_absent: <PASS|FIX|HOLD>
+    allowed_domain_only: <PASS|FIX|HOLD>
+    sample_http_200_3plus: <PASS|FIX|HOLD>
 
 annotations:
 - <!-- Zoro: 과장 표현 완화 -->
@@ -66,7 +72,14 @@ handoff_rule:
 ```
 
 ## 운영 규칙 요약
-- PASS: 네레 전달
+- PASS: 네레 전달 (단, image_integrity 5개 전부 PASS일 때만)
 - FIX: 수정요청 + 체크 항목 지정
 - HOLD: 발행 금지 사유 명시 + 즉시 네레 보고
 - 동일 사유 3회 이상 FIX/HOLD: 중단 후 네레 보고
+
+## 이미지 URL 강제 규칙 (조로 게이트)
+- URL 패턴 추정/문자열 조합(`.../wp-content/uploads/...` 수동 생성) 금지
+- 나미 산출물은 아래 중 하나만 허용:
+  1) `{{WP_IMAGE_*}}` placeholder + `placeholder_to_file` 완전 매핑
+  2) 실제 업로드 검증된 URL(샘플 3개 이상 HTTP 200 증거 포함)
+- 위반 시 PASS 금지(HOLD)

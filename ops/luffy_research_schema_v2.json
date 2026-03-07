@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Luffy Research Artifact v2",
+  "type": "object",
+  "required": ["job_id", "agent", "format_lock", "topic", "generated_at", "items"],
+  "properties": {
+    "job_id": { "type": "string" },
+    "agent": { "type": "string", "const": "luffy" },
+    "format_lock": { "type": "string" },
+    "topic": { "type": "string" },
+    "generated_at": { "type": "string" },
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "number",
+          "source",
+          "product_category",
+          "recommended_product",
+          "issue_basis",
+          "trend_basis",
+          "search_metrics",
+          "evidence_url"
+        ],
+        "properties": {
+          "number": { "type": "integer", "minimum": 1 },
+          "source": { "type": "string", "enum": ["naver", "froogle", "youtube", "news"] },
+          "product_category": { "type": "string", "description": "상품 카테고리 (예: 생활가전, IT주변기기, 건강식품)" },
+          "recommended_product": {
+            "type": "string",
+            "description": "에이스가 쿠팡에서 정확히 검색 가능한 수준의 구체 상품명 (모호 표현 금지)"
+          },
+          "issue_basis": {
+            "type": "string",
+            "description": "로빈 작성 참고용 이슈 근거. 한 줄이더라도 정보밀도 높게 작성"
+          },
+          "trend_basis": { "type": "string" },
+          "search_metrics": { "type": "string" },
+          "evidence_url": {
+            "type": "string",
+            "pattern": "^https://",
+            "description": "근거 URL. 추적 가능한 실제 원문 링크"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

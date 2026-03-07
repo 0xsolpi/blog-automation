@@ -1,0 +1,83 @@
+{
+  "job_id": "2026-03-07-0329-hiking-luffy-001",
+  "agent": "ace",
+  "validated_at": "2026-03-07T03:40:20+09:00",
+  "status": "failed_blocking",
+  "affiliate_rule_check": "fail",
+  "checklist": [
+    {
+      "id": "handoff_items_shape",
+      "title": "selected/handoff items shape 확인",
+      "result": "pass",
+      "evidence": "selected_item_numbers=[1,3], items 2건 유효"
+    },
+    {
+      "id": "browser_relay_collection",
+      "title": "Browser Relay 기반 수집",
+      "result": "pass",
+      "evidence": "쿠팡 검색(등산 스틱, 등산 배낭 20L) 및 상품 URL 수집 완료"
+    },
+    {
+      "id": "partner_link_validity",
+      "title": "coupang_partner_link 유효성(link.coupang.com)",
+      "result": "fail",
+      "evidence": "상품 상세 URL만 수집됨. link.coupang.com 유효 파트너 링크 미확보"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3개 전문 + 리뷰이미지 정책",
+      "result": "fail",
+      "evidence": "베스트리뷰 전문 3건 및 이미지 정책 충족 데이터 미확보"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "등산 지팡이 스틱 야외 등산용품 캠핑 산행 필수품 알루미늄 4단 1자형/T자형 2종류",
+      "price": 3610,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "best_reviews/리뷰이미지 정책 미충족"
+    },
+    {
+      "rank_by_price": 2,
+      "product": "4단 등산스틱 일자형 지팡이",
+      "price": 3800,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "파트너 링크 유효성 미확보 + 리뷰 데이터 미충족"
+    },
+    {
+      "rank_by_price": 3,
+      "product": "등산 배낭 20L 검색 상위 상품군",
+      "price": null,
+      "rating": null,
+      "review_count": null,
+      "result": "rejected",
+      "reason": "상품 상세 검증 대비 리뷰/이미지 원문 요건 미충족"
+    }
+  ],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "등산 스틱(초경량 2단)",
+      "reason": "베스트리뷰 3개 전문/이미지 정책 및 파트너 링크 유효성 미충족",
+      "fail_code": "REVIEW_DATA_INSUFFICIENT"
+    },
+    {
+      "number": 3,
+      "product": "등산 배낭(20~30L 당일산행용)",
+      "reason": "베스트리뷰 3개 전문/이미지 정책 및 파트너 링크 유효성 미충족",
+      "fail_code": "PARTNER_LINK_FAILED"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 3
+  },
+  "review_image_fail_count": 2,
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-07-0329-hiking-luffy-001/artifacts/research.json"
+}

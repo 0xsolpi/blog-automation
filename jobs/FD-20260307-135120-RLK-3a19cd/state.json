@@ -1,0 +1,18 @@
+{
+  "job_id": "FD-20260307-135120-RLK-3a19cd",
+  "current_stage": "ace_validation",
+  "status": "failed_blocking",
+  "retry_count": 0,
+  "next_agent": "nere",
+  "blocking_reason": "hard_gate_failed:partner_product_fields",
+  "last_error": null,
+  "selected_item": {
+    "numbers": [
+      1
+    ]
+  },
+  "artifacts": {
+    "validation": "/home/solpi/work/blog-automation/jobs/FD-20260307-135120-RLK-3a19cd/artifacts/validation.json"
+  },
+  "updated_at": "2026-03-07T13:52:00+09:00"
+}

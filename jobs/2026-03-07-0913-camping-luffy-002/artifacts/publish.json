@@ -1,0 +1,39 @@
+{
+  "job_id": "2026-03-07-0913-camping-luffy-002",
+  "stage": "robin_publish",
+  "status": "published",
+  "post_id": 295,
+  "post_url": "https://0xsolpi.com/20260307-p295/",
+  "posted_at": "2026-03-07T09:36:10+09:00",
+  "success_criteria": {
+    "post_url_200": true,
+    "body_image_sample_6plus_200": true,
+    "render_no_broken_image": true
+  },
+  "image_sample_results": [
+    {
+      "url": "https://secure.gravatar.com/avatar/b12ec84cd52b655891d22e78e55eba5b38ed9d12f9ef7c385479e0f4e7226d85?s=50&amp;d=mm&amp;r=g",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/b59a/957f482a54c714ba9e047152d95dfa3eb97eafabd0230a72a8b29800bb22.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202504/23/3938819420104195598/08b67759-9eb1-4754-bd0d-8ae60bbe4c74.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202504/23/3938819420104195598/5da79ab3-0367-43df-8e9d-5e1a079be876.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/154789958590293-1769c79b-c33f-468a-a37a-30efe9f2f76f.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202510/2/5732675800661688875/ca7d7473-5930-429c-bd3d-95357b209b41.jpg",
+      "status_200": true
+    }
+  ]
+}

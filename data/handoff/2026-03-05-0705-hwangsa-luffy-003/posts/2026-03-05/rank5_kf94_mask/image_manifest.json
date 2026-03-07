@@ -1,0 +1,44 @@
+{
+  "run_id": "2026-03-05-0705-hwangsa-luffy-003",
+  "post_slug": "rank5_kf94_mask",
+  "images": [
+    {
+      "key": "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:01",
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_01.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_01.jpg"
+    },
+    {
+      "key": "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:02",
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_02.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_02.jpg"
+    },
+    {
+      "key": "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:03",
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_03.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_03.jpg"
+    },
+    {
+      "key": "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:04",
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_04.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_04.jpg"
+    }
+  ],
+  "final_image_map": {
+    "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:01": {
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_01.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_01.jpg"
+    },
+    "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:02": {
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_02.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_02.jpg"
+    },
+    "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:03": {
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_03.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_03.jpg"
+    },
+    "2026-03-05-0705-hwangsa-luffy-003:rank5_kf94_mask:04": {
+      "local_path": "data/handoff/2026-03-05-0705-hwangsa-luffy-003/posts/2026-03-05/rank5_kf94_mask/images/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_04.jpg",
+      "wp_final_url": "https://0xsolpi.com/wp-content/uploads/2026/03/2026-03-05-0705-hwangsa-luffy-003_rank5_kf94_mask_04.jpg"
+    }
+  }
+}

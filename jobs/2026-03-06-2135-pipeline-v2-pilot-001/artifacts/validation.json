@@ -1,0 +1,46 @@
+{
+  "job_id": "2026-03-06-2135-pipeline-v2-pilot-001",
+  "agent": "ace",
+  "validated_at": "2026-03-06T21:42:37+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "rule_checks": {
+    "contains_eligible_products": true,
+    "high_risk_excluded": true,
+    "commercial_intent_present": true,
+    "policy_notes": "건강기능식품 직접 효능 주장 리스크를 낮추기 위해 생활가전 중심으로 우선 선별"
+  },
+  "eligible_products": [
+    {
+      "number": 4,
+      "product": "가습기(저소음/세척편의형)",
+      "category": "생활가전",
+      "eligibility": "pass",
+      "reason": "환절기 건조 이슈와 직접 연계, 쇼핑 지표 급등(SUDDEN_SPIKE), 구매 전환 의도 높음"
+    },
+    {
+      "number": 3,
+      "product": "공기청정기(원룸/침실형)",
+      "category": "생활가전",
+      "eligibility": "pass",
+      "reason": "실내 공기질 관리 수요와 직접 연계, 계절성 수요 지속, 비교/구매 콘텐츠 적합"
+    }
+  ],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "유산균(장건강/면역 밸런스형)",
+      "reason": "건강효능 표현/의학적 오인 리스크 관리 차원에서 파일럿 우선순위 제외"
+    },
+    {
+      "number": 2,
+      "product": "비타민C(데일리 항산화/면역 케어)",
+      "reason": "건강효능 표현 리스크 및 근거 고도화 필요로 우선 제외"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 4,
+    "backup": 3
+  },
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-06-2135-pipeline-v2-pilot-001/artifacts/research.json"
+}

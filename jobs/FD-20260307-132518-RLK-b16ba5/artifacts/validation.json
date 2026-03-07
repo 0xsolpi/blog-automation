@@ -1,0 +1,104 @@
+{
+  "job_id": "FD-20260307-132518-RLK-b16ba5",
+  "agent": "ace",
+  "validated_at": "2026-03-07T13:25:40+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 검증",
+      "result": "pass",
+      "evidence": "입력 링크 pageKey=8821592139, itemId=25720279442, vendorItemId=84993764945와 수집 상품 동일"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8821592139&itemId=25720279442&vendorItemId=84993764945&traceid=V0-183-2f1ca3fcba09d279, shortenUrl=https://link.coupang.com/a/dZvBCk"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3개 전문 + 이미지 정책",
+      "result": "pass",
+      "evidence": "next-api/review 200 응답, 리뷰 3개 전문 및 각 리뷰 이미지 3장 확보(PASS_3)"
+    },
+    {
+      "id": "browser_relay_collection",
+      "title": "Browser Relay 수집",
+      "result": "pass",
+      "evidence": "링크 직접 진입 후 product/review 수집 완료"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "농심 짜파게티 140g, 10개",
+      "price": 8960,
+      "rating": 4.8,
+      "review_count": 463205,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 모드 링크 완전일치 + 하드게이트 충족"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "농심 짜파게티 140g, 10개",
+      "category": "라면",
+      "eligibility": "pass",
+      "reason": "입력 링크 100% 일치 + 파트너링크/리뷰/이미지 정책 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8821592139?itemId=25720279442&vendorItemId=84993764945&sourceType=gm_crm_oms&subSourceType=gm_crm_gwc1mainbnr_p797_b1003963_c505128&omsPageId=101274&omsPageUrl=101274",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8821592139&itemId=25720279442&vendorItemId=84993764945&traceid=V0-183-2f1ca3fcba09d279",
+      "rating": 4.8,
+      "review_count": 463205,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/825730060763-ca36ceec-5fa8-41b1-a1be-d77ce758779b.png"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "855681392",
+          "rating": 5,
+          "full_text": "농심 올리브 짜파게티입니다.\n이번 수량은 5개들이로 구매했어요~\n\n기존짜파게티가 남아있었습니다. ㅎ\n\n5개들이보다 10개가 보통은\n조금더 가격이 싸더군요 ㅎㅎ\n\n어차필 한번 먹으면 다음번\n먹을걸 준비해야 하니까\n한번에 10개 씩은 사두는걸 추천합니다.\n\n매번 주문하기도 귀찮고\n또 10개씩 사는게 좀더 저렴합니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/6605661863626736683/4440f8b0-65f0-42dd-9d38-737d0beba3a5.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/6605661863626736683/26f286fa-faff-4796-b038-3069814ef361.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/6605661863626736683/8433309b-1183-4f36-81cb-ab47b86d8c99.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "854922881",
+          "rating": 5,
+          "full_text": "농심짜파게티\n\n-농심짜파게티는 오랜 시간 국내에서 큰 사랑을 받아온 짜장 라면의 대표 명작으로 “라면계의 국민 짜장”이라 불릴 만큼 익숙한 맛과 편리함을 갖춘 제품입니다\n\n-봉지를 열면 짜장 특유의 달콤짭짤한 분말스프 향이 먼저 코끝을 자극해 “오늘은 짜파게티!”라는 기대감을 갖게 합니다",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/4/7523834745503257680/1f09768d-f0ab-4b28-9c68-875182297a75.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/4/7523834745503257680/d486e01e-47ed-40d9-a4f7-79c192a47bb7.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/4/7523834745503257680/69eba810-35f0-4cef-8848-daeeeb52eb58.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "854426155",
+          "rating": 5,
+          "full_text": "⭐ 구매동기 ⭐\n\n집에서 간편하게 한 끼를 해결할 수 있는 라면류를 항상 구비해두는 편이라 이번에도 내돈내산으로 짜파게티를 구매하게 되었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/3/2860586707406489631/dcd17c15-3d3c-43bb-9bfb-06e79bc25caf.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/3/2860586707406489631/e9a75a22-a3c1-405c-9412-1a27bd427359.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/3/2860586707406489631/2ff0e98f-08d2-405c-88c2-3cf80e11f078.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8821592139?itemId=25720279442&vendorItemId=84993764945&sourceType=gm_crm_oms&subSourceType=gm_crm_gwc1mainbnr_p797_b1003963_c505128&omsPageId=101274&omsPageUrl=101274"
+}

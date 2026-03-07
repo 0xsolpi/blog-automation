@@ -29,3 +29,15 @@
 - match_confidence (0~1)
 - search_queries_tried[]
 - rejection_reason(optional)
+
+## Self-Improvement 적용 (공통)
+- 작업 시작 전 `.learnings/LEARNINGS.md`, `.learnings/ERRORS.md`, `.learnings/FEATURE_REQUESTS.md`의 미해결 항목을 먼저 확인한다.
+- 아래 상황 발생 시 즉시 기록한다.
+  - 실행/명령 실패, 외부 API/도구 실패 → `ERRORS.md`
+  - 사용자 정정/지식 갭/더 나은 방법 발견 → `LEARNINGS.md`
+  - 현재 불가능한 기능 요청 수신 → `FEATURE_REQUESTS.md`
+- 반복되는 실수(동일/유사 3회 이상)는 해당 규칙을 상위 운영 문서(AGENTS.md/SOUL.md/TOOLS.md)에 승격 제안한다.
+
+## 2026-03-05 업로드 안정화 연동
+- 아이템명/모델명 정규화 시 slug 변경이 발생하면 handoff 메타에 즉시 반영한다.
+- Nami가 생성할 `image_manifest` 경로 체계(run_id/post_slug)를 깨뜨리는 임의 리네이밍 금지.

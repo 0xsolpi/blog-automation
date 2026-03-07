@@ -1,0 +1,23 @@
+{
+  "job_id": "2026-03-07-0243-eorinijip-luffy-003",
+  "current_stage": "nami_draft",
+  "status": "completed",
+  "retry_count": 0,
+  "next_agent": "nami",
+  "blocking_reason": null,
+  "last_error": null,
+  "selected_item": {
+    "numbers": [
+      1,
+      2
+    ]
+  },
+  "artifacts": {
+    "research": "/home/solpi/work/blog-automation/jobs/2026-03-07-0243-eorinijip-luffy-003/artifacts/research.json",
+    "validation": "/home/solpi/work/blog-automation/jobs/2026-03-07-0243-eorinijip-luffy-003/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/2026-03-07-0243-eorinijip-luffy-003/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/2026-03-07-0243-eorinijip-luffy-003/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/2026-03-07-0243-eorinijip-luffy-003/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-07T02:52:15+09:00"
+}

@@ -1,0 +1,29 @@
+{
+  "run_id": "2026-03-05-1210-bomnaduli-luffy-001",
+  "from": "nami",
+  "to": "zoro",
+  "generated_at": "2026-03-05T21:10:30+09:00",
+  "drafts": [
+    {
+      "rank": 1,
+      "title": "봄나들이 돗자리, 요즘 많이 찾는 방수 대형 매트 뭐가 괜찮을까?",
+      "markdown_path": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank1_picnicmat/article.md",
+      "wp_ready_path": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank1_picnicmat/wp-ready.md",
+      "product_name": "까사재클린 피크닉 대형 방수 체크 매트 돗자리, 베이지, 195 x 200 cm",
+      "coupang_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8880508259&itemId=25917179599&vendorItemId=85633964101&traceid=V0-153-aceautogen&subid=ace",
+      "image_manifest": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank1_picnicmat/image_manifest.json"
+    },
+    {
+      "rank": 5,
+      "title": "피크닉 바구니 세트 추천, 요즘 많이 찾는 라탄 보냉 바구니 실사용 후기 포인트",
+      "markdown_path": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank5_basket/article.md",
+      "wp_ready_path": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank5_basket/wp-ready.md",
+      "product_name": "네이쳐리빙 데이지가든 보냉 라탄 피크닉 바구니 + 보냉백, 1세트",
+      "coupang_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6743583101&itemId=15750357746&vendorItemId=82964103549&traceid=V0-153-aceautogen&subid=ace",
+      "image_manifest": "data/handoff/2026-03-05-1210-bomnaduli-luffy-001/posts/2026-03-05/rank5_basket/image_manifest.json"
+    }
+  ],
+  "notes": {
+    "source_file": "/home/solpi/work/agents/agent2-ace/data/handoff/processed/2026-03-05-1210-bomnaduli-luffy-001/2026-03-05_2033_ace_validated.json"
+  }
+}

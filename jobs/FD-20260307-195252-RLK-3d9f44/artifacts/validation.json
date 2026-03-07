@@ -1,0 +1,104 @@
+{
+  "job_id": "FD-20260307-195252-RLK-3d9f44",
+  "agent": "ace",
+  "validated_at": "2026-03-07T19:53:10+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8202565947 vendorItemId=91580775584 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZJmN8, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8202565947&vendorItemId=91580775584&traceid=V0-183-89b6add73b7bfa57"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=무빙큐빅스 대형 삼탠바이미 이동식TV거치대 티비스탠드 삼텐바이미 50인치 55인치 65인치 75인치 호환, brand=null 허용, model=삼탠바이미"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "무빙큐빅스 대형 삼탠바이미 이동식TV거치대 티비스탠드 삼텐바이미 50인치 55인치 65인치 75인치 호환",
+      "price": 110430,
+      "rating": 4.8,
+      "review_count": 269,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "무빙큐빅스 대형 삼탠바이미 이동식TV거치대",
+      "productName": "무빙큐빅스 대형 삼탠바이미 이동식TV거치대 티비스탠드 삼텐바이미 50인치 55인치 65인치 75인치 호환",
+      "brand": null,
+      "model": "삼탠바이미",
+      "category": "TV거치대",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8202565947?vendorItemId=91580775584&sourceType=HOME_GW_PROMOTION&searchId=feed-99dc66cfc1bc4856b50223c2c54228f3-3.33.107%3Agw_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8202565947&vendorItemId=91580775584&traceid=V0-183-89b6add73b7bfa57",
+      "rating": 4.8,
+      "review_count": 269,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/1aa3/0ad849d8b1e0f91ef16707927354d6fd45a1092bcf62dcfd8f32342a458b.png"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "853630465",
+          "rating": 5,
+          "full_text": "✅견고한 지지력과 50인치 티비와의 완벽 호환 저는 이노스 50인치 티비를 거치했는데 흔들림 없이 탄탄하게 잘 지탱해줘서 정말 안심이 되네요! 대형 티비까지 호환되는 제품이라 그런지 프레임 자체가 굉장히 묵직하고 견고해서 거실 한복판에 두어도 불안함이 전혀 없습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/6845093480632326652/44eef335-c69d-4733-88bc-0667530cb262.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/6845093480632326652/e5f6097f-d938-47dd-9a64-8205d46bdbdb.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/6845093480632326652/27f473b2-4932-4712-8ac9-d31d19127100.jpg"
+          ]
+        },
+        {
+          "review_id": "852349498",
+          "rating": 5,
+          "full_text": "저희집 티비가 65인치인데 50인치부터 75인치까지 거치 가능하다고 되어 있어서 충분히 맞겠더라고요. 무엇보다 50kg까지 하중을 버틴다고 해서 안정감 부분이 가장 마음에 들었어요. 실제 설치 후 중심이 잘 잡혀 있어 만족합니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/25/7831838698127204481/7d82c835-fe3a-4437-b51b-25e26b504bce.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/25/7831838698127204481/d24eee60-379b-4f4d-8eb1-a7977e3efd48.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/25/7831838698127204481/4a6bbf29-95d9-40e0-b93e-b2a59219f2c7.jpg"
+          ]
+        },
+        {
+          "review_id": "843198334",
+          "rating": 5,
+          "full_text": "TV를 고정해두고 보는 생활이 답답해 이동식 거치대를 찾다가 선택했습니다. 65인치 기준으로도 안정감이 높고 바퀴 이동과 고정이 모두 우수해 실사용 만족도가 높았습니다. 높이 조절도 가능해 시청 편의성이 좋았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/5/8869526135539041842/d1e8af29-f6d5-4fff-badd-0c07d9e392ab.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/5/8869526135539041842/f6fee062-38f3-4cb4-a9c2-424bdc3e58a2.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/5/8869526135539041842/277073cd-d573-42a9-a8dd-c9cf996b25bc.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8202565947?vendorItemId=91580775584&sourceType=HOME_GW_PROMOTION&searchId=feed-99dc66cfc1bc4856b50223c2c54228f3-3.33.107%3Agw_promotion"
+}

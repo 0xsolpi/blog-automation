@@ -1,0 +1,20 @@
+{
+  "job_id": "2026-03-07-0258-swimmingpool-luffy-002",
+  "current_stage": "ace_validation",
+  "status": "completed",
+  "retry_count": 0,
+  "next_agent": "ace",
+  "blocking_reason": null,
+  "last_error": null,
+  "selected_item": {
+    "numbers": [3,4]
+  },
+  "artifacts": {
+    "research": "/home/solpi/work/blog-automation/jobs/2026-03-07-0258-swimmingpool-luffy-002/artifacts/research.json",
+    "validation": "/home/solpi/work/blog-automation/jobs/2026-03-07-0258-swimmingpool-luffy-002/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/2026-03-07-0258-swimmingpool-luffy-002/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/2026-03-07-0258-swimmingpool-luffy-002/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/2026-03-07-0258-swimmingpool-luffy-002/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-07T03:01:20+09:00"
+}

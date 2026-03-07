@@ -1,0 +1,13 @@
+{
+  "run_id": "2026-03-04-2349-hwangsa-luffy-002",
+  "stage": "ROBIN_PUBLISHING",
+  "status": "in_progress",
+  "from": "nere",
+  "to": "robin",
+  "retry_count": 0,
+  "generated_at": "2026-03-05T01:00:23.451629+09:00",
+  "meta": {
+    "mode": "retry_with_guardrail",
+    "policy": "ops/image_upload_100_guardrail.md"
+  }
+}

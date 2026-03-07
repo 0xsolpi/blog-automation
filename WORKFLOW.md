@@ -3,7 +3,7 @@
 ## 운영 모드
 - `legacy`: 기존 12단계 handoff 중심 운영
 - `v2-event`: run_id 상태파일 + 이벤트 로그 기반 운영 (권장)
-- `autopilot-v1` (기본): 사장님 개입은 `리서치 요청` + `아이템 선택`만. 이후 포스팅 업로드까지 자동.
+- `autopilot-v1` (기본): 선장님 개입은 `리서치 요청` + `아이템 선택`만. 이후 포스팅 업로드까지 자동.
 
 ## 현재 운영 버전(vCurrent) — 12단계 고정
 
@@ -67,12 +67,25 @@
 - Admin 승인 건만 업로드
 - 산출 기대: `robin_to_nere.json`
 - 회수 필수: URL / 게시상태 / 실패여부 / run_id
+- 필수 수행: **WordPress REST API 기반 업로드/발행만 허용**
+  - 미디어: `/wp-json/wp/v2/media`
+  - 글 발행: `/wp-json/wp/v2/posts`
+- 이미지 파일명/키는 반드시 `run_id + post_slug + index` 고유 규칙 사용(충돌 방지)
+- 치환 URL은 Media API 응답 `source_url`만 허용
+- fuzzy 이미지 매칭 금지(정확 key/정확 파일명 1:1 매핑만 허용)
+- 발행 금지 조건: 본문에 `./images/` 또는 `your-domain.com` 또는 markdown raw 잔존
+
+### 금지 규칙(재발 방지)
+- 네레가 워드프레스에서 본문을 직접 작성/발행하지 않는다.
+- 나미 산출물(`nami_to_zoro.json`)과 조로 PASS(`zoro_to_nere.json`)가 없으면 업로드 금지.
+- 사용자 가시 보고/승인요청/결과 메시지는 Telegram 세션으로만 보낸다(webchat 분산 금지).
+- 산출물 누락 시 상태를 `BLOCKED`로 전환하고 Admin 확인을 요청한다.
 
 ## autopilot-v1 고정 순서 (신규 기본)
 **Admin(리서치 요청/아이템 선택) → 루피 → 에이스 → 나미 ↔ 조로(최대 3회 수정루프) → 네레 업로드 → Admin 최종 결과 보고**
 
 > 운영 고정:
-> - 사장님은 선택 이후 중간 동의/개입 없음
+> - 선장님은 선택 이후 중간 동의/개입 없음
 > - 중간 ACK/announce는 사용자 채널 발신 금지
 > - 실패는 내부 재시도 최대 3회 후 `BLOCKED` 1회 보고
 > - PASS + 정책검사 통과 시 즉시 발행

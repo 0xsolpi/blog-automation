@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Pipeline State v2",
+  "type": "object",
+  "required": [
+    "job_id",
+    "current_stage",
+    "status",
+    "retry_count",
+    "next_agent",
+    "artifacts",
+    "updated_at"
+  ],
+  "properties": {
+    "job_id": { "type": "string" },
+    "current_stage": {
+      "type": "string",
+      "enum": [
+        "intake",
+        "luffy_research",
+        "ace_validation",
+        "nami_draft",
+        "zoro_review",
+        "admin_approval",
+        "robin_publish",
+        "done"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "running",
+        "completed",
+        "failed_retryable",
+        "failed_blocking",
+        "waiting_admin"
+      ]
+    },
+    "retry_count": { "type": "integer", "minimum": 0 },
+    "next_agent": {
+      "type": "string",
+      "enum": ["nere", "luffy", "ace", "nami", "zoro", "robin", "admin", "none"]
+    },
+    "blocking_reason": { "type": ["string", "null"] },
+    "last_error": { "type": ["string", "null"] },
+    "selected_item": {
+      "type": ["object", "null"],
+      "properties": {
+        "name": { "type": "string" },
+        "source": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "artifacts": {
+      "type": "object",
+      "required": ["research", "validation", "draft", "final", "publish"],
+      "properties": {
+        "research": { "type": ["string", "null"] },
+        "validation": { "type": ["string", "null"] },
+        "draft": { "type": ["string", "null"] },
+        "final": { "type": ["string", "null"] },
+        "publish": { "type": ["string", "null"] }
+      }
+    },
+    "updated_at": { "type": "string" }
+  },
+  "additionalProperties": true
+}

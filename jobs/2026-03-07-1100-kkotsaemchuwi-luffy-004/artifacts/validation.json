@@ -1,0 +1,164 @@
+{
+  "job_id": "2026-03-07-1100-kkotsaemchuwi-luffy-004",
+  "agent": "ace",
+  "validated_at": "2026-03-07T13:27:00+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, 2건 모두 link.coupang.com landingUrl 생성"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3개 전문 + 이미지 정책",
+      "result": "pass",
+      "evidence": "2개 상품 모두 리뷰 3개 전문 및 각 리뷰 이미지 3장 확보(PASS_3)"
+    },
+    {
+      "id": "browser_relay_collection",
+      "title": "Browser Relay 수집",
+      "result": "pass",
+      "evidence": "상품상세 진입 및 next-api/review 200 확인"
+    },
+    {
+      "id": "handoff_items_shape",
+      "title": "handoff items 유효성",
+      "result": "pass",
+      "evidence": "selected_item_numbers=[5,6], items 2건 유효"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "한일전기 밤하늘고래 양면 전기방석",
+      "price": 12660,
+      "rating": 4.2,
+      "review_count": 852,
+      "result": "selected",
+      "reason": "하드게이트 충족"
+    },
+    {
+      "rank_by_price": 2,
+      "product": "보아르 모노라운드 전기 온풍기 자동회전 온도조절 난방기",
+      "price": 108000,
+      "rating": 5.0,
+      "review_count": 28,
+      "result": "selected",
+      "reason": "하드게이트 충족(conditional review_count)"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 5,
+      "product": "전기방석(사무실/차량 겸용)",
+      "category": "생활가전",
+      "eligibility": "pass",
+      "reason": "리뷰/이미지/파트너링크 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9160525641?itemId=26981932472&vendorItemId=83396122022",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9160525641&itemId=26981932472&vendorItemId=83396122022&traceid=V0-183-587eb48b76655bba",
+      "rating": 4.2,
+      "review_count": 852,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/35620781241205-a53d37e3-06d3-490c-9e41-ffb86a50d463.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "847869079",
+          "rating": 5,
+          "full_text": "⭐️ [한일전기 양면 USB 전기방석 밤하늘고래]() 리뷰 ⭐️\n\n✅ 구매 이유\n겨울철 의자나 소파에 오래 앉아 있을 때 엉덩이·허리 냉기가 느껴져 따뜻하게 사용할 전기방석을 찾다가 선택했습니다. 양면 사용이 가능하고 USB 전원이라 책상·PC 앞, 거실 소파 등 다양한 장소에서 편하게 활용할 수 있을 것 같아 구매했어요.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/14/6217089842699043463/c8b218bb-b199-416f-b8b2-6944ca42c39e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/14/6217089842699043463/1c9690c3-c953-4a17-8366-259a71bd89d6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/14/6217089842699043463/2029763e-6c3f-413f-9d43-0d2ea36b3ba1.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "845889399",
+          "rating": 4,
+          "full_text": "고양이가 창가 해먹에서 자는 걸 너무 좋아해서, 날씨가 추워질수록 감기에 걸리진 않을까 걱정이 컸습니다. 그래서 따뜻하게 보내줄 수 있는 방석을 찾아보다가 이 제품을 선택하게 되었어요.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/696838662631001836/b7b44888-caf8-45ff-a80b-4bbca5a84bb0.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/696838662631001836/f2e7d66e-0906-42b7-a554-2879bf770c1e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/696838662631001836/ea367dea-ec47-4302-a68d-18cad59bf913.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "835189285",
+          "rating": 5,
+          "full_text": "한일전기 ‘밤하늘고래’ 양면 전기방석 사용 후기\n처음 이 전기방석을 받아 들었을 때, 이름부터가 너무 사랑스럽더라고요.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/20/8210869966631000095/0cced851-5cbf-472d-8056-ce1abf4311a5.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/20/8210869966631000095/4dfb49be-29df-4db2-ab34-ed5511d140c0.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/20/8210869966631000095/4156e05f-1da3-4470-a859-240b6e32e1cf.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "product": "전기히터(미니 난방기)",
+      "category": "난방가전",
+      "eligibility": "conditional",
+      "reason": "review_count 28 경계값이나 하드게이트 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9122066394?itemId=26833031743&vendorItemId=93803076662",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9122066394&itemId=26833031743&vendorItemId=93803076662&traceid=V0-183-551b0c5f2b3bd55c",
+      "rating": 5.0,
+      "review_count": 28,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2025/10/13/13/6/ae03adb0-032e-4c84-b649-bf4de1b86ec2.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "827346412",
+          "rating": 5,
+          "full_text": "쿠팡체험단 이벤트로 상품을 무료 제공받아 작성한 리뷰입니다. ▶️ 상품명 : 보아르 모노라운드 전기 온풍기 자동회전 온도조절 난방기, VHET-001WH, 화이트",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/5/4864585288410827336/d29d8666-0d5c-478f-8d5d-c8fb3f60859f.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/5/4864585288410827336/a3af9a8e-f325-4361-b196-bdd6fda72450.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/5/4864585288410827336/c102079a-3860-4c93-a392-bfa8e56aefc2.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "825322028",
+          "rating": 5,
+          "full_text": "좋은기회로 체험하게되었는데요! 보아르 모노라운드 전기온풍기를 사용하면서 가장 먼저 느낀 점은 디자인, 성능, 소음까지 두루 만족스러운 제품이었어요!",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/1/421669364474965967/3bd250e7-4698-4a39-8b61-fb9c21dbfd15.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/1/421669364474965967/f3256a3a-b12c-4ce9-bd93-101398a4fd67.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/1/421669364474965967/1964f7fc-e882-4e41-b4f5-a96b3faf6f88.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "826493194",
+          "rating": 5,
+          "full_text": "요즘 날씨가 너무 추운데 난방비는 부담되고 집이 위풍이 쎄서 한번씩 온풍기 돌리고 아이들 씻고 나오면 추워서 온풍기 틀면 좋더라구요~",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/4/7692141399354330182/f55bc405-3943-4724-8376-c86918d3b37b.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/4/7692141399354330182/6abad682-3a2a-4d29-bb64-4798b80cbae6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/4/7692141399354330182/df409752-9e6e-4374-b1fc-fc4029d6dc4f.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 5,
+    "backup": 6
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "/home/solpi/work/agents/agent2-ace/data/handoff/raw/2026-03-07-1100-kkotsaemchuwi-luffy-004/2026-03-07_112345_luffy_to_ace.json"
+}

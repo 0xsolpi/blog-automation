@@ -1,0 +1,23 @@
+{
+  "job_id": "2026-03-07-0329-hiking-luffy-001",
+  "current_stage": "ace_validation",
+  "status": "failed_blocking",
+  "retry_count": 0,
+  "next_agent": "nere",
+  "blocking_reason": "hard_gate_failed:partner_link_or_best_reviews",
+  "last_error": null,
+  "selected_item": {
+    "numbers": [
+      1,
+      3
+    ]
+  },
+  "artifacts": {
+    "research": "/home/solpi/work/blog-automation/jobs/2026-03-07-0329-hiking-luffy-001/artifacts/research.json",
+    "validation": "/home/solpi/work/blog-automation/jobs/2026-03-07-0329-hiking-luffy-001/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/2026-03-07-0329-hiking-luffy-001/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/2026-03-07-0329-hiking-luffy-001/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/2026-03-07-0329-hiking-luffy-001/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-07T03:40:20+09:00"
+}

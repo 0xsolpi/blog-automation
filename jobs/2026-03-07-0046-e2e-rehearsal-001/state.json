@@ -1,0 +1,29 @@
+{
+  "job_id": "2026-03-07-0046-e2e-rehearsal-001",
+  "current_stage": "nami_fix",
+  "status": "waiting_nami",
+  "retry_count": 1,
+  "next_agent": "nami",
+  "blocking_reason": "QUALITY_GATE_HOLD",
+  "last_error": null,
+  "selected_item": {
+    "name": "종근당건강 락토핏 골드 유산균",
+    "source": "trend_research"
+  },
+  "review_decision": "HOLD",
+  "nami_fix_instructions": [
+    "PLACEHOLDER 제거: IMAGE_PLACEHOLDER 및 PARTNER_LINK_PLACEHOLDER 전부 실제 값으로 치환",
+    "파트너스 링크 규칙 충족: 본문 1회 + CTA 1회 총 2회 삽입",
+    "CTA 문구 중복 금지: 동일 CTA 문구 반복 사용 금지",
+    "validation.json 실패 원인 해소: 리뷰/평점 근거 확인 가능한 제품 또는 근거 확보 후 본문 근거 문장 정합성 재검증",
+    "최종 품질 게이트 재점검: 문체/오타/의미불명 문장 제거 후 재제출"
+  ],
+  "artifacts": {
+    "research": "/home/solpi/work/blog-automation/jobs/2026-03-07-0046-e2e-rehearsal-001/artifacts/research.json",
+    "validation": "/home/solpi/work/blog-automation/jobs/2026-03-07-0046-e2e-rehearsal-001/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/2026-03-07-0046-e2e-rehearsal-001/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/2026-03-07-0046-e2e-rehearsal-001/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/2026-03-07-0046-e2e-rehearsal-001/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-07T00:50:30+09:00"
+}

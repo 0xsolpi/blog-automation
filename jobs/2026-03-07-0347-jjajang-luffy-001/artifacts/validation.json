@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-03-07-0347-jjajang-luffy-001",
+  "agent": "ace",
+  "validated_at": "2026-03-07T03:54:21+09:00",
+  "status": "failed_retryable",
+  "affiliate_rule_check": "fail",
+  "checklist": [
+    {
+      "id": "C1",
+      "title": "최저가 우선 순차 검증 + price_scan_log",
+      "result": "warn",
+      "evidence": "즉시 아티팩트 생성(검증 진행 전)"
+    },
+    {
+      "id": "C2",
+      "title": "기준 검증(review>=30, rating>=4.0)",
+      "result": "warn",
+      "evidence": "검증 대기"
+    },
+    {
+      "id": "C3",
+      "title": "is_rocket_delivery 기록",
+      "result": "warn",
+      "evidence": "검증 대기"
+    },
+    {
+      "id": "C4",
+      "title": "리뷰 3개 + 이미지 정책",
+      "result": "warn",
+      "evidence": "검증 대기"
+    }
+  ],
+  "price_scan_log": [],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 0,
+      "product": "PENDING",
+      "reason": "초기 생성 스텁(검증 진행 예정)",
+      "fail_code": "REVIEW_DATA_INSUFFICIENT"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 0,
+    "backup": 0
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-07-0347-jjajang-luffy-001/artifacts/research.json"
+}

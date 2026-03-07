@@ -1,0 +1,129 @@
+{
+  "job_id": "2026-03-07-0218-camping-luffy-001",
+  "agent": "luffy",
+  "format_lock": "ADMIN_FIXED_12",
+  "topic": "캠핑",
+  "generated_at": "2026-03-07T02:18:45+09:00",
+  "items": [
+    {
+      "number": 1,
+      "source": "naver",
+      "recommended_product": "원터치 캠핑텐트(4인용)",
+      "coupang_search_keyword": "캠핑 원터치 텐트",
+      "issue_basis": "주말 근교 캠핑 수요에서 가장 먼저 결정되는 핵심 장비로 설치 편의성이 구매 전환에 직접 영향",
+      "trend_basis": "캠핑 입문/가족 캠핑 검색과 동반 증가",
+      "search_metrics": "source=trend_cluster_naver, intent=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://search.naver.com/search.naver?query=%EC%BA%A0%ED%95%91+%EC%9B%90%ED%84%B0%EC%B9%98+%ED%85%90%ED%8A%B8"
+    },
+    {
+      "number": 2,
+      "source": "naver",
+      "recommended_product": "캠핑 의자(경량 접이식)",
+      "coupang_search_keyword": "캠핑 접이식 의자",
+      "issue_basis": "저단가·고빈도 소모성 캠핑 장비로 세트 구매 및 추가 구매가 잦음",
+      "trend_basis": "텐트와 함께 준비물 검색 상위 동반 노출",
+      "search_metrics": "source=trend_cluster_naver, intent=high, velocity=FLAT",
+      "evidence_url": "https://search.naver.com/search.naver?query=%EC%BA%A0%ED%95%91+%EC%9D%98%EC%9E%90"
+    },
+    {
+      "number": 3,
+      "source": "naver",
+      "recommended_product": "캠핑 랜턴(LED 충전식)",
+      "coupang_search_keyword": "캠핑 LED 랜턴",
+      "issue_basis": "야간 체류 필수 장비로 안전성·밝기 리뷰에 따른 즉시 구매 전환이 많음",
+      "trend_basis": "야외 숙박형 캠핑 준비물 키워드와 동행",
+      "search_metrics": "source=trend_cluster_naver, intent=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://search.naver.com/search.naver?query=%EC%BA%A0%ED%95%91+%EB%9E%9C%ED%84%B4"
+    },
+    {
+      "number": 4,
+      "source": "froogle",
+      "recommended_product": "캠핑 테이블(롤테이블)",
+      "coupang_search_keyword": "캠핑 롤테이블",
+      "issue_basis": "브랜드/소재/무게 비교가 쉬운 쇼핑형 카테고리로 구매 의도가 높음",
+      "trend_basis": "쇼핑 검색에서 가격비교 활성",
+      "search_metrics": "source=trend_cluster_froogle, intent=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%BA%A0%ED%95%91+%ED%85%8C%EC%9D%B4%EB%B8%94&gprop=froogle"
+    },
+    {
+      "number": 5,
+      "source": "froogle",
+      "recommended_product": "캠핑 아이스박스(대용량)",
+      "coupang_search_keyword": "캠핑 아이스박스",
+      "issue_basis": "캠핑 식재료/음료 보관 수요로 가족 단위 구매 전환이 빠르게 발생",
+      "trend_basis": "봄철 야외활동 증가와 함께 동반 수요",
+      "search_metrics": "source=trend_cluster_froogle, intent=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%BA%A0%ED%95%91+%EC%95%84%EC%9D%B4%EC%8A%A4%EB%B0%95%EC%8A%A4&gprop=froogle"
+    },
+    {
+      "number": 6,
+      "source": "froogle",
+      "recommended_product": "캠핑 버너(휴대용 가스버너)",
+      "coupang_search_keyword": "캠핑 휴대용 버너",
+      "issue_basis": "캠핑 조리의 필수 장비로 안전장치·화력 비교 후 구매하는 패턴이 강함",
+      "trend_basis": "조리용품 카테고리 검색 증가",
+      "search_metrics": "source=trend_cluster_froogle, intent=high, velocity=SUDDEN_SPIKE",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%BA%A0%ED%95%91+%EB%B2%84%EB%84%88&gprop=froogle"
+    },
+    {
+      "number": 7,
+      "source": "youtube",
+      "recommended_product": "차박 매트(차량 맞춤형)",
+      "coupang_search_keyword": "차박 매트",
+      "issue_basis": "차박 후기/세팅 영상 소비 이후 구매되는 전형적 콘텐츠-커머스 카테고리",
+      "trend_basis": "유튜브 차박 세팅 콘텐츠 소비 지속",
+      "search_metrics": "source=trend_cluster_youtube, intent=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%B0%A8%EB%B0%95+%EB%A7%A4%ED%8A%B8&gprop=youtube"
+    },
+    {
+      "number": 8,
+      "source": "youtube",
+      "recommended_product": "캠핑 화로대(접이식)",
+      "coupang_search_keyword": "캠핑 접이식 화로대",
+      "issue_basis": "실사용 리뷰에서 내구/세척편의 비교가 강해 구매 전환에 직접 연결",
+      "trend_basis": "바베큐/불멍 콘텐츠와 동반 증가",
+      "search_metrics": "source=trend_cluster_youtube, intent=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%BA%A0%ED%95%91+%ED%99%94%EB%A1%9C%EB%8C%80&gprop=youtube"
+    },
+    {
+      "number": 9,
+      "source": "youtube",
+      "recommended_product": "캠핑 수납박스(폴딩형)",
+      "coupang_search_keyword": "캠핑 폴딩 수납박스",
+      "issue_basis": "짐 정리/차량 적재 효율 문제를 해결해 재구매 및 추가구매가 잦은 품목",
+      "trend_basis": "캠핑 짐 정리 콘텐츠에서 반복 노출",
+      "search_metrics": "source=trend_cluster_youtube, intent=medium, velocity=FLAT",
+      "evidence_url": "https://trends.google.com/trends/explore?geo=KR&hl=ko&q=%EC%BA%A0%ED%95%91+%EC%88%98%EB%82%A9%EB%B0%95%EC%8A%A4&gprop=youtube"
+    },
+    {
+      "number": 10,
+      "source": "news",
+      "recommended_product": "주말 캠핑 입문 세트(텐트+의자+랜턴)",
+      "coupang_search_keyword": "캠핑 입문 세트",
+      "issue_basis": "주말 나들이/캠핑 관련 기사 노출 시 입문 장비 세트 구매 비중 상승",
+      "trend_basis": "야외활동 이슈와 연동된 준비물 수요 확대",
+      "search_metrics": "source=google_news_rss_24h, outing_signal=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://news.google.com/rss/search?q=%EC%A3%BC%EB%A7%90+%EC%BA%A0%ED%95%91&hl=ko&gl=KR&ceid=KR:ko"
+    },
+    {
+      "number": 11,
+      "source": "news",
+      "recommended_product": "캠핑 안전용품(소화기/랜턴/멀티툴)",
+      "coupang_search_keyword": "캠핑 안전용품",
+      "issue_basis": "캠핑 안전사고/주의 보도 시 안전 장비 사전 구매 수요가 급증",
+      "trend_basis": "안전 키워드 결합 시 즉시성 구매 증가",
+      "search_metrics": "source=google_news_rss_24h, safety_signal=high, velocity=SUDDEN_SPIKE",
+      "evidence_url": "https://news.google.com/rss/search?q=%EC%BA%A0%ED%95%91+%EC%95%88%EC%A0%84&hl=ko&gl=KR&ceid=KR:ko"
+    },
+    {
+      "number": 12,
+      "source": "news",
+      "recommended_product": "캠핑 조리도구 세트(버너/코펠/집게)",
+      "coupang_search_keyword": "캠핑 조리도구 세트",
+      "issue_basis": "캠핑 먹거리/바베큐 관련 콘텐츠 이슈에 따라 조리 장비의 동반 구매가 발생",
+      "trend_basis": "캠핑 식문화 기사와 장비 수요 동행",
+      "search_metrics": "source=google_news_rss_24h, food_camp_signal=high, velocity=STEADY_GROWTH",
+      "evidence_url": "https://news.google.com/rss/search?q=%EC%BA%A0%ED%95%91+%EB%B0%94%EB%B2%A0%ED%81%90&hl=ko&gl=KR&ceid=KR:ko"
+    }
+  ]
+}

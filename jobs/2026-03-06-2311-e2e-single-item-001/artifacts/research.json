@@ -1,0 +1,29 @@
+{
+  "job_id": "2026-03-06-2311-e2e-single-item-001",
+  "schema": "luffy_research_schema_v2",
+  "agent": "luffy",
+  "generated_at": "2026-03-06T23:11:30+09:00",
+  "topic": "로베라 큐블 실내자전거",
+  "items": [
+    {
+      "number": 1,
+      "source": "manual_test",
+      "product_category": "실내운동기구 > 실내자전거",
+      "recommended_product": "로베라 큐블 실내자전거",
+      "issue_basis": "야외 활동이 제한되는 계절(한파·미세먼지·장마)과 체중 관리 수요가 겹칠 때, 소음 부담이 낮고 공간 점유가 작은 홈트 장비의 전환율이 높습니다. 특히 실내자전거 카테고리는 유산소 운동 목적이 명확해 구매 의사결정이 빠르며, 조립 난이도·소음·안정성·AS를 비교하는 검색 패턴이 반복됩니다. 로베라 큐블 실내자전거는 '원룸/아파트 실내 사용'과 '초보자 홈트 입문' 문맥에서 노출되기 쉬운 상품명 구조를 가지고 있어 쿠팡 검색 진입성이 높고, 후기 기반 전환(소음/내구/안장 체감)에도 유리합니다.",
+      "trend_basis": "단건 E2E 파일럿(수동 지정 아이템) 기준으로, 계절성 실내운동 니즈와 홈트 카테고리의 상시 수요를 반영",
+      "search_metrics": {
+        "mode": "manual_test_single_item",
+        "conversion_potential": "high",
+        "commerce_intent_signal": "review/compare/price-check",
+        "velocity": "STEADY_GROWTH"
+      },
+      "evidence": [
+        {
+          "type": "coupang_search",
+          "url": "https://www.coupang.com/np/search?component=&q=%EB%A1%9C%EB%B2%A0%EB%9D%BC+%ED%81%90%EB%B8%94+%EC%8B%A4%EB%82%B4%EC%9E%90%EC%A0%84%EA%B1%B0"
+        }
+      ]
+    }
+  ]
+}

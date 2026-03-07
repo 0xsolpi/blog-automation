@@ -1,0 +1,29 @@
+{
+  "run_id": "2026-03-04-0732-school-luffy-001",
+  "stage": "ADMIN_APPROVED",
+  "status": "done",
+  "from": "admin",
+  "to": "robin",
+  "retry_count": 0,
+  "updated_at": "2026-03-04T12:00:44.876232+09:00",
+  "meta": {
+    "approval_file": "data/handoff/2026-03-04-0732-school-luffy-001/admin_publish_approval.json",
+    "source": "telegram",
+    "message_id": "237"
+  },
+  "history": [
+    {
+      "stage": "ADMIN_APPROVED",
+      "status": "done",
+      "from": "admin",
+      "to": "robin",
+      "retry_count": 0,
+      "at": "2026-03-04T12:00:44.876232+09:00",
+      "meta": {
+        "approval_file": "data/handoff/2026-03-04-0732-school-luffy-001/admin_publish_approval.json",
+        "source": "telegram",
+        "message_id": "237"
+      }
+    }
+  ]
+}
