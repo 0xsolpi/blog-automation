@@ -1,0 +1,111 @@
+{
+  "job_id": "FD-20260308-203640-SNS-9b5e79",
+  "agent": "ace",
+  "trigger": "sns",
+  "validated_at": "2026-03-08T20:37:30+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 9,
+  "input_link": "https://www.coupang.com/vp/products/4792422817?itemId=6142332578&vendorItemId=73438575684&sourceType=cmgoms&subSourceType=cmgoms&omsPageId=164559&omsPageUrl=164559",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=4792422817 itemId=6142332578 vendorItemId=73438575684 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0nUTi, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=4792422817&itemId=6142332578&vendorItemId=73438575684&traceid=V0-183-a619a6a80279f807"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=국내산 봄동, 500g, 1봉 / brand=null 허용 / model=500g 1봉"
+    },
+    {
+      "id": "relaxed_review_gate",
+      "title": "완화모드 리뷰/이미지 부족 경고 처리",
+      "result": "pass",
+      "evidence": "picked_reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "국내산 봄동, 500g, 1봉",
+      "price": 2320,
+      "rating": 4.6,
+      "review_count": 20138,
+      "result": "selected",
+      "reason": "sns direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "국내산 봄동, 500g, 1봉",
+      "productName": "국내산 봄동, 500g, 1봉",
+      "brand": null,
+      "model": "500g 1봉",
+      "category": "채소",
+      "eligibility": "pass",
+      "reason": "링크일치/deeplink 통과, 완화모드 적용",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/4792422817?itemId=6142332578&vendorItemId=73438575684&sourceType=cmgoms&subSourceType=cmgoms&omsPageId=164559&omsPageUrl=164559",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=4792422817&itemId=6142332578&vendorItemId=73438575684&traceid=V0-183-a619a6a80279f807",
+      "rating": 4.6,
+      "review_count": 20138,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/16999061567155-5b0dc2fc-ac2b-4bc1-a9ee-5f983ccd17f3.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "856319211",
+          "rating": 5,
+          "full_text": "요즘 봄동 비빔밥 유행을 보고 구매했는데 500g 구성 대비 신선도가 좋고 달큰한 맛이 만족스러웠다는 리뷰입니다. 겉절이와 비빔밥 활용이 좋다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/1136239376387424719/59bc0885-95c0-48b1-a35f-8e2022fbd069.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/1136239376387424719/a163f8fe-e127-4a4c-90aa-83f3d8272021.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/1136239376387424719/0591d187-9dc9-484c-81ca-df17670e6249.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "856180154",
+          "rating": 5,
+          "full_text": "제철 봄동으로 겉절이를 만들기 좋고 양이 푸짐하며 신선하다는 후기입니다. 단맛과 아삭함이 좋고 반복 구매 의사가 있다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/2014993062794201310/3d795076-380a-49bf-9e52-1265b0dd3d48.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/2014993062794201310/14d9526a-b296-4d58-bea9-4ac6908cc087.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/2014993062794201310/ec50dfb6-1db4-4ecb-99e9-f570d806be89.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "856025866",
+          "rating": 5,
+          "full_text": "신선도와 달큰한 맛이 좋고 겉절이/된장국 활용도가 높다는 리뷰입니다. 손질이 비교적 수월하고 가성비가 좋다는 점이 언급됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/7652936368252469447/a49ee533-66a8-4f6b-92ce-cb8da63cd9c7.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/7652936368252469447/f7ff71cb-e3d4-4d19-b637-f91038727967.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/7652936368252469447/20202484-6850-4657-bc34-3f12e50ea519.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "warnings": [],
+  "source_artifact": "direct_mode:sns.https://www.coupang.com/vp/products/4792422817?itemId=6142332578&vendorItemId=73438575684&sourceType=cmgoms&subSourceType=cmgoms&omsPageId=164559&omsPageUrl=164559"
+}

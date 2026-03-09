@@ -1,0 +1,43 @@
+{
+  "job_id": "2026-03-08-1943-hwanjeolgi-luffy-001",
+  "stage": "robin_publish",
+  "status": "published",
+  "post_id": 468,
+  "post_url": "https://0xsolpi.com/20260308-p468/",
+  "posted_at": "2026-03-08T19:56:36+09:00",
+  "category_id": 1,
+  "featured_media_id": 467,
+  "featured_image_url": "https://0xsolpi.com/wp-content/uploads/2026/03/feat_v2j28s25.png",
+  "success_criteria": {
+    "post_url_200": true,
+    "body_image_sample_6plus_200": true,
+    "render_no_broken_image": true,
+    "featured_image_200": true
+  },
+  "image_sample_results": [
+    {
+      "url": "https://secure.gravatar.com/avatar/b12ec84cd52b655891d22e78e55eba5b38ed9d12f9ef7c385479e0f4e7226d85?s=50&amp;d=mm&amp;r=g",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/64f2/ffc4f71a9b44aa8b7129e94616b5f63b087ce5040e36af9bf241dabd7c06.png",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/2926404569850503102/c1e3c1a2-e7b2-4145-a21b-4f67faa9c95f.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/21/896157954171094483/0736946b-b4ad-48a2-8b60-451255fb6a6c.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/25/6061048471622983185/120038ce-6923-44c5-81e8-ba5cd797c165.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/2926404569850503102/aa8ba46c-b8c0-4911-b93d-7751a4603c98.jpg",
+      "status_200": true
+    }
+  ]
+}

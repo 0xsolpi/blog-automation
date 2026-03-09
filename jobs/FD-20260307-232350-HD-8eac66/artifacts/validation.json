@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260307-232350-HD-8eac66",
+  "agent": "ace",
+  "trigger": "ㅎㄷ",
+  "validated_at": "2026-03-07T23:24:30+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 3,
+  "input_link": "https://www.coupang.com/vp/products/9160567225?vendorItemId=94139204404&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107:gw_promotion",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=9160567225 vendorItemId=94139204404 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZRaCs, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9160567225&vendorItemId=94139204404&traceid=V0-183-49a0c565c58ef370"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=Kipnos 높이조절 이동식 3단 이동식침대테이블 사이드테이블 쇼파테이블 보조테이블 쇼파사이드테이블 미니테이블 티테이블 커피테이블, brand=null 허용, model=이동식 3단 이동식침대테이블"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "Kipnos 높이조절 이동식 3단 이동식침대테이블",
+      "price": 22050,
+      "rating": 4.7,
+      "review_count": 390,
+      "result": "selected",
+      "reason": "ㅎㄷ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "Kipnos 높이조절 이동식 3단 이동식침대테이블",
+      "productName": "Kipnos 높이조절 이동식 3단 이동식침대테이블 사이드테이블 쇼파테이블 보조테이블 쇼파사이드테이블 미니테이블 티테이블 커피테이블",
+      "brand": null,
+      "model": "이동식 3단 이동식침대테이블",
+      "category": "사이드테이블",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9160567225?vendorItemId=94139204404&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107:gw_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9160567225&vendorItemId=94139204404&traceid=V0-183-49a0c565c58ef370",
+      "rating": 4.7,
+      "review_count": 390,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/ae7d/e09c907ab80a1ba996fc77db2d37729b1d73cff1ef691896dc2198d83027.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "837273393",
+          "rating": 5,
+          "full_text": "엄마 쇼파테이블로 Kipnos 높이조절 이동식 3단 이동식 침대테이블을 주문해드렸어요. 쇼파 생활 동선에 맞춰 사용하기 좋고 높이 조절, 이동 바퀴, 하단 수납으로 실사용 편의성이 높았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/30/5709456180940329750/01f1ba33-f03b-4802-84d8-8a1ad8d59dcc.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/30/5709456180940329750/2e1083db-401b-41f1-9950-01e3ef777d58.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/30/5709456180940329750/3eea361c-27ac-4d43-95e0-2f9c5e575100.jpg"
+          ]
+        },
+        {
+          "review_id": "837015788",
+          "rating": 4,
+          "full_text": "내돈내산 기준 조립 과정에서 다소 번거로움이 있었지만 완성 후 사용성은 만족스러웠습니다. 가격 대비 안정감과 실사용 편의가 괜찮아 가성비 측면에서 긍정 평가입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/8624817138983539073/d23fa723-11d5-46f6-8df5-bd01a5172461.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/8624817138983539073/d8aa7727-5fae-4345-a79f-67b0a4ffe643.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/8624817138983539073/0bded798-0ce1-4579-bb93-7e549753bafe.jpg"
+          ]
+        },
+        {
+          "review_id": "811993785",
+          "rating": 5,
+          "full_text": "쇼파 작업용 테이블로 구매했으며 조립이 간단하고 수납공간 활용도가 높았다는 후기입니다. 높낮이 조절과 이동 바퀴로 공간 활용이 좋아 전반 만족도가 높습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/7/8323748015996089631/5573f364-dfcd-4b88-9610-f136c923908e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/7/8323748015996089631/aced2599-b7c9-4fe3-ad6a-3d92de0cb35a.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/7/8323748015996089631/60827666-4dbc-405c-9dc8-71928fd55db2.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㅎㄷ.https://www.coupang.com/vp/products/9160567225?vendorItemId=94139204404&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107:gw_promotion"
+}

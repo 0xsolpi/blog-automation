@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260308-025446-RLK-e3da42",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T02:55:10+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/8705356815?itemId=25281389419&vendorItemId=3414864466&sourceType=gm_crm_sssp&subSourceType=gm_crm_rblbnr",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8705356815 itemId=25281389419 vendorItemId=3414864466 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZU25O, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8705356815&itemId=25281389419&vendorItemId=3414864466&traceid=V0-183-c8b63318b5a808f5"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=요넥스 배드민턴 라켓 2p + 케이스 랜덤발송, brand=null 허용, model=2p + 케이스 랜덤발송"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "요넥스 배드민턴 라켓 2p + 케이스 랜덤발송",
+      "price": 51490,
+      "rating": 4.7,
+      "review_count": 2506,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "요넥스 배드민턴 라켓 2p + 케이스 랜덤발송",
+      "productName": "요넥스 배드민턴 라켓 2p + 케이스 랜덤발송",
+      "brand": null,
+      "model": "2p + 케이스 랜덤발송",
+      "category": "배드민턴 라켓",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8705356815?itemId=25281389419&vendorItemId=3414864466&sourceType=gm_crm_sssp&subSourceType=gm_crm_rblbnr",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8705356815&itemId=25281389419&vendorItemId=3414864466&traceid=V0-183-c8b63318b5a808f5",
+      "rating": 4.7,
+      "review_count": 2506,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/97033124997953-b5b102f3-6cbc-4db2-9402-561003381c1e.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "845976982",
+          "rating": 5,
+          "full_text": "> > 장점 :\n요넥스 배드민턴 라켓 세트는 2개의 라켓을 한 번에 구성해 주는 가성비 좋은 패키지입니다. 친구·가족과 함께 바로 배드민턴을 즐기거나 라켓이 마모되었을 때 예비용으로 사용하기에 적합해요. 요넥스 고유의 제조 기술력으로 가벼운 무게와 균형 잡힌 밸런스가 보장되어 초보자부터 체육 활동을 자주 하는 분들까지 폭넓게 활용 가능한 점이 큰 장점입니다. 기본 제공되는 케이스가 함께 있어 보관·이동이 편리하고, 무게나 그립감이 부담스럽지 않아 첫 라켓으로도 부담 없이 선택할 수 있습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/9126658232622662989/338bc5ee-4996-49ae-994c-11d754bbe95e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/9126658232622662989/4482115c-89b8-4477-a78c-2c9293aa353d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/11/9126658232622662989/86b894cf-de99-406b-9486-81acef7e2a99.jpg"
+          ]
+        },
+        {
+          "review_id": "853773124",
+          "rating": 5,
+          "full_text": "배드민턴을 처음 시작하면서 어떤 라켓을 사야 할지 고민하다가, 워낙 많이 쓰는 브랜드라고 해서 요넥스로 선택했어요. 초보자라 스펙은 잘 모르지만 실제로 쳐보니 무겁지 않고 손에 잘 잡혀서 처음 쓰기 부담이 없었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/3373428373003539235/6f911a94-df5e-4cb5-8e83-eaab4cdfa6d6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/3373428373003539235/6e800779-c14b-4175-a08e-1e79ffa8befb.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/3373428373003539235/c94e8b3f-7838-4c4a-98f1-aab8d9bfa914.jpg"
+          ]
+        },
+        {
+          "review_id": "757558577",
+          "rating": 5,
+          "full_text": "8살 아이가 배드민턴에 관심을 보여 요넥스 라켓을 사용했는데 가볍고 그립감이 좋아 초등학생도 사용하기 편했습니다. 가족 취미용으로 만족스럽다는 후기입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/25/4448435643716620956/3035dadd-4a50-47d7-97a3-c83c71fb6bf7.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/25/4448435643716620956/285f5059-9d05-479d-a143-4c06f34338ec.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/25/4448435643716620956/6b782362-114c-4186-98f5-b4b970cb088c.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8705356815?itemId=25281389419&vendorItemId=3414864466&sourceType=gm_crm_sssp&subSourceType=gm_crm_rblbnr"
+}

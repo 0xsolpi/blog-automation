@@ -1,0 +1,110 @@
+{
+  "job_id": "FD-20260309-175546-RLK-cde190",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-09T17:56:40+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/8384928020?vendorItemId=91250909561&sourceType=HOME_GW_PROMOTION&searchId=feed-a0a9e9a500a34ec9aaa645b021789e01-3.33.107%3Agw_promotion",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8384928020 vendorItemId=91250909561 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0VsBs, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8384928020&vendorItemId=91250909561&traceid=V0-183-fe747342b25d0769"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=포지타노 레몬 캔디 이탈리아 일마레디솔레 대용량 사탕 100개(개별포장), brand=null 허용, model=100개(개별포장)"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "포지타노 레몬 캔디 이탈리아 일마레디솔레 대용량 사탕 100개(개별포장)",
+      "price": 12670,
+      "rating": 4.5,
+      "review_count": 975,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "포지타노 레몬 캔디 이탈리아 일마레디솔레 대용량 사탕 100개(개별포장)",
+      "productName": "포지타노 레몬 캔디 이탈리아 일마레디솔레 대용량 사탕 100개(개별포장)",
+      "brand": null,
+      "model": "100개(개별포장)",
+      "category": "캔디",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8384928020?vendorItemId=91250909561&sourceType=HOME_GW_PROMOTION&searchId=feed-a0a9e9a500a34ec9aaa645b021789e01-3.33.107%3Agw_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8384928020&vendorItemId=91250909561&traceid=V0-183-fe747342b25d0769",
+      "rating": 4.5,
+      "review_count": 975,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/6e8f/5321da0029cfc8b6e9189ed24634dd3e568f7cf73721c4ee3ab857ef216d.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "825581691",
+          "rating": 5,
+          "full_text": "레몬 사탕을 자주 먹는 입장에서 대용량 구성과 개별포장 편의성이 좋았고, 맛은 단맛이 먼저 오고 레몬 풍미가 뒤따르는 타입이라는 상세 후기입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/2/8654976169172397266/a4767d40-3e28-45c1-aa7e-60708f1af2b1.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/2/8654976169172397266/bfc2576c-aff4-48c0-8407-6568569b9710.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/2/8654976169172397266/0946344c-acef-4cf4-93c9-fb10175f7c71.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "845149451",
+          "rating": 5,
+          "full_text": "100개 대용량과 개별포장으로 보관/휴대가 편하고, 상큼한 레몬향과 균형 잡힌 단맛이 만족스럽다는 후기입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/9/6895242258567155594/baae2788-10b6-4207-a0c5-7bbf182ab741.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/9/6895242258567155594/22be3ed3-0f69-4d4c-844d-031a764ed90e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/9/6895242258567155594/df33e92c-ae9c-4cf9-adfb-18c2bd1a8898.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "717222983",
+          "rating": 5,
+          "full_text": "시험기간 집중력 보조용으로 구매해 상큼한 맛과 개별포장 휴대성이 좋았다는 후기입니다. 기분 전환 간식으로 활용도가 높다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202505/9/5932368163050971727/e67df631-d473-4aad-87e1-fd8d1d27a484.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202505/9/5932368163050971727/fce0b0ed-ac56-41e2-b59c-8c9e125f0fbe.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202505/9/5932368163050971727/bd903b3e-5199-474d-aa19-89a5227f2799.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8384928020?vendorItemId=91250909561&sourceType=HOME_GW_PROMOTION&searchId=feed-a0a9e9a500a34ec9aaa645b021789e01-3.33.107%3Agw_promotion"
+}

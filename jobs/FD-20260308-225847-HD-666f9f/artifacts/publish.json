@@ -1,0 +1,43 @@
+{
+  "job_id": "FD-20260308-225847-HD-666f9f",
+  "stage": "robin_publish",
+  "status": "published",
+  "post_id": 491,
+  "post_url": "https://0xsolpi.com/20260308-p491/",
+  "posted_at": "2026-03-08T23:05:43+09:00",
+  "category_id": 3,
+  "featured_media_id": 490,
+  "featured_image_url": "https://0xsolpi.com/wp-content/uploads/2026/03/feat_s44jf_8y.jpg",
+  "success_criteria": {
+    "post_url_200": true,
+    "body_image_sample_6plus_200": true,
+    "render_no_broken_image": true,
+    "featured_image_200": true
+  },
+  "image_sample_results": [
+    {
+      "url": "https://secure.gravatar.com/avatar/b12ec84cd52b655891d22e78e55eba5b38ed9d12f9ef7c385479e0f4e7226d85?s=50&amp;d=mm&amp;r=g",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/81a2/5506341cc2d40aa90b284da325a12da3ecb3367da20ad34c7c4c191142ae.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202510/14/5230612738279175819/7138fc11-7adf-4231-a139-d6f9f610eee2.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/24/4471826518496582627/5f9de827-8a19-4409-b089-4d93e8edda63.jpg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/20/6701444438137922163/d81db443-61b9-40bc-aff4-4267b25350c5.jpeg",
+      "status_200": true
+    },
+    {
+      "url": "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202510/14/5230612738279175819/2da72749-8419-4b04-8655-372e946fce0a.jpg",
+      "status_200": true
+    }
+  ]
+}

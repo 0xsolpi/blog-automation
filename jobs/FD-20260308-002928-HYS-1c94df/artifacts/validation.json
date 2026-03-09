@@ -1,0 +1,90 @@
+{
+  "job_id": "FD-20260308-002928-HYS-1c94df",
+  "agent": "ace",
+  "trigger": "ㅎㅇㅅ",
+  "validated_at": "2026-03-08T00:30:20+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 9,
+  "input_link": "https://coupang.com/vp/products/9409933567?itemId=27959012695&vendorItemId=94917080581&q=두바이%20찰떡%20파이&searchId=4b8bf5e53831095&sourceType=search&itemsCount=35&searchRank=2&rank=2&traceId=mmghad88",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=9409933567 itemId=27959012695 vendorItemId=94917080581 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZS7sH, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9409933567&itemId=27959012695&vendorItemId=94917080581&traceid=V0-183-5bd1bc2e5104c712"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=명가 찰떡파이 두쫀쿠 두바이ST 피스타치오맛 300g, brand=null 허용, model=두바이ST 피스타치오맛 300g"
+    },
+    {
+      "id": "relaxed_review_gate",
+      "title": "완화모드 리뷰/이미지 부족 경고 처리",
+      "result": "warn",
+      "evidence": "best_reviews_count_below_3_relaxed_allowed, review_image_total_below_6_relaxed_allowed"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "명가 찰떡파이 두쫀쿠 두바이ST 피스타치오맛 300g",
+      "price": 7980,
+      "rating": 5.0,
+      "review_count": 8,
+      "result": "selected",
+      "reason": "ㅎㅇㅅ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "명가 찰떡파이 두쫀쿠 두바이ST 피스타치오맛 300g",
+      "productName": "명가 찰떡파이 두쫀쿠 두바이ST 피스타치오맛 300g",
+      "brand": null,
+      "model": "두바이ST 피스타치오맛 300g",
+      "category": "간식",
+      "eligibility": "pass",
+      "reason": "링크일치/deeplink 통과, 완화모드 경고 허용",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9409933567?itemId=27959012695&vendorItemId=94917080581&q=%EB%91%90%EB%B0%94%EC%9D%B4+%EC%B0%B0%EB%96%A1+%ED%8C%8C%EC%9D%B4&searchId=4b8bf5e53831095&sourceType=search&itemsCount=35&searchRank=2&rank=2&traceId=mmghad88",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9409933567&itemId=27959012695&vendorItemId=94917080581&traceid=V0-183-5bd1bc2e5104c712",
+      "rating": 5.0,
+      "review_count": 8,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/8fb3/df1714a8a4df0796696d28aaa8f20b162a965f37f2e3fc7eab06b3f14362.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "856173353",
+          "rating": 5,
+          "full_text": "두쫀쿠보단 초코피가 두껍다보니 달긴한데 안에 바싹하게 씹히구맛있어요…….. 또먹고싶어요.. 브레이크 안잡혀서 앉은자리에서 다먹을뻔했어요.. 두친자라면 꼭 드셔보세요.. 다른덴 뭐껴서 팔던데 단독으로 싸게팔아서 좋아요.. 오프라인에서 구천원에 팔던데 무배까지 생각하먄 대ㅐㅐㅐ만족이에요",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/4188352563872496990/828a9fac-962d-48f1-a6dc-c22e7654c11a.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/4188352563872496990/0caa0d05-cce9-4e5b-be98-b81ff358fddd.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/4188352563872496990/a2f8b095-9f98-403a-b187-08590133ef05.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "warnings": [
+    "best_reviews_count_below_3_relaxed_allowed",
+    "review_image_total_below_6_relaxed_allowed"
+  ],
+  "source_artifact": "direct_mode:ㅎㅇㅅ.https://coupang.com/vp/products/9409933567?itemId=27959012695&vendorItemId=94917080581&q=두바이%20찰떡%20파이&searchId=4b8bf5e53831095&sourceType=search&itemsCount=35&searchRank=2&rank=2&traceId=mmghad88"
+}

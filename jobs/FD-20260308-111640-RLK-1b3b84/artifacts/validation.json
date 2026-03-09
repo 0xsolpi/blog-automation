@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260308-111640-RLK-1b3b84",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T11:17:20+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/9210174450",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=9210174450 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZ3Om6, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9210174450&traceid=V0-183-3b2503633251c0b6"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=한경희 스탠드형 스팀다리미 HSI-D1601A1, brand=null 허용, model=HSI-D1601A1"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "한경희 스탠드형 스팀다리미 HSI-D1601A1",
+      "price": 99000,
+      "rating": 5.0,
+      "review_count": 10,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "한경희 스탠드형 스팀다리미 HSI-D1601A1",
+      "productName": "한경희 스탠드형 스팀다리미 HSI-D1601A1",
+      "brand": null,
+      "model": "HSI-D1601A1",
+      "category": "스팀다리미",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9210174450",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9210174450&traceid=V0-183-3b2503633251c0b6",
+      "rating": 5.0,
+      "review_count": 10,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/38af/1c23480f0d423ae1dc1b7e6bf84e01f747a2dddf7592d92a131a46bf1d71.png"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "821911751",
+          "rating": 5,
+          "full_text": "집에서 다림질할 일이 은근 많아서 스팀다리미를 찾다가 한경희 스탠드 스팀다리미로 선택했어요. 2L 대용량 물통이라 여러 벌을 한 번에 다려도 중간 보충이 거의 필요 없고, 100도 고온 스팀으로 주름 제거와 냄새 정리 체감이 좋아 만족했다는 후기입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/25/6917366637199315063/0b7ed5bc-b100-427b-a650-52ca9145fbf7.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/25/6917366637199315063/2b1b5bee-e79b-4d09-b1d0-f3264f4d9ac5.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/25/6917366637199315063/c04e78be-3c81-4fc7-940a-78e5d55d0655.jpg"
+          ]
+        },
+        {
+          "review_id": "818645335",
+          "rating": 5,
+          "full_text": "주 5일 셔츠 다림질 용도로 사용하며 대용량 물통과 강한 스팀 분출이 특히 만족스럽다는 리뷰입니다. 디자인도 파스텔톤으로 인테리어와 잘 어울리고, 수직/수평 다림판 활용도가 높다는 내용이 포함됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/19/7990499009796958704/b8138e03-1c30-4ea7-ae5f-9e320b330f8e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/19/7990499009796958704/6db4a7ca-1e7b-4d45-aba8-6f58815d6701.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/19/7990499009796958704/7f7fb68d-c8c0-4dbe-8a61-efc6c47fc061.jpg"
+          ]
+        },
+        {
+          "review_id": "817354179",
+          "rating": 5,
+          "full_text": "한경희 스탠드 스팀다리미 HSI-D1601A1 사용 후, 조작이 쉽고 대용량 물통으로 연속 다림질이 편하다는 후기입니다. 고온 스팀, 수직/수평 조절 다림판, 모드 선택 기능이 실사용에서 유용하다는 평가입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/17/7572926836726918061/18db2fa8-0fd3-4320-9388-21486b5e677c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/17/7572926836726918061/9415af8b-bd16-49b1-bb3a-92a64d212928.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/17/7572926836726918061/bbc4801f-7c4b-45db-97b9-25c555c7453f.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/9210174450"
+}

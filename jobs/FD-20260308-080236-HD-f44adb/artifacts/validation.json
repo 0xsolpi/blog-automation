@@ -1,0 +1,105 @@
+{
+  "job_id": "FD-20260308-080236-HD-f44adb",
+  "agent": "ace",
+  "trigger": "ㅎㄷ",
+  "validated_at": "2026-03-08T08:03:20+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 3,
+  "input_link": "https://www.coupang.com/vp/products/9339080485?vendorItemId=91549930095&sourceType=HOME_GW_PROMOTION&searchId=feed-12286778b1b24bdb9dfe0c4f4fcd416d-3.33.107%3Agw_promotion",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=9339080485 vendorItemId=91549930095 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZYb75, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9339080485&vendorItemId=91549930095&traceid=V0-183-616451dd61e53a50"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=다파니 카수가이 시오아메 소금사탕 일본사탕 대용량 개별포장 90개입, brand=null 허용, model=90개입"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=7"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "다파니 카수가이 시오아메 소금사탕 일본사탕 대용량 개별포장 90개입",
+      "price": 14910,
+      "rating": 4.7,
+      "review_count": 315,
+      "result": "selected",
+      "reason": "ㅎㄷ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "다파니 카수가이 시오아메 소금사탕 일본사탕 대용량 개별포장 90개입",
+      "productName": "다파니 카수가이 시오아메 소금사탕 일본사탕 대용량 개별포장 90개입",
+      "brand": null,
+      "model": "90개입",
+      "category": "사탕",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9339080485?vendorItemId=91549930095&sourceType=HOME_GW_PROMOTION&searchId=feed-12286778b1b24bdb9dfe0c4f4fcd416d-3.33.107%3Agw_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9339080485&vendorItemId=91549930095&traceid=V0-183-616451dd61e53a50",
+      "rating": 4.7,
+      "review_count": 315,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/dbea/c0584a8525e441ade0502cd24e955d9a2b565d3d445006bc051c1559cf09.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "681435403",
+          "rating": 5,
+          "full_text": "안녕하세요. 쿠팡리뷰어 일산서구민 입니다. 카수가이 시오아메 소금사탕 90개입에 대한 구매후기 입니다. 어머니가 가져오셔서 먹어봤는데 생각보다 훨씬 맛있어 재구매했습니다. 달면서도 짭짤하고 맛이 깔끔해 군것질용으로 좋고 중독성 있는 맛입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202501/31/4642887445934954595/6a366bdf-8f09-4a8b-95ed-c0f7258c5742.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202501/31/4642887445934954595/eb4aa84f-e2a4-4e61-99aa-fcd8bbb103dd.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202501/31/4642887445934954595/d4ff8ce8-7d90-4c44-b31b-b45b427911ff.jpeg"
+          ]
+        },
+        {
+          "review_id": "698584577",
+          "rating": 5,
+          "full_text": "등산 시 입에 물고 다니기 좋고, 가격 비교 관점에서도 관심이 간 제품이라는 리뷰입니다. 실제 구매 비교 내용과 함께 소금사탕 활용도가 언급되었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202503/19/7980824638697759180/30f5186c-fb6a-4391-a452-aa97237b484d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202503/19/7980824638697759180/ea50a840-be79-41c3-8eaa-7f86c8de85be.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202504/29/7980824638697759180/0a2bd184-0026-41c4-b2ea-fede54f532ae.jpg"
+          ]
+        },
+        {
+          "review_id": "693955430",
+          "rating": 5,
+          "full_text": "단짠 간식으로 먹기 좋은 일본 소금사탕이라는 후기입니다. 개별 포장으로 휴대가 편하고 달달하면서 짭짤한 맛, 감칠맛이 특징이라 중독성 있게 자주 찾게 된다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202503/6/4701639923848434901/0223c71d-6098-498d-b265-eb56bd6673d2.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㅎㄷ.https://www.coupang.com/vp/products/9339080485?vendorItemId=91549930095&sourceType=HOME_GW_PROMOTION&searchId=feed-12286778b1b24bdb9dfe0c4f4fcd416d-3.33.107%3Agw_promotion"
+}

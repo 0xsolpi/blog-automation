@@ -1,0 +1,110 @@
+{
+  "job_id": "FD-20260309-084832-RLK-ce90b4",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-09T08:50:10+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/6518020305?itemId=172871736&vendorItemId=3414534025&q=%ED%84%B0%ED%82%A4%EB%A1%9C%EC%BF%B0&searchId=7cc0d5c033538241&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmhvw8d5",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=6518020305 itemId=172871736 vendorItemId=3414534025 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0DtxE, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6518020305&itemId=172871736&vendorItemId=3414534025&traceid=V0-183-cc8d25d34a549ea7"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=[귤루올루] 터키쉬 4종 장미로쿰 피스타치오 로쿰 민트 초코 로쿰 허니 로쿰 250g, 250g, 1세트, brand=null 허용, model=250g 1세트"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "[귤루올루] 터키쉬 4종 장미로쿰 피스타치오 로쿰 민트 초코 로쿰 허니 로쿰 250g, 250g, 1세트",
+      "price": 12500,
+      "rating": 4.4,
+      "review_count": 212,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "터키쉬 4종 로쿰 250g",
+      "productName": "[귤루올루] 터키쉬 4종 장미로쿰 피스타치오 로쿰 민트 초코 로쿰 허니 로쿰 250g, 250g, 1세트",
+      "brand": null,
+      "model": "250g 1세트",
+      "category": "젤리/캔디",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/6518020305?itemId=172871736&vendorItemId=3414534025&q=%ED%84%B0%ED%82%A4%EB%A1%9C%EC%BF%B0&searchId=7cc0d5c033538241&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmhvw8d5",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6518020305&itemId=172871736&vendorItemId=3414534025&traceid=V0-183-cc8d25d34a549ea7",
+      "rating": 4.4,
+      "review_count": 212,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/9558/6723bb040c9619cf5ae3583e00a159a49a1117d8b2f204c0a5a8c1ef48f6.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "416167279",
+          "rating": 5,
+          "full_text": "어머니가 터키쉬 4종 믹스 로쿰이 맛있다는 얘기를 들으셨는지\n갑자기 사달라고 하시더라구용\n그래서 바로 주문했어요, 배송일자 맞게 잘 왔고 포장도 잘 왔어용\n고급스러운 상자에 담겨 배송돼서, 저 처럼 선물용으로도 좋을 것 같아요\n다가올 발렌타인데이 때도 추천드립니당\n\n- 로쿰이란? -\n물에 설탕과 전분을 넣고 졸여서 말랑하게 굳혀 만든 터키식 과자.\n장미수나 레몬즙, 견과류 따위를 첨가하여 향과 맛을 내며, 쫀득한 식감과 달콤한 맛이 특징\n\n- 후기 -\n먹기전에 사진찍어 달라고 부탁드렸는데, 너무 맛있어서 사진 찍기 전에 거의 다 먹으셨다며, 남아 있는 로쿰이라도 찍어주셨어요\n맛\n살짝 생소했지만 맛있게 잘먹었대요\n맛이 달지만, 그게 매력이라고, 쫀득쫀득한 식감도 좋다고 하시네용\n\n- 종류 -\n\n1. 장미 로쿰\n2. 파스타치오 로쿰\n3. 민트초코 로쿰\n4. 허니로쿰\n\n그중에서도 어머니는 장미로쿰이 젤 맛있다고 하셨어요.\n장미로쿰 > 허니로쿰 > 파스타치오 로쿰 > 민트초코 로쿰 순으로 맛있었대용",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202302/9/1871085598707941806/a25e0606-6963-4645-ad3d-392ddac07094.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202302/9/1871085598707941806/a721a0b1-c6d5-4546-b365-ee1e42a9a031.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202302/9/1871085598707941806/a101fc5c-87f1-4b24-ba13-72bf74e109a7.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "590971907",
+          "rating": 5,
+          "full_text": "당이  땡길땐 맛나요^^\n네가지 맛이   씹히는 식감이 달라\n재미도 느끼고,\n대신 조금  먹어야하는  \n제한적 바클라바..",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202404/6/5203871878282656809/f5bbd3d6-934b-4fdc-967f-6ce946c8b907.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202404/6/5203871878282656809/01df153c-7ef4-47f5-8e6c-edf070899b9e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202404/6/5203871878282656809/0d75af82-511f-4eb9-9506-1b39dd3795af.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "526337747",
+          "rating": 5,
+          "full_text": "전에도 시켜 먹었던 제품입니다.\n\n이제는 로쿰이나 바클라바도 잘 알죠.~\n\n터키는 가보지 않았지만 이색적인 것에 대한 호기심으로 이것저것 잘 시켜 먹는답니다.\n\n대부분 장미향의 로쿰이  맛있다고 하는데..\n\n물론 그것도 맛있지만 코코넛 가루에 둘러싸여 살짝 단 다른 로쿰도 맛있고 쵸코렛으로 입힌건 우리나라 찰떡파이같아서 더 친근하네요..\n\n커피랑 같이 마시고 먹으면 넘 훌륭한 디저트예요.~\n\n색다른 선물용으로도 좋을것 같아요.\n\n그래서 두개세트를 주문했는데 하나는 저한테 잘해주는 지인에게 선물할거예요.~\n\n참, 무화과로쿰도 시켰는데 둘다 아주 맛있어요.^^",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202310/28/7798219547112999445/19bb9762-037e-4bb2-b1ac-bd3b6c5a90f3.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202310/28/7798219547112999445/b94d136f-7499-4907-9189-73c58559d4be.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202310/28/7798219547112999445/a78e701a-5964-488e-b8c1-d3f38e2c9e3f.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/6518020305?itemId=172871736&vendorItemId=3414534025&q=%ED%84%B0%ED%82%A4%EB%A1%9C%EC%BF%B0&searchId=7cc0d5c033538241&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmhvw8d5"
+}

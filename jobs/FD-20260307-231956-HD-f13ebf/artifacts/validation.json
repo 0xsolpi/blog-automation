@@ -1,0 +1,62 @@
+{
+  "job_id": "FD-20260307-231956-HD-f13ebf",
+  "agent": "ace",
+  "trigger": "ㅎㄷ",
+  "validated_at": "2026-03-07T23:20:20+09:00",
+  "status": "failed_blocking",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 3,
+  "input_link": "https://www.coupang.com/vp/products/7276565188?vendorItemId=85706471494&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107%3Agw_promotion",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=7276565188 vendorItemId=85706471494 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZQ2cR, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7276565188&vendorItemId=85706471494&traceid=V0-183-46e4c734b4302ec8"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=웰퍼니쳐 레브B 식탁 의자 3colors, brand=null 허용, model=레브B"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "fail",
+      "evidence": "picked_reviews=0, image_total=0 (이미지 포함 리뷰 부족)"
+    }
+  ],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "웰퍼니쳐 레브B 식탁 의자 3colors",
+      "productName": "웰퍼니쳐 레브B 식탁 의자 3colors",
+      "brand": null,
+      "model": "레브B",
+      "category": "식탁 의자",
+      "eligibility": "fail",
+      "reason": "리뷰 이미지 하드게이트 미충족(리뷰당>=1 및 총>=6 실패)",
+      "coupang_product_url": "https://www.coupang.com/vp/products/7276565188?vendorItemId=85706471494&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107%3Agw_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7276565188&vendorItemId=85706471494&traceid=V0-183-46e4c734b4302ec8",
+      "rating": 4.2,
+      "review_count": 5
+    }
+  ],
+  "selected_for_nami": null,
+  "review_image_fail_count": 1,
+  "source_artifact": "direct_mode:ㅎㄷ.https://www.coupang.com/vp/products/7276565188?vendorItemId=85706471494&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107%3Agw_promotion",
+  "failures": [
+    {
+      "code": "review_image_gate_failed",
+      "detail": "best_reviews 3~5 / each>=1 / total>=6 미충족"
+    }
+  ]
+}

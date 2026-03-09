@@ -12,3 +12,4 @@ data/drafts/*.md
 data/review/*.json
 data/published/*.json
 .env
+.env.discord

@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260308-133131-RLK-fb1ac2",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T13:32:20+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/44918501?itemId=27557947566&vendorItemId=94522058198&pickType=COU_PICK&q=%EA%B0%A4%EB%9F%AD%EC%8B%9Cs26+%EC%BC%80%EC%9D%B4%EC%8A%A4&searchId=229e1a933167668&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmh98lmq",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=44918501 itemId=27557947566 vendorItemId=94522058198 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZ8l15, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=44918501&itemId=27557947566&vendorItemId=94522058198&traceid=V0-183-e1a61d788933dad7"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=신지모루 에어클로 휴대폰 케이스, brand=null 허용, model=에어클로"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "신지모루 에어클로 휴대폰 케이스",
+      "price": 9930,
+      "rating": 4.7,
+      "review_count": 117807,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "신지모루 에어클로 휴대폰 케이스",
+      "productName": "신지모루 에어클로 휴대폰 케이스",
+      "brand": null,
+      "model": "에어클로",
+      "category": "휴대폰 케이스",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/44918501?itemId=27557947566&vendorItemId=94522058198&pickType=COU_PICK&q=%EA%B0%A4%EB%9F%AD%EC%8B%9Cs26+%EC%BC%80%EC%9D%B4%EC%8A%A4&searchId=229e1a933167668&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmh98lmq",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=44918501&itemId=27557947566&vendorItemId=94522058198&traceid=V0-183-e1a61d788933dad7",
+      "rating": 4.7,
+      "review_count": 117807,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2026/01/12/12/4/cd4c9696-1feb-4417-9b0c-96c3172be2f5.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "856293959",
+          "rating": 5,
+          "full_text": "휴대폰 본연의 색상을 살리고 싶어 투명 케이스를 선호하는데, 기존 제품 대비 신지모루 에어클로는 더 탄탄하고 밀착감이 좋았다는 후기입니다. 후면 PC/측면 TPU 조합으로 보호력 체감이 좋고, 스크래치/유막 방지 측면에서 만족했다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/1323584787148210975/9c422ad4-a632-40d0-850b-c64a0b1898b5.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/1323584787148210975/b38733dc-399b-466c-b0a7-9777da35f6b6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/1323584787148210975/8efb1715-e331-4a44-9c3e-1429acf7610c.jpg"
+          ]
+        },
+        {
+          "review_id": "855784922",
+          "rating": 5,
+          "full_text": "갤럭시 S26 울트라 교체 후 신지모루 에어클로를 선택했고, 그립감/버튼감/카메라 단차 보호가 만족스럽다는 후기입니다. 매트 클리어 질감과 밀착성이 좋고 케이스 간섭이 적어 실사용에 편하다는 내용이 포함됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/7903018371633933671/708a0617-1aeb-44a2-a2ee-41aad2782fd9.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/7903018371633933671/d6c25eb5-78fa-42f8-8486-3c4e5408de94.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/7903018371633933671/962cd1d2-e03b-4f70-bf4b-f947c5141e4b.jpg"
+          ]
+        },
+        {
+          "review_id": "852934445",
+          "rating": 5,
+          "full_text": "기존 투명 케이스 황변 이슈로 교체했고, 에어클로는 후면 투명 유지력이 상대적으로 좋았다는 후기입니다. 슬림한 착용감과 기본 보호 성능이 무난해 데일리 사용에 적합하다고 평가했습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/27/2544602295392179338/26d6654c-6c01-46da-bd79-d8386f68ec3c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/27/2544602295392179338/54bf2e11-6cc5-4044-81a1-15d955d935ba.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/27/2544602295392179338/460903dd-28eb-40a1-ba1e-1835024b97be.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/44918501?itemId=27557947566&vendorItemId=94522058198&pickType=COU_PICK&q=%EA%B0%A4%EB%9F%AD%EC%8B%9Cs26+%EC%BC%80%EC%9D%B4%EC%8A%A4&searchId=229e1a933167668&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmh98lmq"
+}

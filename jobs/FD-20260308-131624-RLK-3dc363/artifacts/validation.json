@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260308-131624-RLK-3dc363",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T13:17:30+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/7961028909?itemId=27829866202&vendorItemId=94784064400&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26+%EC%9A%B8%ED%8A%B8%EB%9D%BC+%EB%B3%B4%ED%98%B8%ED%95%84%EB%A6%84&searchId=fca9845533406931&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmh8oyl1",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=7961028909 itemId=27829866202 vendorItemId=94784064400 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZ7PUN, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7961028909&itemId=27829866202&vendorItemId=94784064400&traceid=V0-183-42da7e57c926c0a4"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=NINETECH 1+4 갤럭시 S26 플러스 울트라 풀커버 지문인식 방탄 우레탄 액정 보호 필름 5매, brand=null 허용, model=1+4/5매"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "NINETECH 1+4 갤럭시 S26 플러스 울트라 풀커버 지문인식 방탄 우레탄 액정 보호 필름 5매",
+      "price": 8980,
+      "rating": 4.5,
+      "review_count": 5852,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "NINETECH 1+4 갤럭시 S26 플러스 울트라 풀커버 지문인식 방탄 우레탄 액정 보호 필름 5매",
+      "productName": "NINETECH 1+4 갤럭시 S26 플러스 울트라 풀커버 지문인식 방탄 우레탄 액정 보호 필름 5매",
+      "brand": null,
+      "model": "1+4/5매",
+      "category": "액정보호필름",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/7961028909?itemId=27829866202&vendorItemId=94784064400&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26+%EC%9A%B8%ED%8A%B8%EB%9D%BC+%EB%B3%B4%ED%98%B8%ED%95%84%EB%A6%84&searchId=fca9845533406931&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmh8oyl1",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7961028909&itemId=27829866202&vendorItemId=94784064400&traceid=V0-183-42da7e57c926c0a4",
+      "rating": 4.5,
+      "review_count": 5852,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/3632/d175791fb634d4b3f2cb659ec426f3a90cdffea6d01db4d643a315c43c75.png"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "856317444",
+          "rating": 4,
+          "full_text": "5장 구성이라 가성비가 좋아 구매했다는 후기입니다. 부착 난이도는 다소 있었지만 재시도 여유가 있고, 기포/자국은 시간 경과 후 완화된다는 사용 경험이 포함되어 있습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/3038356460349636770/eddeb20e-f023-4cac-89df-33d2f3554a2c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/3038356460349636770/b2d8a4ce-0049-43b7-a438-8452512d0d62.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/7/3038356460349636770/2cc23a3b-c9b9-4282-a7ba-2ef79c065d34.jpg"
+          ]
+        },
+        {
+          "review_id": "855119766",
+          "rating": 5,
+          "full_text": "풀커버 필름 5매 구성이라 실패 부담이 적고, 부착 도구가 포함되어 초보자도 사용하기 좋다는 리뷰입니다. 지문인식과 터치 반응, 스크래치 방어 측면에서 균형이 괜찮다는 내용이 포함됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/4/5310003916963901500/a01ae1c4-00fb-48f3-9c94-ea48751aab37.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/4/5310003916963901500/9bed7ac1-1e6c-4e22-b705-947b5df331b9.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/4/5310003916963901500/ff28c2ed-9106-445a-a6bb-d57ff0f6aac1.jpg"
+          ]
+        },
+        {
+          "review_id": "854185431",
+          "rating": 5,
+          "full_text": "설명서대로 부착 시 기포 없이 쉽게 작업 가능했고, 부착 후 터치감/선명도/지문인식 등 사용성이 좋다는 후기입니다. 엣지 밀착과 케이스 간섭 최소화도 장점으로 언급됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/4853394277149828333/b5f8c0b2-a696-490f-86fb-121c2f872dc0.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/4853394277149828333/51b3272b-3df4-4e22-af41-4714ec08012e.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/4853394277149828333/0c24926c-5503-40a9-991d-281f6c5934f1.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/7961028909?itemId=27829866202&vendorItemId=94784064400&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26+%EC%9A%B8%ED%8A%B8%EB%9D%BC+%EB%B3%B4%ED%98%B8%ED%95%84%EB%A6%84&searchId=fca9845533406931&sourceType=search&itemsCount=36&searchRank=1&rank=1&traceId=mmh8oyl1"
+}

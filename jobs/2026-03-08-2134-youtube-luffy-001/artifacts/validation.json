@@ -1,0 +1,49 @@
+{
+  "job_id": "2026-03-08-2134-youtube-luffy-001",
+  "agent": "ace",
+  "validated_at": "2026-03-08T22:59:43+09:00",
+  "status": "failed_blocking",
+  "affiliate_rule_check": "fail",
+  "checklist": [
+    {
+      "id": "selected_match",
+      "title": "selected_item_numbers 일치 확인",
+      "result": "pass",
+      "evidence": "selected_item_numbers=[3] 기준 재검증"
+    },
+    {
+      "id": "relay_collection_consistency",
+      "title": "브라우저 수집 결과 정합성",
+      "result": "fail",
+      "evidence": "동일 수집 턴에서 URL(productId=7672348704)와 상품명/메타 데이터 불일치 발생"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 단계",
+      "result": "warn",
+      "evidence": "수집 정합성 실패로 deeplink 미진입"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "리뷰/이미지 하드게이트",
+      "result": "warn",
+      "evidence": "정합성 실패로 신뢰 가능한 리뷰셋 확정 불가"
+    }
+  ],
+  "price_scan_log": [],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 3,
+      "product": "스마트폰 짐벌(손떨림 보정)",
+      "reason": "browser_extraction_inconsistent",
+      "fail_code": "REVIEW_DATA_INSUFFICIENT"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 3,
+    "backup": 3
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-08-2134-youtube-luffy-001/artifacts/research.json"
+}

@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260307-225620-HD-914c50",
+  "agent": "ace",
+  "trigger": "ㅎㄷ",
+  "validated_at": "2026-03-07T22:57:30+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 3,
+  "input_link": "https://coupang.com/vp/products/48004484?vendorItemId=3007328994&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107:gw_promotion",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=48004484 vendorItemId=3007328994 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZQg1S, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=48004484&vendorItemId=3007328994&traceid=V0-183-63eeacd97435fcbc"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=네임코코 방수네임스티커 사각 소형, brand=null 허용, model=사각 소형"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "네임코코 방수네임스티커 사각 소형",
+      "price": 3230,
+      "rating": 4.7,
+      "review_count": 22116,
+      "result": "selected",
+      "reason": "ㅎㄷ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "네임코코 방수네임스티커 사각 소형",
+      "productName": "네임코코 방수네임스티커 사각 소형",
+      "brand": null,
+      "model": "사각 소형",
+      "category": "네임스티커",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/48004484?vendorItemId=3007328994&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107:gw_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=48004484&vendorItemId=3007328994&traceid=V0-183-63eeacd97435fcbc",
+      "rating": 4.7,
+      "review_count": 22116,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/images/2015/08/18/9d67911c-0760-4c60-9ec3-ad8360a21638.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "853556225",
+          "rating": 5,
+          "full_text": "유치원 입학 준비하면서 준비물이 정말 많더라고요. 연필, 색연필, 크레파스, 물통, 칫솔, 수건, 실내화까지 전부 이름을 써야 해서 고민하다가 네임코코 방수 네임스티커 사각 소형으로 제작했어요. 사이즈가 소형이라 작은 물건에도 잘 맞고 방수 성능도 좋아 물 닿는 물건에도 잘 버텨 만족했습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/1593031368888377673/e4b942cc-3aa3-4659-a26e-b3eb1a5034e5.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/1593031368888377673/d61256a5-200d-4b93-a040-feff11b84feb",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/1593031368888377673/e0e316f3-6586-4a1a-89de-c277f2ca3d32.jpg"
+          ]
+        },
+        {
+          "review_id": "768115105",
+          "rating": 5,
+          "full_text": "첫째 때부터 꾸준히 사용 중인 네임코코 스티커입니다. 컬러 디자인이 눈에 잘 띄고 접착력이 좋아 세탁이나 물놀이 후에도 잘 유지되었습니다. 어린이집/학교 물건 분실 방지에 실사용 만족도가 높았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/21/8090537929447734522/0bd4344e-a320-4a60-8154-bc40717181c8.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/21/8090537929447734522/4577bae6-a34a-42df-95a5-c07b3d4477cd.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/21/8090537929447734522/65031bd1-9fea-4b8e-9ac8-563a039685a2.jpg"
+          ]
+        },
+        {
+          "review_id": "759401392",
+          "rating": 5,
+          "full_text": "첫째 때부터 5년째 사용 중이며 둘째 어린이집 준비물에도 재구매했습니다. 방수/접착력/제거 편의성 모두 만족스럽고, 작은 물건에도 잘 붙는 소형 사이즈 활용도가 높았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/30/8090537929447734522/68d37e21-39ac-4c9f-be38-3d49339b0236.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/30/8090537929447734522/136c3c17-3600-437e-8ec1-cd2e204cdab8.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/30/8090537929447734522/e8a77124-7df9-4fda-9db3-a2926b7e39bc.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㅎㄷ.https://coupang.com/vp/products/48004484?vendorItemId=3007328994&sourceType=PC_SHORTCUT_MARKETPLACE_DEALPAGE_GW_PROMOTION&searchId=feed-f642b75d6e9e48bebb0f7f0e86cd0543-3.33.107:gw_promotion"
+}

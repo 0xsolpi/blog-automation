@@ -1,0 +1,110 @@
+{
+  "job_id": "FD-20260308-225847-HD-666f9f",
+  "agent": "ace",
+  "trigger": "ㅎㄷ",
+  "validated_at": "2026-03-08T23:01:20+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 3,
+  "input_link": "https://www.coupang.com/vp/products/9061046303?vendorItemId=88483665809&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-be3dd0e7ac0347d995b667149a5a010e-3.33.169%3Ajikgu_promotion",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=9061046303 vendorItemId=88483665809 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0tKr5, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9061046303&vendorItemId=88483665809&traceid=V0-183-efe4ef54703696ce"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=닛신 돈베이 특대 유부우동 컵라면 관동, brand=null 허용, model=특대 유부우동 관동"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "닛신 돈베이 특대 유부우동 컵라면 관동",
+      "price": 30220,
+      "rating": 4.7,
+      "review_count": 600,
+      "result": "selected",
+      "reason": "ㅎㄷ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "닛신 돈베이 특대 유부우동 컵라면 관동",
+      "productName": "닛신 돈베이 특대 유부우동 컵라면 관동",
+      "brand": null,
+      "model": "특대 유부우동 관동",
+      "category": "컵라면",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9061046303?vendorItemId=88483665809&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-be3dd0e7ac0347d995b667149a5a010e-3.33.169%3Ajikgu_promotion",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9061046303&vendorItemId=88483665809&traceid=V0-183-efe4ef54703696ce",
+      "rating": 4.7,
+      "review_count": 600,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/81a2/5506341cc2d40aa90b284da325a12da3ecb3367da20ad34c7c4c191142ae.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "777368835",
+          "rating": 5,
+          "full_text": "큼직한 유부와 깊은 국물이 장점이라는 상세 후기입니다. 특대 사이즈의 푸짐한 면과 두툼한 유부, 가쓰오/다시마 베이스 국물 조합이 만족스럽고 재구매 의사가 높다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202510/14/5230612738279175819/7138fc11-7adf-4231-a139-d6f9f610eee2.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202510/14/5230612738279175819/64566c98-3969-4629-9b21-4fb25138db9b.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202510/14/5230612738279175819/2da72749-8419-4b04-8655-372e946fce0a.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "769474452",
+          "rating": 5,
+          "full_text": "직구 배송으로 구매 후 국물의 단짠 밸런스와 큰 유부, 특대 용량의 포만감이 좋았다는 리뷰입니다. 유부우동 별미로 추천된다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/24/4471826518496582627/5f9de827-8a19-4409-b089-4d93e8edda63.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/24/4471826518496582627/aa024446-640c-49d1-81b0-3812caabc653.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/24/4471826518496582627/e97acbd8-5558-4283-90a5-2d3b88329507.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "767759979",
+          "rating": 5,
+          "full_text": "로켓직구 기준 배송 속도와 제품 퀄리티가 기대 이상이라는 후기입니다. 면발과 국물 완성도가 높고 유통기한도 넉넉해 만족했다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/20/6701444438137922163/d81db443-61b9-40bc-aff4-4267b25350c5.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/20/6701444438137922163/d83e1f9c-7d51-4826-a10c-f825bda57c98.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202509/20/6701444438137922163/6ec1d78f-2d0f-4c49-a058-032aec55a951.jpeg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㅎㄷ.https://www.coupang.com/vp/products/9061046303?vendorItemId=88483665809&sourceType=HOME_JIKGU_PROMOTION&searchId=feed-be3dd0e7ac0347d995b667149a5a010e-3.33.169%3Ajikgu_promotion"
+}

@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260308-023321-RLK-afe6b5",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T02:33:40+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/8142926718?vendorItemId=88715246846&sourceType=HOME_PERSONALIZED_ADS&searchId=feed-a90839126b7a4bb180ef68909a632500-3.33.14%3Apersonalized_ads&clickEventId=9c3977b0-1a4a-11f1-8853-4c605935c3fc",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8142926718 vendorItemId=88715246846 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/dZURYV, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8142926718&vendorItemId=88715246846&traceid=V0-183-9b2d98b74097a020"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=와이드뷰 HD 화이트에디션 스마트 TV + 삼탠바이미 V1 이동식 거치대 세트, brand=null 허용, model=삼탠바이미 V1"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "와이드뷰 HD 화이트에디션 스마트 TV + 삼탠바이미 V1 이동식 거치대 세트",
+      "price": 256000,
+      "rating": 4.7,
+      "review_count": 646,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "와이드뷰 HD 화이트에디션 스마트 TV + 삼탠바이미 V1 이동식 거치대 세트",
+      "productName": "와이드뷰 HD 화이트에디션 스마트 TV + 삼탠바이미 V1 이동식 거치대 세트",
+      "brand": null,
+      "model": "삼탠바이미 V1",
+      "category": "게이밍 모니터",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8142926718?vendorItemId=88715246846&sourceType=HOME_PERSONALIZED_ADS&searchId=feed-a90839126b7a4bb180ef68909a632500-3.33.14%3Apersonalized_ads&clickEventId=9c3977b0-1a4a-11f1-8853-4c605935c3fc",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8142926718&vendorItemId=88715246846&traceid=V0-183-9b2d98b74097a020",
+      "rating": 4.7,
+      "review_count": 646,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/942508388369419-2d0fe652-07cc-469c-93f7-b7b3f0942832.png"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "856012259",
+          "rating": 5,
+          "full_text": "안녕하세요! 오늘은 와이드뷰 스마트 TV + 삼텐바이미 이동식 거치대 세트 81cm 제품에 대해 리뷰해보려고 합니다. 설치는 설명서 보며 혼자 가능했고 거치대 하단 무게감 덕분에 안정감이 좋았습니다. 바퀴 이동성이 좋아 거실/방/주방 이동이 편하고 와이파이 연결 후 스마트 기능도 즉시 사용 가능했습니다. 화질도 기대 이상으로 선명해 서브TV 용도로 만족도가 높았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/7610791329488423818/e7c352db-8bb0-4eae-a323-364c20be7349.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/7610791329488423818/9a354a36-8ae7-4371-986e-97f925493f56.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/7610791329488423818/32f5dac9-ab4c-4dda-a67b-c7adef8eb446.jpg"
+          ]
+        },
+        {
+          "review_id": "855620161",
+          "rating": 5,
+          "full_text": "100% 내돈내산 기준으로 화이트 에디션 디자인과 이동식 거치대 조합 만족도가 높았습니다. 32인치 사이즈가 침대/소파 옆에 적당하고 바퀴 이동이 부드러워 활용성이 좋았습니다. 직접 설치도 설명서 기반으로 어렵지 않았고 스탠드 안정감도 좋았습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/2401644409725967044/da4862c8-dfa2-4716-8fcc-3799192b776d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/2401644409725967044/e14f4a66-14ef-446f-9d09-6f76d1b83991.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/6/2401644409725967044/b9077ece-70ad-4340-b1bd-8c58c9045929.jpg"
+          ]
+        },
+        {
+          "review_id": "855463918",
+          "rating": 5,
+          "full_text": "와이드뷰 HD 화이트에디션 스마트 TV와 삼탠바이미 V1 이동식 거치대 세트 구성으로 디자인 통일감이 좋다는 후기입니다. 이동/각도/높이 조절 활용이 가능하며 구글TV 기반 스마트 기능도 무난하다는 평가가 포함되어 있습니다. 다만 HD 해상도는 타협이 필요한 선택이라는 의견이 있었습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/5/3556398707045001900/6c7d7421-0e1a-44ea-b0e6-54c9edc6634b.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/5/3556398707045001900/1c2362c6-4338-4a1c-abea-41017d540abf.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/5/3556398707045001900/cf42211b-eefd-483f-ae3f-cad4223c7acf.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8142926718?vendorItemId=88715246846&sourceType=HOME_PERSONALIZED_ADS&searchId=feed-a90839126b7a4bb180ef68909a632500-3.33.14%3Apersonalized_ads&clickEventId=9c3977b0-1a4a-11f1-8853-4c605935c3fc"
+}

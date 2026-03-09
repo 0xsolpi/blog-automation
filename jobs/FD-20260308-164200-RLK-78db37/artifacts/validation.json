@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260308-164200-RLK-78db37",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T16:43:00+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/8156963484",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8156963484 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0eLui, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8156963484&traceid=V0-183-168dd55540b6f7d0"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=씨앤케어 EMS 온열 진동 멀티케어 마사지기 블랙, brand=null 허용, model=EMS 온열 진동 멀티케어"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "씨앤케어 EMS 온열 진동 멀티케어 마사지기 블랙",
+      "price": 62980,
+      "rating": 4.8,
+      "review_count": 127,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "씨앤케어 EMS 온열 진동 멀티케어 마사지기 블랙",
+      "productName": "씨앤케어 EMS 온열 진동 멀티케어 마사지기 블랙",
+      "brand": null,
+      "model": "EMS 온열 진동 멀티케어",
+      "category": "마사지기",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8156963484",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8156963484&traceid=V0-183-168dd55540b6f7d0",
+      "rating": 4.8,
+      "review_count": 127,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2024/06/10/18/0/fadd5fa1-d012-4c06-901c-9402bd0853ee.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "726905086",
+          "rating": 5,
+          "full_text": "홈케어 입문용으로 구매했는데 사용법이 간단하고 고주파/LED/온열 모드 조합이 만족스럽다는 후기입니다. 사용 후 피부 컨디션과 화장 밀착감 개선을 체감했다는 내용이 포함됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202506/4/1797920690018089014/3e58b678-a4de-438f-81f9-4ec4541b9fd8.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202506/4/1797920690018089014/ca2661db-5909-4077-8155-16b82dde68d2.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202506/4/1797920690018089014/85788126-25f8-47b6-82cd-67a69014a0b4.jpg"
+          ]
+        },
+        {
+          "review_id": "825190200",
+          "rating": 5,
+          "full_text": "뷰티 디바이스 입문용으로 선택했고 EMS 자극은 익숙해지면 괜찮으며, 세럼/크림 흡수 보조와 리프팅 체감이 있다는 리뷰입니다. 휴대성과 배터리 지속시간도 장점으로 언급됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/1/542284152554046817/8762baeb-21b3-41b8-8a81-d644aedec2d3.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/1/542284152554046817/fcfcddf5-d2b1-4cc3-acaa-09625ff1dc3a.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/1/542284152554046817/8ce55cd5-2857-4b58-ae5c-2af7a41e83f4.jpg"
+          ]
+        },
+        {
+          "review_id": "716919282",
+          "rating": 5,
+          "full_text": "고주파·온열·LED 멀티 기능으로 집에서 데일리 관리하기 좋다는 후기입니다. 15분 루틴 사용 시 피부 컨디션 개선 체감이 있었고 C타입 충전 등 사용 편의성이 좋다는 내용이 포함됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202505/8/4837426661346648427/cf34fd94-0d99-4098-aa17-6e0e30df771f.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202505/8/4837426661346648427/a3b5f576-0992-4fa6-9a27-360d55f2fbee.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202505/8/4837426661346648427/0cbb8ccf-315a-4f9a-b2d8-75844c080582.jpeg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8156963484"
+}

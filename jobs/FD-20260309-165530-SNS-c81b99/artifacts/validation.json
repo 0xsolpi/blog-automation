@@ -1,0 +1,111 @@
+{
+  "job_id": "FD-20260309-165530-SNS-c81b99",
+  "agent": "ace",
+  "trigger": "sns",
+  "validated_at": "2026-03-09T16:57:10+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 9,
+  "input_link": "https://www.coupang.com/vp/products/8915336552?itemId=25966035145&vendorItemId=93527009503&q=%EB%8B%8C%ED%85%90%EB%8F%84+%EC%8A%A4%EC%9C%84%EC%B9%982&searchId=f9dacd4f8085467&sourceType=search&itemsCount=35&searchRank=0&rank=0&traceId=mmivyiio",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8915336552 itemId=25966035145 vendorItemId=93527009503 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0S4ox, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8915336552&itemId=25966035145&vendorItemId=93527009503&traceid=V0-183-2e512fccc1252bff"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=닌텐도 스위치2 본체 BEE-001, brand=null 허용, model=BEE-001"
+    },
+    {
+      "id": "relaxed_review_gate",
+      "title": "완화모드 리뷰/이미지 부족 경고 처리",
+      "result": "pass",
+      "evidence": "충분수집"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "닌텐도 스위치2 본체 BEE-001",
+      "price": 799000,
+      "rating": 4.8,
+      "review_count": 404,
+      "result": "selected",
+      "reason": "sns direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "닌텐도 스위치2 본체 BEE-001",
+      "productName": "닌텐도 스위치2 본체 BEE-001",
+      "brand": null,
+      "model": "BEE-001",
+      "category": "게임기",
+      "eligibility": "pass",
+      "reason": "링크일치/deeplink 통과, 완화모드 허용",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/8915336552?itemId=25966035145&vendorItemId=93527009503&q=%EB%8B%8C%ED%85%90%EB%8F%84+%EC%8A%A4%EC%9C%84%EC%B9%982&searchId=f9dacd4f8085467&sourceType=search&itemsCount=35&searchRank=0&rank=0&traceId=mmivyiio",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=8915336552&itemId=25966035145&vendorItemId=93527009503&traceid=V0-183-2e512fccc1252bff",
+      "rating": 4.8,
+      "review_count": 404,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/fddb/7feea2df4443bbff888ae3e7a87eac51639f72771cac92e1ea919f4c27ff.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "854234976",
+          "rating": 5,
+          "full_text": "내돈으로 사서 쓰고 남기는 리뷰 입니다. 아들과 함께 플레이하려고 구매했고 기존 스위치 게임 호환, 화면 선명도/로딩 속도/마그네틱 조이콘 체결 등에서 확실히 개선을 체감했다는 후기입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/185274719283509857/bfbf8ead-c965-4c66-b712-ba2c7ff85166.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/185274719283509857/d4891bd1-efce-431c-b35a-6dc8fc057441.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/2/185274719283509857/09546539-4c66-4d44-9d9d-19c702bc9f73.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "854495108",
+          "rating": 5,
+          "full_text": "초등생 선물용으로 2달 이상 사용 후 작성한 후기입니다. 기존 스위치 대비 로딩/화질/안정성 개선 체감이 있었고 가족용 활용도가 높다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/3/4000540192301674839/e06f8e25-8a8f-464b-a90a-bd3c2bcf8ad1.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/3/4000540192301674839/f8978cd8-94a5-46d9-9d24-1f6f4de1ef88.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/3/4000540192301674839/27926dd5-6b8c-48b8-94f2-af46805690f1.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "852084980",
+          "rating": 5,
+          "full_text": "닌텐도 스위치2 본체 BEE-001 실사용 후기로, 휴대성/디스플레이/조작성/TV연결 멀티 활용 등 전반 만족도가 높다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/25/1001673230725119130/3b839cce-bd33-4036-9348-d28befb2f793.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/25/1001673230725119130/415cd10a-8819-4417-bca6-3e051c9d5f3d.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/25/1001673230725119130/1a5f7be0-cb25-4efc-ad86-8b2ee989aeff.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "warnings": [],
+  "source_artifact": "direct_mode:sns.https://www.coupang.com/vp/products/8915336552?itemId=25966035145&vendorItemId=93527009503&q=%EB%8B%8C%ED%85%90%EB%8F%84+%EC%8A%A4%EC%9C%84%EC%B9%982&searchId=f9dacd4f8085467&sourceType=search&itemsCount=35&searchRank=0&rank=0&traceId=mmivyiio"
+}

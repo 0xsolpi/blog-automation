@@ -1,0 +1,110 @@
+{
+  "job_id": "FD-20260309-115049-RLK-d70994",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-09T11:52:00+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/6726414722?itemId=15658754827&vendorItemId=92052393069&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=b28b61e0-1b62-11f1-88f0-22303682f9c1&korePlacement=15&koreSubPlacement=1&traceId=mmil2x33",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=6726414722 itemId=15658754827 vendorItemId=92052393069 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0IOCG, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6726414722&itemId=15658754827&vendorItemId=92052393069&traceid=V0-183-8d5f3fd4d2981dcf"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=말랑하니 휴대용 신생아 백색소음기 아기 수면교육, 내츄럴우드, 1개, brand=null 허용, model=내츄럴우드"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "말랑하니 휴대용 신생아 백색소음기 아기 수면교육, 내츄럴우드, 1개",
+      "price": 38900,
+      "rating": 4.9,
+      "review_count": 1513,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "말랑하니 휴대용 신생아 백색소음기 아기 수면교육, 내츄럴우드, 1개",
+      "productName": "말랑하니 휴대용 신생아 백색소음기 아기 수면교육, 내츄럴우드, 1개",
+      "brand": null,
+      "model": "내츄럴우드",
+      "category": "백색소음기",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/6726414722?itemId=15658754827&vendorItemId=92052393069&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=b28b61e0-1b62-11f1-88f0-22303682f9c1&korePlacement=15&koreSubPlacement=1&traceId=mmil2x33",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=6726414722&itemId=15658754827&vendorItemId=92052393069&traceid=V0-183-8d5f3fd4d2981dcf",
+      "rating": 4.9,
+      "review_count": 1513,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/e47e/61c2388995ab578e6c8f75edcc61528f5bd5d658e0e15b58cd1a84dbab00.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "856562323",
+          "rating": 5,
+          "full_text": "구매 이유와 사용 계기, 사용 편의성, 수면 효과, 볼륨/타이머 기능, 아쉬운 점까지 상세하게 작성된 후기입니다. 신생아 수면 안정에 도움이 되었다는 내용이 포함됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/8/5451304582653450011/1d2f11d8-f4a1-465e-803f-73e9f08534e6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/8/5451304582653450011/0cf94707-672d-4770-99ef-fae6d6e4eacf.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/8/5451304582653450011/5ef9caad-5d9e-47e5-8988-76981ce41b54.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "853624441",
+          "rating": 5,
+          "full_text": "유튜브 백색소음 대체로 구매했고, 광고 없이 안정적인 재생과 다양한 소리 옵션, 타이머 기능이 유용했다는 후기입니다. 아기 수면 루틴 개선 체감이 언급됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/3211008904022317181/87a67aa6-60f2-448d-b0ae-a4ccef23f33b.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/3211008904022317181/7cc3b197-227e-4b3f-9f3c-20071ae4a6d2.jpeg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/3211008904022317181/24ba9cc9-d109-4392-b665-a82fa1ae29cc.jpeg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "851508060",
+          "rating": 5,
+          "full_text": "신생아 수면 고민 해결 목적으로 구매해 사용했으며, 다양한 소리와 직관적 조작으로 실제 수면 시간이 개선되었다는 후기입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/23/6504713268768348110/fc4d5924-8bd5-421b-8b1e-dff9a5eb697c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/23/6504713268768348110/f9642426-28d5-453b-941f-3cf8d42a9619.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/23/6504713268768348110/b5457a78-0171-4761-92b2-7e631f19668d.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/6726414722?itemId=15658754827&vendorItemId=92052393069&pickType=COU_PICK&sourceType=srp_product_ads&clickEventId=b28b61e0-1b62-11f1-88f0-22303682f9c1&korePlacement=15&koreSubPlacement=1&traceId=mmil2x33"
+}

@@ -1,0 +1,20 @@
+{
+  "job_id": "FD-20260307-231956-HD-f13ebf",
+  "trigger": "ㅎㄷ",
+  "publish_category_id": 3,
+  "current_stage": "ace_validation",
+  "status": "failed_blocking",
+  "retry_count": 0,
+  "next_agent": "nere",
+  "blocking_reason": "review_image_gate_failed",
+  "last_error": "picked_reviews=0,image_total=0",
+  "selected_item": {
+    "numbers": [
+      1
+    ]
+  },
+  "artifacts": {
+    "validation": "/home/solpi/work/blog-automation/jobs/FD-20260307-231956-HD-f13ebf/artifacts/validation.json"
+  },
+  "updated_at": "2026-03-07T23:20:20+09:00"
+}

@@ -1,0 +1,63 @@
+{
+  "job_id": "FD-20260308-145500-RLK-5773ef",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T14:56:10+09:00",
+  "status": "failed_blocking",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/9396085090?itemId=27905574802&vendorItemId=94864912280&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26%EC%95%85%EC%84%B8%EC%82%AC%EB%A6%AC&searchId=72e2da284398121&sourceType=search&itemsCount=36&searchRank=17&rank=17&traceId=mmhc7rzp",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=9396085090 itemId=27905574802 vendorItemId=94864912280 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0bahg, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9396085090&itemId=27905574802&vendorItemId=94864912280&traceid=V0-183-f49c42c300f190f4"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=갤럭시 s26 울트라 s23 ultra 플러스 무변색 투명 맥세이프 케이스, brand=null 허용, model=맥세이프 케이스"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "fail",
+      "evidence": "reviews=1, image_total=3"
+    }
+  ],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "갤럭시 s26 울트라 s23 ultra 플러스 무변색 투명 맥세이프 케이스",
+      "productName": "갤럭시 s26 울트라 s23 ultra 플러스 무변색 투명 맥세이프 케이스",
+      "brand": null,
+      "model": "맥세이프 케이스",
+      "category": "휴대폰 케이스",
+      "eligibility": "fail",
+      "reason": "리뷰 하드게이트 미충족(3~5개/리뷰당1+/총6+)",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/9396085090?itemId=27905574802&vendorItemId=94864912280&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26%EC%95%85%EC%84%B8%EC%82%AC%EB%A6%AC&searchId=72e2da284398121&sourceType=search&itemsCount=36&searchRank=17&rank=17&traceId=mmhc7rzp",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=9396085090&itemId=27905574802&vendorItemId=94864912280&traceid=V0-183-f49c42c300f190f4",
+      "rating": 4.9,
+      "review_count": 44
+    }
+  ],
+  "selected_for_nami": null,
+  "review_image_fail_count": 1,
+  "failures": [
+    {
+      "code": "review_image_gate_failed",
+      "detail": "picked_reviews=1,image_total=3"
+    }
+  ],
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/9396085090?itemId=27905574802&vendorItemId=94864912280&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26%EC%95%85%EC%84%B8%EC%82%AC%EB%A6%AC&searchId=72e2da284398121&sourceType=search&itemsCount=36&searchRank=17&rank=17&traceId=mmhc7rzp"
+}

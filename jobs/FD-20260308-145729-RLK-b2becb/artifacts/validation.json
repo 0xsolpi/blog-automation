@@ -1,0 +1,107 @@
+{
+  "job_id": "FD-20260308-145729-RLK-b2becb",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T14:58:30+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/153505288?itemId=27594946093&vendorItemId=94558359692&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26%EC%95%85%EC%84%B8%EC%82%AC%EB%A6%AC&searchId=72e2da284398121&sourceType=search&itemsCount=36&searchRank=16&rank=16&traceId=mmhcb1o8",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=153505288 itemId=27594946093 vendorItemId=94558359692 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0bft2, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=153505288&itemId=27594946093&vendorItemId=94558359692&traceid=V0-183-b1c66f13f5beb462"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=누아트 9H 2.5D 강화유리 휴대폰 액정보호필름, brand=null 허용, model=9H 2.5D"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "누아트 9H 2.5D 강화유리 휴대폰 액정보호필름",
+      "price": 4600,
+      "rating": 4.4,
+      "review_count": 6558,
+      "result": "selected",
+      "reason": "ㄹㅋ direct 링크 검증 통과"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 1,
+      "product": "누아트 9H 2.5D 강화유리 휴대폰 액정보호필름",
+      "productName": "누아트 9H 2.5D 강화유리 휴대폰 액정보호필름",
+      "brand": null,
+      "model": "9H 2.5D",
+      "category": "액정보호필름",
+      "eligibility": "pass",
+      "reason": "하드게이트 전항목 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/153505288?itemId=27594946093&vendorItemId=94558359692&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26%EC%95%85%EC%84%B8%EC%82%AC%EB%A6%AC&searchId=72e2da284398121&sourceType=search&itemsCount=36&searchRank=16&rank=16&traceId=mmhcb1o8",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=153505288&itemId=27594946093&vendorItemId=94558359692&traceid=V0-183-b1c66f13f5beb462",
+      "rating": 4.4,
+      "review_count": 6558,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/retail/images/2026/01/16/10/6/7f0b36c4-dcd5-40b4-a5cc-a1e41b51323a.jpg"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "853804050",
+          "rating": 5,
+          "full_text": "9H 경도 보호력과 높은 투과율, 쉬운 부착성이 장점이라는 후기입니다. 터치감/선명도/기포 처리 측면에서 만족도가 높고 입문자도 비교적 쉽게 부착 가능하다는 내용이 포함됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/5923747116002769920/a252acbd-99c2-4ba1-aae2-70b8dbbac1ed.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/5923747116002769920/22d31b59-7067-4838-b9ec-68bb3bdf4b91.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202603/1/5923747116002769920/35d93bce-f60c-4efb-a0cc-52d8fff2c3db.jpg"
+          ]
+        },
+        {
+          "review_id": "852912387",
+          "rating": 5,
+          "full_text": "강화유리 필름 교체가 잦은 사용자 기준으로, 누아트 9H가 가성비와 터치감에서 만족스럽다는 후기입니다. 부착 시 기포가 적고 모서리 들뜸이 크지 않다는 경험이 담겨 있습니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/27/4753747200379279077/110feba8-027e-408e-a103-797d84b7529b.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/27/4753747200379279077/cf0a079e-b661-40ba-9b27-44592f2714d9.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/27/4753747200379279077/34ca40f1-6fcb-4ac7-acd4-1578e63c3751.jpg"
+          ]
+        },
+        {
+          "review_id": "848129359",
+          "rating": 5,
+          "full_text": "외부 활동이 많은 사용자 관점에서 스크래치 방지와 터치 반응, 선명도 유지가 양호하다는 리뷰입니다. 부착 도구 구성과 내구성 측면에서 전반 만족했다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/15/4160421826721491167/7de64c27-6d1a-49fd-a65e-d41c9cb0a920.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/15/4160421826721491167/205d349a-33b1-43ba-985f-11aec5bd50e6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202602/15/4160421826721491167/f61ba60d-6a52-4407-a15b-80599abe56e6.jpg"
+          ]
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [],
+  "selected_for_nami": {
+    "primary": 1,
+    "backup": 1
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/153505288?itemId=27594946093&vendorItemId=94558359692&q=%EA%B0%A4%EB%9F%AD%EC%8B%9C26%EC%95%85%EC%84%B8%EC%82%AC%EB%A6%AC&searchId=72e2da284398121&sourceType=search&itemsCount=36&searchRank=16&rank=16&traceId=mmhcb1o8"
+}

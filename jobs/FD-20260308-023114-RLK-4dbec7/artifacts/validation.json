@@ -1,0 +1,40 @@
+{
+  "job_id": "FD-20260308-023114-RLK-4dbec7",
+  "agent": "ace",
+  "trigger": "ㄹㅋ",
+  "validated_at": "2026-03-08T02:31:40+09:00",
+  "status": "failed_blocking",
+  "affiliate_rule_check": "fail",
+  "publish_category_id": 1,
+  "input_link": "https://www.coupang.com/vp/products/8142926718?vendorItemId=88715246846&sourceType=HOME_PERSONALIZED_ADS&searchId=feed-a90839126b7a4bb180ef68909a632500-3.33.14%3Apersonalized_ads&clickEventId=9c3977b0-1a4a-11f1-8853-4c605935c3fc",
+  "checklist": [
+    {
+      "id": "direct_link_match",
+      "title": "링크 제품 100% 일치 확인",
+      "result": "pass",
+      "evidence": "input_link productId=8142926718 vendorItemId=88715246846 일치"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "fail",
+      "evidence": "COUPANG_ACCESS_KEY/COUPANG_SECRET_KEY 환경변수 미주입으로 deeplink 호출 불가"
+    }
+  ],
+  "eligible_products": [],
+  "ineligible_products": [
+    {
+      "number": 1,
+      "product": "와이드뷰 HD 화이트에디션 스마트 TV + 삼탠바이미 V1 이동식 거치대 세트",
+      "eligibility": "fail",
+      "reason": "deeplink_auth_unavailable"
+    }
+  ],
+  "failures": [
+    {
+      "code": "deeplink_auth_unavailable",
+      "detail": "COUPANG_ACCESS_KEY and COUPANG_SECRET_KEY not found in environment"
+    }
+  ],
+  "source_artifact": "direct_mode:ㄹㅋ.https://www.coupang.com/vp/products/8142926718?vendorItemId=88715246846&sourceType=HOME_PERSONALIZED_ADS&searchId=feed-a90839126b7a4bb180ef68909a632500-3.33.14%3Apersonalized_ads&clickEventId=9c3977b0-1a4a-11f1-8853-4c605935c3fc"
+}

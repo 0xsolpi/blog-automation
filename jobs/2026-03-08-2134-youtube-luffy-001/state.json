@@ -1,0 +1,22 @@
+{
+  "job_id": "2026-03-08-2134-youtube-luffy-001",
+  "current_stage": "ace_validation",
+  "status": "failed_blocking",
+  "retry_count": 0,
+  "next_agent": "nere",
+  "blocking_reason": "browser_extraction_inconsistent",
+  "last_error": "url_product_metadata_mismatch",
+  "selected_item": {
+    "numbers": [
+      3
+    ]
+  },
+  "artifacts": {
+    "research": "/home/solpi/work/blog-automation/jobs/2026-03-08-2134-youtube-luffy-001/artifacts/research.json",
+    "validation": "/home/solpi/work/blog-automation/jobs/2026-03-08-2134-youtube-luffy-001/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/2026-03-08-2134-youtube-luffy-001/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/2026-03-08-2134-youtube-luffy-001/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/2026-03-08-2134-youtube-luffy-001/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-08T22:59:43+09:00"
+}

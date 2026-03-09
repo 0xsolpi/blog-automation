@@ -1,0 +1,23 @@
+{
+  "job_id": "FD-20260308-111640-RLK-1b3b84",
+  "trigger": "ㄹㅋ",
+  "publish_category_id": 1,
+  "current_stage": "done",
+  "status": "completed",
+  "retry_count": 0,
+  "next_agent": "none",
+  "blocking_reason": null,
+  "last_error": null,
+  "selected_item": {
+    "numbers": [
+      1
+    ]
+  },
+  "artifacts": {
+    "validation": "/home/solpi/work/blog-automation/jobs/FD-20260308-111640-RLK-1b3b84/artifacts/validation.json",
+    "draft": "/home/solpi/work/blog-automation/jobs/FD-20260308-111640-RLK-1b3b84/artifacts/draft.md",
+    "final": "/home/solpi/work/blog-automation/jobs/FD-20260308-111640-RLK-1b3b84/artifacts/final.md",
+    "publish": "/home/solpi/work/blog-automation/jobs/FD-20260308-111640-RLK-1b3b84/artifacts/publish.json"
+  },
+  "updated_at": "2026-03-08T11:21:25+09:00"
+}

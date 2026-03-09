@@ -1,0 +1,132 @@
+{
+  "job_id": "2026-03-08-1943-hwanjeolgi-luffy-001",
+  "agent": "ace",
+  "validated_at": "2026-03-08T19:52:30+09:00",
+  "status": "completed",
+  "affiliate_rule_check": "pass",
+  "checklist": [
+    {
+      "id": "selected_match",
+      "title": "selected_item_numbers 일치 확인",
+      "result": "pass",
+      "evidence": "selected_item_numbers=[9] 기준 검증"
+    },
+    {
+      "id": "partner_link_generated",
+      "title": "deeplink API 호출/결과/검증로그",
+      "result": "pass",
+      "evidence": "rCode=0, shortenUrl=https://link.coupang.com/a/d0l0Se, landingUrl=https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7836398506&itemId=14461901066&vendorItemId=93280487261&traceid=V0-183-9f00c1a9814a7747"
+    },
+    {
+      "id": "product_fields_resolved",
+      "title": "productName/brand/model 확정",
+      "result": "pass",
+      "evidence": "productName=뽀로로 면역대장 비타민D+아연, 100g, 1개 / brand=null 허용 / model=비타민D+아연 100g"
+    },
+    {
+      "id": "best_reviews_image_policy",
+      "title": "best_reviews 3~5 + 리뷰당>=1 + 총이미지>=6",
+      "result": "pass",
+      "evidence": "reviews=3, image_total=9"
+    }
+  ],
+  "price_scan_log": [
+    {
+      "rank_by_price": 1,
+      "product": "맑은누리 핑크퐁 아기상어 아이비타C+D+아연 30정, 1개",
+      "price": 600,
+      "rating": 5.0,
+      "review_count": 304,
+      "result": "rejected",
+      "reason": "아동 비타민캔디 계열로 selected 주제(환절기 영양제 비타민D/아연) 대비 적합도 낮음"
+    },
+    {
+      "rank_by_price": 2,
+      "product": "비타민마을 어골해조산호 칼슘 마그네슘 아연 비타민D 비타민K 54g, 1개, 60정",
+      "price": 4900,
+      "rating": 4.5,
+      "review_count": 21,
+      "result": "rejected",
+      "reason": "review_count<30"
+    },
+    {
+      "rank_by_price": 3,
+      "product": "뽀로로 면역대장 비타민D+아연, 100g, 1개",
+      "price": 5390,
+      "rating": 4.9,
+      "review_count": 546,
+      "result": "selected",
+      "reason": "최저가 순 조건 충족(rating>=4.0, review_count>=30)"
+    }
+  ],
+  "eligible_products": [
+    {
+      "number": 9,
+      "product": "환절기 영양제(비타민D/아연)",
+      "productName": "뽀로로 면역대장 비타민D+아연, 100g, 1개",
+      "brand": null,
+      "model": "비타민D+아연 100g",
+      "category": "건강기능식품",
+      "eligibility": "pass",
+      "reason": "선택 항목 기준 하드게이트 충족",
+      "coupang_verified": true,
+      "coupang_product_url": "https://www.coupang.com/vp/products/7836398506?itemId=14461901066&vendorItemId=93280487261",
+      "coupang_partner_link": "https://link.coupang.com/re/AFFSDP?lptag=AF2373838&pageKey=7836398506&itemId=14461901066&vendorItemId=93280487261&traceid=V0-183-9f00c1a9814a7747",
+      "rating": 4.9,
+      "review_count": 546,
+      "is_rocket_delivery": null,
+      "representative_image_urls": [
+        "https://thumbnail.coupangcdn.com/thumbnails/remote/492x492ex/image/vendor_inventory/64f2/ffc4f71a9b44aa8b7129e94616b5f63b087ce5040e36af9bf241dabd7c06.png"
+      ],
+      "best_reviews": [
+        {
+          "review_id": "836312642",
+          "rating": 5,
+          "full_text": "내돈내산 리뷰입니다. 요즘 어린이집 다니기 시작하면 감기 달고 살잖아요 그래서 아이 면역 관리용으로 비타민D+아연 조합 제품을 찾다가 아이도 거부감 없이 먹을 수 있는 뽀로로 면역대장으로 구매했어요. 스틱형이라 챙기기 편하고 아이가 잘 먹어 매일 루틴으로 관리하기 좋았다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/2926404569850503102/c1e3c1a2-e7b2-4145-a21b-4f67faa9c95f.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/2926404569850503102/ed3af3be-9551-4c14-94a4-9b3a5bf529cd.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202601/23/2926404569850503102/aa8ba46c-b8c0-4911-b93d-7751a4603c98.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "819857855",
+          "rating": 5,
+          "full_text": "아이들이 거부감 없이 잘 먹는 영양제라는 후기입니다. 비타민D+아연 구성과 개별 스틱 포장으로 외출 시 휴대가 편하고, 부모 입장에서 꾸준히 챙기기 쉽다는 점이 장점으로 언급됩니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/21/896157954171094483/0736946b-b4ad-48a2-8b60-451255fb6a6c.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/21/896157954171094483/bc1db574-b7da-47cf-938d-ae3ff10f21c6.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202512/21/896157954171094483/2a193505-c74f-4c43-a315-6d823fdbca49.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        },
+        {
+          "review_id": "757777295",
+          "rating": 5,
+          "full_text": "비타민D와 아연을 동시에 보충할 수 있어 성장기 아이 영양 관리용으로 선택했다는 리뷰입니다. 젤리 타입과 캐릭터 패키지로 복용 거부감이 적고, 개별 포장으로 위생/휴대성이 좋아 만족했다는 내용입니다.",
+          "image_urls": [
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/25/6061048471622983185/120038ce-6923-44c5-81e8-ba5cd797c165.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/25/6061048471622983185/c93378e9-2e79-4402-9a12-3c7c02285c27.jpg",
+            "https://thumbnail.coupangcdn.com/thumbnails/local/q-1/image2/PRODUCTREVIEW/202508/25/6061048471622983185/ee75548d-9eb5-4ae0-8843-b14dc0f80dca.jpg"
+          ],
+          "image_collection_result": "PASS_3"
+        }
+      ]
+    }
+  ],
+  "ineligible_products": [
+    {
+      "number": 2,
+      "product": "비타민마을 어골해조산호 칼슘 마그네슘 아연 비타민D 비타민K 54g, 1개, 60정",
+      "reason": "리뷰수 30 미만",
+      "fail_code": "REVIEW_COUNT_LT_30"
+    }
+  ],
+  "selected_for_nami": {
+    "primary": 9,
+    "backup": 9
+  },
+  "review_image_fail_count": 0,
+  "source_artifact": "/home/solpi/work/blog-automation/jobs/2026-03-08-1943-hwanjeolgi-luffy-001/artifacts/research.json"
+}
